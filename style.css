@@ -206,7 +206,11 @@ header .search-form label:hover {
 }
 
 
-@media (max-width:768px) {
+@media (max-width:768px) { /*---------Mobile Phone-------*/
+
+    header{
+        box-shadow: none;
+    }
     
     header .icons #menu-bars {
         display: inline-block;
@@ -217,27 +221,22 @@ header .search-form label:hover {
         top: 100%;
         left: 0;
         right: 0;
-        border-top: .1rem solid rgba(0, 0, 0, .2);
+        
         padding: 1rem;
+        background-color: transparent;
+        text-align: center;
+        box-shadow: var(--box-shadow);
     }
 
     header .logo img {
         width: 160px;
     }
 
-    .navbar {
-        text-align: center;
-        background-color: var(--green);
-
-    }
+    
 
     header .search-form.active {
         width: 40rem;
     }
-
-
-
-
 
 
 
@@ -252,6 +251,28 @@ header .search-form label:hover {
 
 
 
+
+
+@media (max-width:420px) { /*---------Ultra Small Mobile Phone-------*/
+
+    html {
+        font-size: 43%;
+    }
+
+    header .logo img {
+        width: 120px;
+    }
+
+    header .icons i,
+    header .icons a {
+    
+    height: 3rem;
+    line-height: 3rem;
+    width: 3rem;
+    
+    }
+
+}
 
 
 
