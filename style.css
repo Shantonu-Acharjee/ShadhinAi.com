@@ -203,6 +203,7 @@ header .navbar ul li ul{
     left: 0;
     width: 200px;
     display: none;
+    background: var(--gray);
 }
 
 header .navbar ul li ul li{
