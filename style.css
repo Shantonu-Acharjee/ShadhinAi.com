@@ -84,9 +84,7 @@ header .icons a:hover{
     transform: rotate(360deg);
 }
 
-header .icons #menu-bars{
-    display: none;
-}
+
 
 
 
@@ -125,11 +123,12 @@ header .search-form input{
 }
 
 
-header .search-form label{
+header .search-form button{
     font-size: 2.2rem;
     padding-right: 1.5rem;
     color: var(--black);
     cursor: pointer;
+    background: transparent;
 }
 
 
