@@ -97,7 +97,7 @@ header .icons #menu-bars{
 header .search-form{
     position: absolute;
     top: 110%;
-    right: 110%;
+    right: -120%;
     width: 50rem;
     height: 5rem;
     background-color: var(--white);
@@ -165,6 +165,13 @@ header .search-form label:hover{
     header .logo img{
         width: 200px;
     }
+
+
+    header .search-form.active{
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
 }
 
 
@@ -190,6 +197,10 @@ header .search-form label:hover{
         text-align: center;
         background-color: var(--green);
         
+    }
+
+    header .search-form.active{
+        width: 40rem;
     }
 
 }
