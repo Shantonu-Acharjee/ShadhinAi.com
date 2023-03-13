@@ -3,7 +3,7 @@
     --greenLight: #27ae5fad;
     --black: #192a56;
     --light-color: #666;
-    --box-shadow: .5rem .5rem rgba(0, 0, 0, .1);
+    --box-shadow:0 .5rem 1rem rgba(0, 0, 0, .1);
     --white: #fff;
     --gray: #eee;
 }
@@ -17,7 +17,7 @@
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
-    
+    border: none;
     text-transform: capitalize;
     transition: all .2s linear;
 }
@@ -110,6 +110,51 @@ header .icons input{
     z-index: 10 !important;
     
 }
+
+
+header .search-form{
+    position: absolute;
+    top: 110%;
+    right: 110%;
+    width: 50rem;
+    height: 5rem;
+    background-color: var(--white);
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+
+header .search-form.active{
+    right: 2rem;
+    transform: .4s linear;
+}
+
+header .search-form input{
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+    
+}
+
+
+header .search-form label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+
+header .search-form label:hover{
+    color: var(--green);
+}
+    
     
     
 
