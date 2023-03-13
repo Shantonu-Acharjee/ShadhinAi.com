@@ -1,17 +1,28 @@
-:root{
+:root {
     --green: #27ae60;
     --greenLight: #27ae5fad;
     --black: #192a56;
     --light-color: #666;
-    --box-shadow:0 .5rem 1rem rgba(0, 0, 0, .1);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     --white: #fff;
     --gray: #eee;
+
+
+
+    --hue: 174;
+    --sat: 63%;
+    --first-color: hsl(var(--hue), var(--sat), 40%);
+    --first-color-alt: hsl(var(--hue), var(--sat), 36%);
+    --title-color: hsl(var(--hue), 12%, 15%);
+    --text-color: hsl(var(--hue), 8%, 35%);
+    --body-color: hsl(var(--hue), 100%, 99%);
+    --container-color: #FFF;
 }
 
 
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,7 +34,7 @@
 }
 
 
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 5.5rem;
@@ -31,7 +42,7 @@ html{
 }
 
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -45,11 +56,11 @@ header{
     box-shadow: var(--box-shadow);
 }
 
-header .logo img{
+header .logo img {
     width: 200;
 }
 
-header .navbar a{
+header .navbar a {
     font-size: 1.7rem;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
@@ -57,13 +68,13 @@ header .navbar a{
 }
 
 header .navbar a.active,
-header .navbar a:hover{
+header .navbar a:hover {
     color: var(--white);
     background: var(--green);
 }
 
 header .icons i,
-header .icons a{
+header .icons a {
     cursor: pointer;
     margin-left: .5rem;
     height: 4.5rem;
@@ -78,7 +89,7 @@ header .icons a{
 
 
 header .icons i:hover,
-header .icons a:hover{
+header .icons a:hover {
     color: var(--white);
     background: var(--green);
     transform: rotate(360deg);
@@ -92,7 +103,7 @@ header .icons a:hover{
 
 
 
-header .search-form{
+header .search-form {
     position: absolute;
     top: 110%;
     right: -120%;
@@ -107,23 +118,23 @@ header .search-form{
 }
 
 
-header .search-form.active{
+header .search-form.active {
     right: 2rem;
     transform: .4s linear;
 }
 
-header .search-form input{
+header .search-form input {
     height: 100%;
     width: 100%;
     text-transform: none;
     font-size: 1.6rem;
     color: var(--black);
     padding: 0 1.5rem;
-    
+
 }
 
 
-header .search-form button{
+header .search-form button {
     font-size: 2.2rem;
     padding-right: 1.5rem;
     color: var(--black);
@@ -132,12 +143,33 @@ header .search-form button{
 }
 
 
-header .search-form label:hover{
+header .search-form label:hover {
     color: var(--green);
 }
+
+
+
+
+.bottom-navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--container-color);
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    width: 100%;
+    height: 5rem;
+    padding: 1rem 0;
+    align-content: center;
+    border-radius: 1.25rem 1.25rem 0 0;
     
-    
-    
+}
+
+
+.bottom-navbar i{
+    color: var(--green);
+}
+
+
+
 
 
 
@@ -152,34 +184,35 @@ header .search-form label:hover{
 
 
 /* media queries */
-@media (max-width:991px){
-    html{
+@media (max-width:991px) {
+    html {
         font-size: 55%;
     }
 
-    header{
+    header {
         padding: 1rem 2rem;
     }
 
-    header .logo img{
+    header .logo img {
         width: 200px;
     }
 
 
-    header .search-form.active{
+    header .search-form.active {
         left: 50%;
         transform: translate(-50%);
     }
-    
+
 }
 
 
-@media (max-width:768px){
-    header .icons #menu-bars{
+@media (max-width:768px) {
+    
+    header .icons #menu-bars {
         display: inline-block;
     }
 
-    header .navbar{
+    header .navbar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -188,18 +221,40 @@ header .search-form label:hover{
         padding: 1rem;
     }
 
-    header .logo img{
+    header .logo img {
         width: 160px;
     }
 
-    .navbar{
+    .navbar {
         text-align: center;
         background-color: var(--green);
-        
+
     }
 
-    header .search-form.active{
+    header .search-form.active {
         width: 40rem;
     }
 
+
+
+
+
+
+
+    .bottom-navbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        font-size: 3rem; 
+    }
+
 }
+
+
+
+
+
+
+
+
+
