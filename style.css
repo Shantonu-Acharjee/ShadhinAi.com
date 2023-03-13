@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+
+
 :root {
     --green: #27ae60;
     --greenLight: #27ae5fad;
@@ -31,6 +36,7 @@
     border: none;
     text-transform: capitalize;
     transition: all .2s linear;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -60,19 +66,7 @@ header .logo img {
     width: 200;
 }
 
-header .navbar a {
-    font-size: 1.7rem;
-    border-radius: .5rem;
-    padding: .5rem 1.5rem;
-    color: var(--light-color);
-    text-transform: uppercase;
-}
 
-header .navbar a.active,
-header .navbar a:hover {
-    color: var(--white);
-    background: var(--green);
-}
 
 header .icons i,
 header .icons a {
@@ -172,10 +166,59 @@ header .search-form label:hover {
 
 
 
+header .navbar ul{
+    list-style: none;
+}
+
+
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+
+header .navbar ul li a{
+    font-size: 1.7rem;
+    padding: 20px 1.5rem;
+    color: var(--light-color);
+    display: block;
+    text-transform: uppercase;
+}
+
+header .navbar ul li a span i{
+    color: var(--green);
+}
+
+
+header .navbar ul li a:hover{
+    color: var(--white);
+    background: var(--green);
+}
 
 
 
 
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    display: none;
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
 
 
 
@@ -185,7 +228,7 @@ header .search-form label:hover {
 
 
 /* media queries */
-@media (max-width:991px) {
+@media (max-width:1010px) {
     html {
         font-size: 55%;
     }
@@ -207,7 +250,7 @@ header .search-form label:hover {
 }
 
 
-@media (max-width:768px) { /*---------Mobile Phone-------*/
+@media (max-width:790px) { /*---------Mobile Phone-------*/
 
     html {
         font-size: 50%;
@@ -218,21 +261,26 @@ header .search-form label:hover {
         box-shadow: none;
     }
     
-    header .icons #menu-bars {
-        display: inline-block;
-    }
+
 
     header .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        
-        padding: 1rem;
+        display: flex;
         background-color: transparent;
-        text-align: center;
         box-shadow: var(--box-shadow);
+        justify-content: space-around;
     }
+
+    
+    header .navbar ul li a span,
+    header .navbar ul li ul{
+        display: none !important;
+    }
+
+    
 
     header .logo img {
         width: 160px;
@@ -256,7 +304,7 @@ header .search-form label:hover {
 }
 
 
-@media (max-width:370px) { /*---------Ultra Small Mobile Phone-------*/
+@media (max-width:340px) { /*---------Ultra Small Mobile Phone-------*/
 
     html {
         font-size: 43%;
@@ -276,6 +324,17 @@ header .search-form label:hover {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
