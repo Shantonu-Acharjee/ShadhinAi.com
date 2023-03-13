@@ -209,6 +209,11 @@ header .search-form label:hover {
 
 @media (max-width:768px) { /*---------Mobile Phone-------*/
 
+    html {
+        font-size: 50%;
+    }
+
+
     header{
         box-shadow: none;
     }
@@ -251,10 +256,7 @@ header .search-form label:hover {
 }
 
 
-
-
-
-@media (max-width:420px) { /*---------Ultra Small Mobile Phone-------*/
+@media (max-width:370px) { /*---------Ultra Small Mobile Phone-------*/
 
     html {
         font-size: 43%;
@@ -274,6 +276,12 @@ header .search-form label:hover {
     }
 
 }
+
+
+
+
+
+
 
 
 
