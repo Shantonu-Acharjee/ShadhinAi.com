@@ -3,7 +3,7 @@
 
 :root {
     --green: #27ae60;
-    --greenLight: #27ae5fad;
+    --greenLight: #9eeebf;
     --black: #192a56;
     --light-color: #666;
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
@@ -47,7 +47,7 @@ html {
 
 
 section{
-    padding: 2rem 9%;
+    padding: 2rem 7%;
 }
 
 section:nth-child(even){
@@ -132,12 +132,12 @@ header .search-form {
     right: -120%;
     width: 50rem;
     height: 5rem;
-    background-color: var(--white);
     border-radius: .5rem;
     overflow: hidden;
     display: flex;
     align-items: center;
     box-shadow: var(--box-shadow);
+    background: var(--greenLight);
 }
 
 
@@ -151,8 +151,8 @@ header .search-form input {
     width: 100%;
     text-transform: none;
     font-size: 1.6rem;
-    color: var(--black);
     padding: 0 1.5rem;
+    background: transparent;
 
 }
 
@@ -235,55 +235,18 @@ header .navbar ul li:hover > ul{
 
 
 /*=========================================== top-header ====================*/
-
-.home .home-slider .slide{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding-top: 9rem;
+section.home{
+    padding: 0;
 }
 
-
-
-.home .home-slider .slide .content{
-    flex: 1 1 45rem;
-}
-
-
-.home .home-slider .slide .content span{
-    color: var(--green);
-    font-size: 2.5rem;
-}
-
-
-
-.home .home-slider .slide .content h3{
-    color: var(--black);
-    font-size: 7rem;
-}
-
-
-.home .home-slider .slide .content p{
-    color: var(--light-color);
-    font-size: 2.2rem;
-    padding: .5rem 0;
-    line-height: 1.1;
-}
-
-
-
-
-.home .home-slider .slide .image{
-    flex: 1 1 45rem;
+.home .home-slider .wrapper .slide{
+    margin-top: 8.8rem;
 }
 
 
 .home .home-slider .slide .image img{
     width: 100%;
 }
-
-
 
 
 
@@ -299,13 +262,18 @@ header .navbar ul li:hover > ul{
     padding: 1rem 0;
     align-content: center;
     border-radius: 1.25rem 1.25rem 0 0;
-
+    z-index: 11;
     
 }
 
 
 .bottom-navbar i{
     color: var(--green);
+}
+
+
+.swiper-pagination-bullet-active{
+    background: var(--green);
 }
 
 
@@ -350,127 +318,6 @@ header .navbar ul li:hover > ul{
 
 
 
-
-/*=========================================== For Tablate ====================*/
-
-
-@media (max-width:1010px) {
-    html {
-        font-size: 55%;
-    }
-
-    header {
-        padding: 1rem 2rem;
-    }
-
-    header .logo img {
-        width: 200px;
-    }
-
-
-    header .search-form.active {
-        left: 50%;
-        transform: translate(-50%);
-    }
-
-}
-
-
-
-
-
-
-
-
-/*=========================================== For Moblile Phone ====================*/
-
-
-@media (max-width:790px) { 
-
-    html {
-        font-size: 50%;
-    }
-
-
-    header{
-        box-shadow: none;
-    }
-    
-
-
-    header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        display: flex;
-        background-color: transparent;
-        box-shadow: var(--box-shadow);
-        justify-content: space-around;
-    }
-
-    
-    header .navbar ul li a span,
-    header .navbar ul li ul{
-        display: none !important;
-    }
-
-    
-
-    header .logo img {
-        width: 160px;
-    }
-
-    
-
-    header .search-form.active {
-        width: 40rem;
-    }
-
-
-
-    .bottom-navbar {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        font-size: 3rem; 
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-/*=========================================== Small Mobile Phone ====================*/
-
-
-@media (max-width:340px) { 
-
-    html {
-        font-size: 43%;
-    }
-
-    header .logo img {
-        width: 120px;
-    }
-
-    header .icons i,
-    header .icons a {
-    
-    height: 3rem;
-    line-height: 3rem;
-    width: 3rem;
-    
-    }
-
-}
 
 
 

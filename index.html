@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
     <script src="https://kit.fontawesome.com/57947015ac.js" crossorigin="anonymous"></script><!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/><!--Swiper CDN -->
     <link rel="stylesheet" href="./style.css"><!--main CSS -->
+    <link rel="stylesheet" href="./media.css"><!--media CSS -->
+
 </head>
 <body>
     
@@ -75,23 +79,14 @@
 
     <section class="home" id="home"><!--Home Section Start-->
 
-        <div class="home-slider"><!--home-slider start-->
+        <div class="swiper mySwiper home-slider"><!--home-slider start-->
 
-            <div class="wrapper"> <!--wrapper start-->
+            <div class="swiper-wrapper wrapper"> <!--wrapper start-->
 
-                <div class="slide">
-
-                    <div class="content">
-
-                        <span>Our Special dish</span>
-                        <h3>Spicy Noodls</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro deserunt excepturi animi.</p>
-                        <a href="" class="btn">Order Now</a>
-
-                    </div>
+                <div class="swiper-slide slide">
 
                     <div class="image">
-                        <img src="./photo/camera1.jpg" alt="">
+                        <img src="photo/d.jpg" alt="">
                     </div>
 
                 </div>
@@ -99,19 +94,10 @@
 
 
 
-                <div class="slide">
-
-                    <div class="content">
-
-                        <span>Our Special dish</span>
-                        <h3>Spicy Noodls</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro deserunt excepturi animi.</p>
-                        <a href="" class="btn">Order Now</a>
-
-                    </div>
+                <div class="swiper-slide slide">
 
                     <div class="image">
-                        <img src="./photo/camera2.jpg" alt="">
+                        <img src="photo/d1.jpg" alt="">
                     </div>
 
                 </div>
@@ -120,19 +106,44 @@
 
 
 
-                <div class="slide">
-
-                    <div class="content">
-
-                        <span>Our Special dish</span>
-                        <h3>Spicy Noodls</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro deserunt excepturi animi.</p>
-                        <a href="" class="btn">Order Now</a>
-
-                    </div>
+                <div class="swiper-slide slide">
 
                     <div class="image">
-                        <img src="./photo/camera3.jpg" alt="">
+                        <img src="photo/d2.jpg" alt="">
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="swiper-slide slide">
+
+                    <div class="image">
+                        <img src="photo/d.jpg" alt="">
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="swiper-slide slide">
+
+                    <div class="image">
+                        <img src="photo/d1.jpg" alt="">
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div class="swiper-slide slide">
+
+                    <div class="image">
+                        <img src="photo/d2.jpg" alt="">
                     </div>
 
                 </div>
@@ -140,6 +151,8 @@
 
 
             </div><!--wrapper End-->
+
+            <div class="swiper-pagination"></div>
 
         </div><!--home-slider End-->
 
@@ -192,7 +205,8 @@
     </div><!--bottom End -->
 
 
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><!-- Swiper CDN -->
     <script src="./main.js"></script><!-- main js -->
 </body>
 </html>
