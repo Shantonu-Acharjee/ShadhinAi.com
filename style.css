@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 
-
-
 :root {
     --green: #27ae60;
     --greenLight: #27ae5fad;
@@ -35,7 +33,7 @@
     outline: none;
     border: none;
     text-transform: capitalize;
-    transition: all .2s linear;
+    /*transition: all .2s linear;*/
     font-family: 'Poppins', sans-serif;
 }
 
@@ -46,6 +44,12 @@ html {
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
+
+
+
+/*===========================================BASIC CSS====================*/
+
+
 
 
 header {
@@ -145,27 +149,6 @@ header .search-form label:hover {
 
 
 
-.bottom-navbar {
-    display: flex;
-    justify-content: space-around;
-    background-color: var(--container-color);
-    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
-    width: 100%;
-    height: 5rem;
-    padding: 1rem 0;
-    align-content: center;
-    border-radius: 1.25rem 1.25rem 0 0;
-    
-}
-
-
-.bottom-navbar i{
-    color: var(--green);
-}
-
-
-
-
 header .navbar ul{
     list-style: none;
 }
@@ -227,8 +210,72 @@ header .navbar ul li:hover > ul{
 
 
 
+/*=========================================== top-header ====================*/
 
-/* media queries */
+.bottom-navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--container-color);
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    width: 100%;
+    height: 5rem;
+    padding: 1rem 0;
+    align-content: center;
+    border-radius: 1.25rem 1.25rem 0 0;
+    
+}
+
+
+.bottom-navbar i{
+    color: var(--green);
+}
+
+
+/*=========================================== bottom ====================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=========================================== For Tablate ====================*/
+
+
 @media (max-width:1010px) {
     html {
         font-size: 55%;
@@ -251,7 +298,16 @@ header .navbar ul li:hover > ul{
 }
 
 
-@media (max-width:790px) { /*---------Mobile Phone-------*/
+
+
+
+
+
+
+/*=========================================== For Moblile Phone ====================*/
+
+
+@media (max-width:790px) { 
 
     html {
         font-size: 50%;
@@ -305,7 +361,18 @@ header .navbar ul li:hover > ul{
 }
 
 
-@media (max-width:340px) { /*---------Ultra Small Mobile Phone-------*/
+
+
+
+
+
+
+
+
+/*=========================================== Small Mobile Phone ====================*/
+
+
+@media (max-width:340px) { 
 
     html {
         font-size: 43%;
