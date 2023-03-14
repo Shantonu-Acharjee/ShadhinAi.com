@@ -3,6 +3,7 @@
 
 - Responsive for 320px Device Also
 - Open Graph Protocol Add
+- Canonical Tag Add
 
 # Demo
 👉 For demo click here [ShadhinAi](https://shantonu-acharjee.github.io/ShadhinAi.com/)
