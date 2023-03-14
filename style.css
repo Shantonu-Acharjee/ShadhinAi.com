@@ -236,7 +236,8 @@ header .navbar ul li:hover > ul{
 
 /*=========================================== top-header ====================*/
 section.home{
-    padding: 0;
+    padding: 0 7%;
+    background-color: var(--white);
 }
 
 .home .home-slider .wrapper .slide{
