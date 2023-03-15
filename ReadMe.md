@@ -4,6 +4,7 @@
 - Responsive for 320px Device Also
 - Open Graph Protocol Add
 - Canonical Tag Add
+- Schema Add
 
 # Have To use
 - robots.txt file
