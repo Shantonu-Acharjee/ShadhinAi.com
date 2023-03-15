@@ -85,7 +85,17 @@
 
 
     .home .home-slider .wrapper .slide{
-        margin-top: 14.8rem;
+        margin-top: 0;
+    }
+
+
+
+    .home .home-slider .slide .image a img.slider-pc{
+        display: none;
+    }
+
+    .home .home-slider .slide .image a img.slider-mobile{
+        display: inline;
     }
 
 
@@ -99,8 +109,17 @@
     }
 
 
+    
 
 
+}
+
+
+
+@media (max-width:660px){
+    .home .home-slider .wrapper .slide{
+        margin-top: 6rem;
+    }
 }
 
 
@@ -132,6 +151,11 @@
     line-height: 3rem;
     width: 3rem;
     
+    }
+
+
+    .home .home-slider .wrapper .slide{
+        margin-top: 5rem;
     }
 
 }

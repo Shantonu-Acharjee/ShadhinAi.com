@@ -249,7 +249,9 @@ section.home{
     width: 100%;
 }
 
-
+.home .home-slider .slide .image a img.slider-mobile{
+    display: none;
+}
 
 /*=========================================== home ====================*/
 
