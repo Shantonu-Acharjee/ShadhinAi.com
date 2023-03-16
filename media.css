@@ -68,7 +68,7 @@
     
     header .navbar ul li a span,
     header .navbar ul li ul{
-        display: none !important;
+        visibility: hidden;
     }
 
     

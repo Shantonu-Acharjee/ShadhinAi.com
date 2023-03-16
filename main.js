@@ -10,6 +10,9 @@ document.querySelector('#search-btn').onclick = () => {
 
 
 
+
+
+/*================================== home-slider Start ======================*/
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -19,12 +22,14 @@ var swiper = new Swiper(".mySwiper", {
     },
     pagination: {
         el: ".swiper-pagination",
-        clickable: true,
+        clickable: true
     },
-    
-    loop:true,
+
+    loop: true,
 });
 
 
 
 /*================================== home-slider End ======================*/
+
+
