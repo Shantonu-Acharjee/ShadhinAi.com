@@ -7,6 +7,7 @@
 - Schema Add
 
 # Have To use
+- loading="lazy"
 - robots.txt file
 - <a rel="nofollow" href="#">Bot will not follw the link</a>
 - button have to use aria-label="#"
