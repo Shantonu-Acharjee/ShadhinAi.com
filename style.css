@@ -71,6 +71,22 @@ section:nth-child(even){
     letter-spacing: .1rem;
 }
 
+
+.sub-heading{
+    text-align: center;
+    color: var(--green);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+
+.heading{
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
 /*===========================================BASIC CSS====================*/
 
 
@@ -254,6 +270,54 @@ section.home{
 }
 
 /*=========================================== home ====================*/
+
+.dishes .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 1.5rem;
+}
+
+
+.dishes .box-container .box{
+    padding: 2.5rem;
+    background: var(--white);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0, .2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/*=========================================== Section dishes ====================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .bottom-navbar {
     display: none;
