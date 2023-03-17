@@ -276,9 +276,21 @@ section.top-post .carts .cart{
     margin: 1rem 0;
 }
 
+section.top-post .carts .cart .heading{
+    padding: 10px;
+}
+
 section.top-post .carts .cart .heading h3{
+    
     font-size: 18px;
 }
+
+section.top-post .carts .cart .heading span{
+    font-size: 13px;
+    color: var(--green);
+}
+
+
 section.top-post .carts .cart .photo img{
     width: 100%;
 }

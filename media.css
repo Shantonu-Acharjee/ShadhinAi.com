@@ -29,6 +29,10 @@
         padding: 0;
     }
 
+    section.top-post .carts .cart .heading h3{
+        font-size: 16px;
+    }
+
 }
 
 
@@ -109,7 +113,13 @@
     }
 
 
+
     
+    
+
+    section.top-post .carts .cart{
+        width: 100%;
+    }
 
 
 }
