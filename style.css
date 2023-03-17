@@ -72,21 +72,11 @@ section:nth-child(even){
 }
 
 
-.sub-heading{
-    text-align: center;
-    color: var(--green);
-    font-size: 2rem;
-    padding-top: 1rem;
-}
-
-
-.heading{
-    text-align: center;
-    color: var(--black);
-    font-size: 3rem;
-    padding-bottom: 2rem;
+.section-heading{
     text-transform: uppercase;
+    font-size: 20px;
 }
+
 /*===========================================BASIC CSS====================*/
 
 
@@ -271,22 +261,26 @@ section.home{
 
 /*=========================================== home ====================*/
 
-.dishes .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-    gap: 1.5rem;
+
+section.top-post .carts{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 
-.dishes .box-container .box{
-    padding: 2.5rem;
-    background: var(--white);
-    border-radius: .5rem;
-    border: .1rem solid rgba(0,0,0, .2);
+section.top-post .carts .cart{
+    width: 33%;
     box-shadow: var(--box-shadow);
-    position: relative;
-    overflow: hidden;
-    text-align: center;
+    margin: 1rem 0;
+}
+
+section.top-post .carts .cart .heading h3{
+    font-size: 18px;
+}
+section.top-post .carts .cart .photo img{
+    width: 100%;
 }
 
 
@@ -296,7 +290,7 @@ section.home{
 
 
 
-/*=========================================== Section dishes ====================*/
+/*=========================================== Section top-post ====================*/
 
 
 
