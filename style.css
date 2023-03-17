@@ -271,9 +271,11 @@ section.top-post .carts{
 
 
 section.top-post .carts .cart{
-    width: 33%;
+    width: 32%;
     box-shadow: var(--box-shadow);
     margin: 1rem 0;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 section.top-post .carts .cart .heading{
