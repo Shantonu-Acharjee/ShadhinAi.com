@@ -106,8 +106,7 @@ header .logo img {
 
 
 
-header .icons i,
-header .icons a {
+header .icons i{
     cursor: pointer;
     margin-left: .5rem;
     height: 4.5rem;
@@ -121,8 +120,7 @@ header .icons a {
 }
 
 
-header .icons i:hover,
-header .icons a:hover {
+header .icons i:hover {
     color: var(--white);
     background: var(--green);
     transform: rotate(360deg);
