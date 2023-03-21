@@ -79,7 +79,7 @@ section header .logo img{
 }
 
 section header .menu{
-    height: 40px;
+    display: flex;
     align-items: center;
 }
 
