@@ -6,7 +6,7 @@
 
 
 # Feature
-- Responsive for 320px Device Also
+- Responsive for 260px Device Also
 - Open Graph Protocol Add
 - Canonical Tag Add
 - Schema Add
