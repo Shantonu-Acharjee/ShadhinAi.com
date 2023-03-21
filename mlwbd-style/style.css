@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+:root {
+    --green: #27ae60;
+    --greenLight: #9eeebf;
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --white: #fff;
+    --gray: #eee;
+
+    --body-color: #152121;
+    --header-color: #0F0F0F;
+    --gray-light: #272727;
+    --red: #FF3131;
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1530px;
+    margin: auto;
+    background: var(--body-color);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+input, button{
+    border: none;
+    outline: none;
+}
+
+section{
+    padding: 0 7%;
+}
+
+section.header{
+    background: var(--header-color);
+}
+
+section header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    
+}
+
+
+section header .logo{
+    display: flex;
+    max-width: 250px;
+    max-height: 40px;
+    align-items: center;
+   
+}
+
+section header .logo img{
+    width: 100%;
+}
+
+section header .menu ul{
+    display: flex;
+    gap: 20px;
+}
+
+
+section header .menu ul li a{
+    font-size: 20px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: color .3s;
+}
+
+section header .menu ul li a:hover{
+    color: var(--red);
+}
+
+section header .search-bar{
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+
+section header .search-bar button{
+    
+    background: transparent;
+    padding: 0 10px;
+    font-size: 20px;
+    color: var(--white);
+}
+section header .search-bar input{
+    background-color: #272727;
+    height: 40px;
+    width: 300px;
+    padding-left: 10px;
+    color: var(--white);
+    font-size: 16px;
+}
