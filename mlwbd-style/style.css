@@ -69,7 +69,6 @@ section header{
 
 section header .logo{
     display: flex;
-    width: 250px;
     align-items: center;
    
 }
@@ -81,6 +80,7 @@ section header .logo img{
 section header .menu{
     display: flex;
     align-items: center;
+    height: 40px;
 }
 
 section header .menu ul{
