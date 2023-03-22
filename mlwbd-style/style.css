@@ -77,6 +77,7 @@ section.header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
 }
 
 section header {
@@ -85,7 +86,6 @@ section header {
     align-items: center;
     padding: 10px 0;
     flex-wrap: wrap;
-    z-index: 10;
 }
 
 
@@ -167,7 +167,6 @@ scrolling-text
     font-family: 'Poppins', sans-serif;
     color: var(--white);
     padding: 5px 0;
-    z-index: 1;
 }
 
 
