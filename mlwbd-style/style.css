@@ -146,7 +146,7 @@ section header .search-bar input {
 
 
 /*-------------------------------------------
-slider
+scrolling-text
 --------------------------------------------*/
 
 .header-padding{
@@ -162,4 +162,16 @@ slider
     font-family: 'Poppins', sans-serif;
     color: var(--white);
     padding: 5px 0;
+}
+
+
+
+/*-------------------------------------------
+main
+--------------------------------------------*/
+
+section.main main{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    
 }

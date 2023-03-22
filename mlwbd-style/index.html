@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,11 @@
     <title>Document</title>
 
     <script src="https://kit.fontawesome.com/57947015ac.js" crossorigin="anonymous"></script><!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/><!--Swiper CDN -->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./media.css">
 </head>
+
 <body>
 
     <section class="header"><!--header section start-->
@@ -47,24 +50,128 @@
 
     <div class="header-padding scrolling-text">
 
-        <p><marquee>Hand Over Your Problem To ShadhinAi And Make True Your Imagination.</marquee></p>
+        <p>
+            <marquee>Hand Over Your Problem To ShadhinAi And Make True Your Imagination.</marquee>
+        </p>
 
     </div>
 
 
-    
 
-    <section class="slider">
-        
+
+    <section class="main">
+
+        <main>
+
+            <div class="main-content"><!--main-content start-->
+
+                <div class="swiper mySwiper home-slider"><!--home-slider start-->
+
+                    <div class="swiper-wrapper wrapper"> <!--wrapper start-->
+
+
+
+                        <div class="swiper-slide slide">
+
+                            <div class="image">
+                                <a href="https://shantonu-acharjee.github.io/ShadhinAi.com">
+                                    <img class="slider-mobile" src="photo/2.png" alt="ShadhinAi">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="swiper-slide slide">
+
+                            <div class="image">
+                                <a href="https://shantonu-acharjee.github.io/ShadhinAi.com">
+                                    <img class="slider-mobile" src="photo/3.png" alt="ShadhinAi">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div><!--wrapper End-->
+
+                    <div class="swiper-pagination"></div>
+
+                </div><!--home-slider End-->
+
+
+            </div><!--main-content end-->
+
+
+
+
+
+
+
+
+
+
+
+            <div class="side-content"><!--side-content start-->
+                
+                <img src="./photo/2.png" alt="">
+            </div><!--side-content end-->
+
+        </main>
+
     </section>
 
 
 
-    
 
 
 
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><!-- Swiper CDN -->
+
+    <script>
+
+        /*========= home-slider Start =========*/
+
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+
+            loop: true,
+        });
+
+        /*=========== home-slider End ===========*/
+
+    </script>
+
+
 </body>
+
 </html>
