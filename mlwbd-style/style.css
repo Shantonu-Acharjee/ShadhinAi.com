@@ -360,7 +360,8 @@ section.footer footer p{
 }
 
 
-section.footer footer .about h1{
+section.footer footer .about h1,
+section.footer footer .about h3{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: lighter;
@@ -421,4 +422,49 @@ section.footer footer .social ul li a{
 .copyright p a{
     font-family: 'Poppins', sans-serif;
     color: var(--white);
+}
+
+
+
+
+/*-------------------------------------------
+blog-post
+--------------------------------------------*/
+.blog-post h1{
+    color: var(--white);
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 5px;
+    text-align: center;
+    background: var(--gray-light);
+}
+
+.blog-post h2{
+    color: var(--white);
+    padding: 10px 5px;
+    font-size: 20px;
+    background: var(--gray-light);
+}
+
+.blog-post p{
+    color: var(--white);
+    font-size: 16px;
+    text-align: justify;
+    padding: 10px 5px;
+}
+
+.blog-post ul{
+    color: var(--white);
+    list-style: disc;
+    margin-left: 30px;
+}
+
+.blog-post ul li{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+.blog-post img{
+    margin: 5px 0;
 }
