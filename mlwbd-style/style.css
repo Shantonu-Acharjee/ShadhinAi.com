@@ -14,6 +14,7 @@
     --header-color: #0F0F0F;
     --gray-light: #272727;
     --red: #FF3131;
+    --cart-background-color: #0A0B0B;
 }
 
 
@@ -57,9 +58,12 @@ button{
 
 section {
     padding: 0 7%;
+    
 }
 
-
+main{
+    background: var(--header-color);
+}
 
 
 /*-------------------------------------------
@@ -81,6 +85,7 @@ section header {
     align-items: center;
     padding: 10px 0;
     flex-wrap: wrap;
+    z-index: 10;
 }
 
 
@@ -162,6 +167,7 @@ scrolling-text
     font-family: 'Poppins', sans-serif;
     color: var(--white);
     padding: 5px 0;
+    z-index: 1;
 }
 
 
@@ -174,4 +180,54 @@ section.main main{
     display: grid;
     grid-template-columns: 70% 30%;
     
+    
+}
+
+
+
+
+section.main main .main-content{
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid var(--white);
+    margin-bottom: 10px;
+}
+
+
+
+/*-------------------------------------------
+side-content
+--------------------------------------------*/
+
+.side-content .popular-post h2{
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 0;
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--gray-light);
+    margin-bottom: 10px;
+}
+
+
+.post-card{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 5px 0;
+}
+
+
+.post-card .post-title{
+    background: var(--cart-background-color);
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+.post-card .post-title h3{
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    padding-left: 5px;
+    font-size: 16px;
 }

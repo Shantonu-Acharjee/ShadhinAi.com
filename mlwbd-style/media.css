@@ -58,6 +58,13 @@
         
     }
 
+
+    section.main main .main-content{
+        padding-right: 0;
+        margin-right: 0;
+        border-right: 0;
+    }
+
     
 }
 
