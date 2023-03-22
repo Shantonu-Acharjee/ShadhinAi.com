@@ -241,9 +241,11 @@ categories
 .categories ul{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 10px;
+}
+.side-content .categories ul{
     margin-bottom: 10px;
 }
-
 .categories ul li{
     background: var(--gray-light);
     margin: 5px;

@@ -8,7 +8,6 @@
     <title>Document</title>
 
     <script src="https://kit.fontawesome.com/57947015ac.js" crossorigin="anonymous"></script><!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/><!--Swiper CDN -->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./media.css">
 </head>
@@ -28,7 +27,7 @@
                 <nav>
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/projects.html">Projects</a></li>
+                        <li><a href="#">Projects</a></li>
                         <li><a href="./blogpost.html">Blog</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
@@ -48,60 +47,19 @@
     </section><!--header section end-->
 
 
-    <div class="header-padding scrolling-text">
-
-        <p>
-            <marquee>Hand Over Your Problem To ShadhinAi And Make True Your Imagination.</marquee>
-        </p>
-
-    </div>
+    
 
 
 
 
-    <section class="main">
+    <section class="main header-padding">
 
         <main>
 
             <div class="main-content"><!--main-content start-->
 
-                <div class="swiper mySwiper home-slider"><!--home-slider start-->
 
-                    <div class="swiper-wrapper wrapper"> <!--wrapper start-->
-
-
-
-                        <div class="swiper-slide slide">
-
-                            <div class="image">
-                                <a href="https://shantonu-acharjee.github.io/ShadhinAi.com">
-                                    <img class="slider-mobile" src="photo/2.png" alt="ShadhinAi">
-                                </a>
-                            </div>
-
-                        </div>
-
-
-
-
-                        <div class="swiper-slide slide">
-
-                            <div class="image">
-                                <a href="https://shantonu-acharjee.github.io/ShadhinAi.com">
-                                    <img class="slider-mobile" src="photo/3.png" alt="ShadhinAi">
-                                </a>
-                            </div>
-
-                        </div>
-
-
-
-
-                    </div><!--wrapper End-->
-
-                    <div class="swiper-pagination"></div>
-
-                </div><!--home-slider End-->
+                
 
 
 
@@ -110,10 +68,28 @@
                 
 
 
-                <div class="main-post">
+                <div class="main-post"> <!--main-post start-->
 
 
-                    <h2>Latest Post</h2>
+                    <div class="categories"> <!--categories start-->
+    
+                        <ul>
+
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">ArduinoProjects</a></li>
+                            <li><a href="#">RobotMeena</a></li>
+                            <li><a href="#">ML</a></li>
+                            <li><a href="#">ML Projects</a></li>
+                            <li><a href="#">NodeMCU</a></li>
+                            <li><a href="#">PythonProjects</a></li>
+                            
+    
+                        </ul>
+
+                    </div><!--categories end-->
+
+
+                    <h2>All Projects</h2>
 
                     <div class="main-post-carts"><!--main-post-carts start-->
 
@@ -193,22 +169,18 @@
 
 
 
-                    </div><!--main-post-carts end-->
+                        <div class="main-post-cart">
+
+                            <div class="photo"><img src="./photo/2.png" alt="" loading="lazy"></div>
+
+                            <div class="post-title">
+                                <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
+                            </div>
+
+                        </div>
 
 
 
-
-
-
-
-
-                    <!--Latest Blog Start -->
-
-                    <h2>Latest Blog</h2>
-
-                    <div class="main-post-carts"><!--main-post-carts start-->
-
-                        
 
                         <div class="main-post-cart">
 
@@ -217,49 +189,9 @@
                             <div class="post-title">
                                 <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
                             </div>
-                        </div>
-
-
-
-
-
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="./photo/2.png" alt="" loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Digital Smart House Project For Science Fair</h3>
-                            </div>
 
                         </div>
 
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="./photo/2.png" alt="" loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Covid-19 Updater</h3>
-                            </div>
-
-                        </div>
-
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="./photo/2.png" alt="" loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Bluetooth Controlled Car Using Arduino (L293D Motor Driver)</h3>
-                            </div>
-
-                        </div>
 
 
 
@@ -277,8 +209,6 @@
 
                     </div><!--main-post-carts end-->
 
-
-                    <!--Latest Blog End -->
 
 
 
@@ -298,7 +228,7 @@
                         </ul>
                     </div>
 
-                </div>
+                </div><!--main-post end-->
 
 
             </div><!--main-content end-->
@@ -485,35 +415,6 @@
 
 
 
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><!-- Swiper CDN -->
-
-    <script>
-
-        /*========= home-slider Start =========*/
-
-        var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-
-            loop: true,
-        });
-
-        /*=========== home-slider End ===========*/
-
-    </script>
 
 
 </body>
