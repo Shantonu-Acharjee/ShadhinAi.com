@@ -198,7 +198,7 @@ section.main main .main-content{
 side-content
 --------------------------------------------*/
 
-.popular-post h2{
+.side-content h2{
     color: var(--white);
     font-family: 'Poppins', sans-serif;
     padding: 10px 0;
@@ -234,7 +234,27 @@ side-content
     font-size: 16px;
 }
 
+/*-------------------------------------------
+categories
+--------------------------------------------*/
+.categories ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
 
+.categories ul li{
+    background: var(--gray-light);
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.categories ul li a{
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+}
 
 /*-------------------------------------------
 main-post
