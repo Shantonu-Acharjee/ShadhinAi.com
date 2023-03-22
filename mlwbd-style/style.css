@@ -1,13 +1,12 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 
 :root {
-    --green: #27ae60;
+    --green: #00BF63;
     --greenLight: #9eeebf;
     --black: #192a56;
     --light-color: #666;
-    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --box-shadow: 0px 1px 13px black;
     --white: #fff;
     --gray: #eee;
 
@@ -20,40 +19,49 @@
 
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    max-width: 1530px;
+body {
+    max-width: 1533px;
     margin: auto;
-    background: pink; /* var(--body-color) */
+    background: var(--body-color);
+    /* var(--body-color) */
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-img{
+img {
     width: 100%;
 }
 
-input, button{
+input,
+button {
     border: none;
     outline: none;
 }
 
-section{
+section {
     padding: 0 7%;
 }
 
-section.header{
+
+
+
+/*-------------------------------------------
+header
+--------------------------------------------*/
+
+section.header {
     background: var(--header-color);
     box-shadow: var(--box-shadow);
     position: fixed;
@@ -62,7 +70,7 @@ section.header{
     right: 0;
 }
 
-section header{
+section header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,56 +79,57 @@ section header{
 }
 
 
-section header .logo{
+section header .logo {
     display: flex;
     align-items: center;
-   
+
 }
 
 
 
-section header .menu{
+section header .menu {
     display: flex;
     align-items: center;
     height: 40px;
 }
 
-section header .menu ul{
+section header .menu ul {
     display: flex;
     gap: 20px;
 }
 
 
-section header .menu ul li a{
+section header .menu ul li a {
     font-size: 20px;
     color: white;
     font-family: 'Poppins', sans-serif;
     transition: color .3s;
 }
 
-section header .menu ul li a:hover{
+section header .menu ul li a:hover {
     color: var(--red);
 }
 
-section header .search-bar{
+section header .search-bar {
     background: var(--gray-light);
     display: flex;
     align-items: center;
     border-radius: 5px;
     overflow: hidden;
-    
+
 }
 
 
 
-section header .search-bar button{
-    
+section header .search-bar button {
+
     background: transparent;
     padding: 0 10px;
     font-size: 20px;
     color: var(--white);
 }
-section header .search-bar input{
+
+section header .search-bar input {
     background-color: #272727;
     height: 40px;
     width: 300px;
@@ -134,6 +143,18 @@ section header .search-bar input{
 /*-------------------------------------------
 slider
 --------------------------------------------*/
-section.slider{
-    margin-top:65px;
+
+.header-padding{
+    margin-top: 65px;
+}
+
+
+
+
+.scrolling-text p marquee {
+    background: var(--header-color);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    padding: 5px 0;
 }

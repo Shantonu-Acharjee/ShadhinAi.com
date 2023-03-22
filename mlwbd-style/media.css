@@ -1,5 +1,5 @@
 @media (max-width:1180px) {
-    section.slider{
+    .header-padding{
         margin-top:105px;
     }
 
@@ -24,7 +24,7 @@
 
 @media (max-width:780px){
 
-    section.slider{
+    .header-padding{
         margin-top:145px;
     }
 
@@ -75,7 +75,7 @@
 
 @media (max-width:360px){
 
-    section.slider{
+    .header-padding{
         margin-top:130px;
     }
 
