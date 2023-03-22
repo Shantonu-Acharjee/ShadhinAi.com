@@ -260,7 +260,6 @@ main-post
     background: var(--gray-light);
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: var(--box-shadow);
 }
 
 

@@ -1,4 +1,11 @@
 @media (max-width:1180px) {
+
+    section{
+        padding: 0 1%;
+    }
+
+
+
     .header-padding{
         margin-top:105px;
     }
@@ -17,6 +24,17 @@
 
 
 
+@media (max-width:1150px){
+
+    section.main main{
+
+        grid-template-columns: 100%;
+        
+    }
+
+}
+
+
 
 
 
@@ -28,9 +46,7 @@
         margin-top:145px;
     }
 
-    section{
-        padding: 0 1%;
-    }
+    
 
 
     
@@ -52,11 +68,7 @@
     }
 
 
-    section.main main{
-
-        grid-template-columns: 100%;
-        
-    }
+    
 
 
     section.main main .main-content{
@@ -73,13 +85,6 @@
 
     
 }
-
-
-
-
-
-
-
 
 
 
