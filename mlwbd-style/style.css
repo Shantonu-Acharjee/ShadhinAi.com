@@ -198,7 +198,7 @@ section.main main .main-content{
 side-content
 --------------------------------------------*/
 
-.side-content .popular-post h2{
+.popular-post h2{
     color: var(--white);
     font-family: 'Poppins', sans-serif;
     padding: 10px 0;
@@ -213,7 +213,10 @@ side-content
     display: grid;
     grid-template-columns: 40% 60%;
     margin: 5px 0;
+
 }
+
+
 
 
 .post-card .post-title{
@@ -229,4 +232,44 @@ side-content
     font-family: 'Poppins', sans-serif;
     padding-left: 5px;
     font-size: 16px;
+}
+
+
+
+/*-------------------------------------------
+main-post
+--------------------------------------------*/
+
+.main-post h2{
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.main-post-carts{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    
+    
+}
+
+.main-post-cart{
+    background: var(--gray-light);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+
+
+
+
+.main-post-cart .post-title h3{
+    color: var(--white);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
 }
