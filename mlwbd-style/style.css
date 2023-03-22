@@ -44,10 +44,15 @@ img {
     width: 100%;
 }
 
-input,
-button {
+input {
     border: none;
     outline: none;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    
 }
 
 section {
