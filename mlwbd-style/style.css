@@ -272,3 +272,37 @@ main-post
     font-family: 'Poppins', sans-serif;
     padding: 5px;
 }
+
+
+
+
+/*-------------------------------------------
+page-number
+--------------------------------------------*/
+.page-number{
+    margin-top: 10px;
+}
+.page-number ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.page-number ul li a{
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin: 0 5px;
+    
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+
+    background: var(--gray-light);
+    text-align: center;
+    font-size: 18px;
+    border-radius: 50%;
+    
+}
