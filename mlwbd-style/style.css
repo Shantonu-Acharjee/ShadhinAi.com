@@ -72,6 +72,8 @@ h1, h2, h3, h4, p, a{
     font-family: 'Poppins', sans-serif;
 }
 
+
+
 /*-------------------------------------------
 header
 --------------------------------------------*/
@@ -153,16 +155,64 @@ section header .search-bar input {
 }
 
 /*----------------------------------*/
-.taggle-menu{
-    
-    
-}
+
+
 
 .taggle-menu i{
     color: var(--white);
     font-size: 30px;
 }
 
+
+.taggle-menu-items{
+    position: absolute;
+    right: 0;
+    top: 70px;
+    padding: 0 7%;
+}
+
+
+
+.taggle-menu-items ul{
+    background-color: var(--green);
+    font-size: 20px;
+    text-align: right;
+    width: 250px;
+}
+
+.taggle-menu-items ul a{
+    
+    width: 100%;
+    padding: 5px;
+   
+    
+    
+}
+
+.taggle-menu-items ul li{
+    
+    border-bottom: 1px solid var(--gray-light);
+    border-top: 1px solid var(--gray-light);
+    
+}
+
+.taggle-menu-items ul li span i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+
+.dripdown1,
+.taggle-menu-items{
+    display: none;
+    
+}
+
+
+
+.active{
+    display: inline;
+}
 
 
 /*-------------------------------------------
