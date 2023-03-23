@@ -67,7 +67,7 @@ main{
 }
 
 
-h1, h2, h3, p, a{
+h1, h2, h3, h4, p, a{
     color: white;
     font-family: 'Poppins', sans-serif;
 }
@@ -356,8 +356,7 @@ section.footer footer p{
 }
 
 
-section.footer footer .about h1,
-section.footer footer .about h3{
+section.footer footer .about h4{
     font-size: 16px;
     font-weight: lighter;
     line-height: 20px;
@@ -440,16 +439,36 @@ blog-post
 }
 
 .blog-post ul{
-    color: var(--white);
+    
     list-style: disc;
     margin-left: 30px;
 }
 
 .blog-post ul li{
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     padding: 5px 0;
 }
 
 .blog-post img{
     margin: 5px 0;
+}
+
+
+
+/*-------------------------------------------
+page-not-found
+--------------------------------------------*/
+.page-not-found{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.page-not-found a{
+    margin-top: 20px;
+    display: inline-block;
+    background: var(--gray-light);
+    padding: 10px 15px;
+    border-radius: 5px;
 }
