@@ -19,7 +19,7 @@
         <header>
 
             <div class="logo">
-                <a href="#"><img src="./photo/logo.svg" alt=""></a>
+                <a href="/"><img src="./photo/logo.svg" alt=""></a>
             </div>
 
             <div class="menu">
@@ -27,8 +27,8 @@
                 <nav>
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="/projects.html">Projects</a></li>
+                        <li><a href="./blogpost.html">Blog</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -42,7 +42,42 @@
                 <button type="submit"><i class="fas fa-search" id="search-btn"></i></button>
             </div>
 
+
+
+
+
+            <div class="taggle-menu"><!--taggle-menu start-->
+
+                <div class="taggle-menu-bar">
+                    <i id="taggle-bar" class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="taggle-menu-items">
+
+                    <ul>
+                        <li><a href="./sitemap.html">SiteMap</a></li>
+                        <li><a href="./PageNotFound.html">PageNotFound</a></li>
+                        <li><a href="#"><span><i id="dripdown1icon" class="fa-solid fa-caret-down"></i></span> Projects</a>
+
+                            <ul class="dripdown1">
+                                <li><a href="#">Arduino Projects</a></li>
+                                <li><a href="#">Node MCU Projects</a></li>
+                                <li><a href="#">Python Projects</a></li>
+                            </ul>
+
+                        </li>
+                        <li><a href="/">Home</a></li>
+                    </ul>
+
+
+                </div>
+
+            </div><!--taggle-menu end-->
+
         </header>
+
+
+
 
     </section><!--header section end-->
 
@@ -373,6 +408,22 @@
 
 
 
+    <script>
+        /*=========== taggle menu start ===========*/
+        let TaggleMenuItems = document.querySelector('.taggle-menu-items');
+        let TaggleMenuSubItems = document.querySelector('.dripdown1');
+
+        document.querySelector('#taggle-bar').onclick = () => {
+            TaggleMenuItems.classList.toggle('active');
+        }
+
+
+        document.querySelector('#dripdown1icon').onclick = () => {
+            TaggleMenuSubItems.classList.toggle('active');
+        }
+
+        /*=========== taggle menu end ===========*/
+    </script>
 
 
 
