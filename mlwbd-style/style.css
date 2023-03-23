@@ -146,10 +146,21 @@ section header .search-bar button {
 section header .search-bar input {
     background-color: #272727;
     height: 40px;
-    width: 300px;
+    width: 270px;
     padding-left: 10px;
     color: var(--white);
     font-size: 16px;
+}
+
+/*----------------------------------*/
+.taggle-menu{
+    
+    
+}
+
+.taggle-menu i{
+    color: var(--white);
+    font-size: 30px;
 }
 
 

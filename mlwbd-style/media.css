@@ -18,8 +18,16 @@
         width: 100%;
     }
 
-
+    section header .menu {
+        margin-right: 50px;
+    }
     
+    .taggle-menu{
+    
+        position: absolute;
+        top: 18px;
+        right: 15px;
+    }
 }
 
 
@@ -31,6 +39,8 @@
         grid-template-columns: 100%;
         
     }
+
+
 
 }
 
@@ -88,6 +98,11 @@
         margin: 0 10px;
     }
 
+
+    section header .menu {
+        margin-right: 0;
+    }
+
     
 }
 
@@ -115,6 +130,10 @@
     section header .search-bar{
         margin: 0 1%;
     }
+
+
+
+    
 }
 
 
@@ -141,5 +160,16 @@
     section header .menu ul li a{
         font-size: 13px;
         
+    }
+
+
+    .taggle-menu{
+        top: 13px;
+    }
+
+
+
+    .taggle-menu i{
+        font-size: 20px;
     }
 }
