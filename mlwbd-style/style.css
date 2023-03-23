@@ -417,7 +417,7 @@ section.footer footer .social ul li a{
 /*-------------------------------------------
 blog-post
 --------------------------------------------*/
-.blog-post h1{
+.page-header{
     font-size: 25px;
     padding: 10px 5px;
     text-align: center;
@@ -460,6 +460,8 @@ blog-post
 /*-------------------------------------------
 page-not-found
 --------------------------------------------*/
+
+
 .page-not-found{
     text-align: center;
     margin: 30px 0;
@@ -471,4 +473,33 @@ page-not-found
     background: var(--gray-light);
     padding: 10px 15px;
     border-radius: 5px;
+}
+
+
+
+/*-------------------------------------------
+sitemap
+--------------------------------------------*/
+
+
+
+.site-map .carts .cart h2{
+    margin: 10px;
+}
+
+
+
+.site-map .carts .cart ul{
+    color: var(--white);
+    list-style: disc;
+    margin-left: 30px;
+}
+
+.site-map .carts .cart ul li a{
+    color: var(--red);
+}
+
+
+.site-map .carts .cart ul li a:hover{
+    text-decoration: underline;
 }
