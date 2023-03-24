@@ -105,6 +105,16 @@
         margin-right: 0;
     }
 
+
+
+    .user .user-section{
+        
+        grid-template-columns: 1fr;
+
+    }
+
+
+    
     
 }
 
