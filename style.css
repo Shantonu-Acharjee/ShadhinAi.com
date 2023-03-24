@@ -279,7 +279,7 @@ section.main main .main-content{
 
 
 /*-------------------------------------------
-side-content
+side-content start
 --------------------------------------------*/
 
 .side-content h2{
@@ -290,6 +290,9 @@ side-content
     background-color: var(--gray-light);
     margin-bottom: 10px;
 }
+
+
+
 
 
 .post-card{
@@ -316,6 +319,8 @@ side-content
     font-size: 16px;
 }
 
+
+
 /*-------------------------------------------
 categories
 --------------------------------------------*/
@@ -339,71 +344,16 @@ categories
     padding: 10px;
 }
 
-/*-------------------------------------------
-main-post
---------------------------------------------*/
-
-.main-post h2{
-    
-    padding: 10px 0;
-    font-size: 20px;
-    text-align: center;
-}
-
-.main-post-carts{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    
-    
-}
-
-.main-post-cart{
-    background: var(--gray-light);
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-
-
-
-
-.main-post-cart .post-title h3{
-    font-size: 16px;
-    padding: 5px;
-}
-
-
-
 
 /*-------------------------------------------
-page-number
+side-content end
 --------------------------------------------*/
-.page-number{
-    margin-top: 10px;
-}
-.page-number ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
 
 
-.page-number ul li a{
-    display: block;
-    margin: 0 5px;
-    
-    height: 30px;
-    line-height: 30px;
-    width: 30px;
 
-    background: var(--gray-light);
-    text-align: center;
-    font-size: 18px;
-    border-radius: 50%;
-    
-}
+
+
+
 
 
 /*-------------------------------------------
@@ -494,265 +444,8 @@ section.footer footer .social ul li a{
 
 
 
-/*-------------------------------------------
-blog-post
---------------------------------------------*/
-.page-header{
-    font-size: 25px;
-    padding: 10px 5px;
-    text-align: center;
-    background: var(--gray-light);
-}
-
-.blog-post h2{
-    color: var(--white);
-    padding: 10px 5px;
-    font-size: 20px;
-    background: var(--gray-light);
-}
-
-.blog-post p{
-    color: var(--white);
-    font-size: 16px;
-    text-align: justify;
-    padding: 10px 5px;
-}
-
-.blog-post ul{
-    
-    list-style: disc;
-    margin-left: 30px;
-}
-
-.blog-post ul li{
-    color: var(--white);
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    padding: 5px 0;
-}
-
-.blog-post img{
-    margin: 5px 0;
-}
-
-
-
-/*-------------------------------------------
-page-not-found
---------------------------------------------*/
-
-
-.page-not-found{
-    text-align: center;
-    margin: 30px 0;
-}
-
-.page-not-found a{
-    margin-top: 20px;
-    display: inline-block;
-    background: var(--gray-light);
-    padding: 10px 15px;
-    border-radius: 5px;
-}
-
-
-
-/*-------------------------------------------
-sitemap
---------------------------------------------*/
-
-
-
-.site-map .carts .cart h2{
-    margin: 10px;
-}
-
-
-
-.site-map .carts .cart ul{
-    color: var(--white);
-    list-style: disc;
-    margin-left: 30px;
-}
-
-
-.site-map .carts .cart ul li{
-    margin: 5px 0;
-}
-
-
-.site-map .carts .cart ul li a{
-    color: var(--red);
-}
-
-
-.site-map .carts .cart ul li a:hover{
-    text-decoration: underline;
-}
-
-
-
-/*-------------------------------------------
-user
---------------------------------------------*/
-
-.user{
-    padding: 10px;
-}
-
-.user .profile-photo{
-    width: 250px;
-    height: 250px;
-    margin: 20px auto;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-
-.user .user-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-}
 
 
 
 
-.update-user-details{
-    background: var(--gray-light);
-    padding: 10px;
-}
 
-.user .user-details h1,
-.user .user-details p{
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.update-user-details .items{
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-}
-
-.update-user-details .items input{
-    padding: 10px;
-}
-
-.user form button{
-    padding: 10px;
-    display: flex;
-    margin: 10px auto;
-    background: var(--green);
-    color: var(--white);
-    font-size: 16px;
-    border-radius: 5px;
-}
-
-
-table{
-
-    
-    color: white;
-    border-collapse: collapse;
-    font-family: 'Poppins', sans-serif;
-    text-align: left;
-    width: 100%;
-   
-}
-
-tr{
-    margin: 20px 0;
-    display: flex;
-    background-color: var(--gray-light);
-    width: 100%;
-}
-
-table th{
-    padding: 10px;
-}
-
-table tr th:first-child{
-    display: inline-block;
-    width: 50%;
-    background: var(--green);
-}
-
-
-
-/*-------------------------------------------
-login
---------------------------------------------*/
-
-.login{
-    background: var(--gray-light);
-    max-width: 430px;
-    width: 100%;
-    margin:20px auto;
-    padding: 30px;
-}
-
-.login h1{
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.login form{
-    display: flex;
-    flex-direction: column;
-}
-
-.login form input{
-    height: 50px;
-    margin: 10px 0;
-    padding: 0 10px;
-    border-radius: 5px;
-}
-
-.login form button{
-    height: 50px;
-    padding: 0 10px;
-    border-radius: 5px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    background: var(--green);
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--header-color);
-    text-transform: uppercase;
-}
-
-.login form span{
-    text-align: center;
-    font-size: 13px;
-}
-
-.login form a{
-    color: var(--red);
-}
-
-.login form a:hover{
-    text-decoration: underline;
-}
-
-.login hr{
-    margin: 30px 0;
-}
-
-.login-with-social{
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-.login-with-social button{
-    width: 100%;
-    margin: 10px;
-    padding: 15px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.login-with-social button.facebook{
-    background: var(--facebook-color) !important;
-}

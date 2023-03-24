@@ -10,6 +10,105 @@
     <script src="https://kit.fontawesome.com/57947015ac.js" crossorigin="anonymous"></script><!--Font Awesome-->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./media.css">
+
+
+
+
+
+
+
+    <style>
+        /*-------------------------------------------
+        user start
+        --------------------------------------------*/
+
+        .user {
+            padding: 10px;
+        }
+
+        .user .profile-photo {
+            width: 250px;
+            height: 250px;
+            margin: 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+
+        .user .user-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+
+
+
+        .update-user-details {
+            background: var(--gray-light);
+            padding: 10px;
+        }
+
+        .user .user-details h1,
+        .user .user-details p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .update-user-details .items {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+        }
+
+        .update-user-details .items input {
+            padding: 10px;
+        }
+
+        .user form button {
+            padding: 10px;
+            display: flex;
+            margin: 10px auto;
+            background: var(--green);
+            color: var(--white);
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+
+        table {
+
+
+            color: white;
+            border-collapse: collapse;
+            font-family: 'Poppins', sans-serif;
+            text-align: left;
+            width: 100%;
+
+        }
+
+        tr {
+            margin: 20px 0;
+            display: flex;
+            background-color: var(--gray-light);
+            width: 100%;
+        }
+
+        table th {
+            padding: 10px;
+        }
+
+        table tr th:first-child {
+            display: inline-block;
+            width: 50%;
+            background: var(--green);
+        }
+
+        /*-------------------------------------------
+        user end
+        --------------------------------------------*/
+    </style>
+
 </head>
 
 <body>
@@ -45,7 +144,7 @@
 
 
 
-            
+
 
 
 
@@ -72,7 +171,8 @@
                     <ul>
                         <li><a href="./sitemap.html">SiteMap</a></li>
                         <li><a href="./PageNotFound.html">PageNotFound</a></li>
-                        <li><a href="#"><span><i id="dripdown1icon" class="fa-solid fa-caret-down"></i></span> Projects</a>
+                        <li><a href="#"><span><i id="dripdown1icon" class="fa-solid fa-caret-down"></i></span>
+                                Projects</a>
 
                             <ul class="dripdown1">
                                 <li><a href="#">Arduino Projects</a></li>
@@ -81,7 +181,10 @@
                             </ul>
 
                         </li>
+
                         <li><a href="/">Home</a></li>
+                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./signup.html">Signup</a></li>
                     </ul>
 
 
@@ -97,7 +200,7 @@
     </section><!--header section end-->
 
 
-    
+
 
 
 
@@ -108,7 +211,7 @@
 
             <div class="main-content"><!--main-content start-->
 
-        
+
 
                 <div class="user">
 
@@ -121,7 +224,8 @@
 
                         <div class="user-details">
                             <h1>Shantonu Acharjee</h1>
-                            <p>I have 2 years of experience in Artificial Intelligence and 5 years of experience in microcontrollers, Digital Electronics & home automation systems.</p>
+                            <p>I have 2 years of experience in Artificial Intelligence and 5 years of experience in
+                                microcontrollers, Digital Electronics & home automation systems.</p>
 
 
                             <div class="table">
@@ -131,9 +235,9 @@
 
                                     <tr>
 
-                                      <th>Post</th>
-                                      <th>18</th>
-    
+                                        <th>Post</th>
+                                        <th>18</th>
+
                                     </tr>
 
 
@@ -142,7 +246,7 @@
 
                                         <th>Flower</th>
                                         <th>22</th>
-      
+
                                     </tr>
 
 
@@ -150,10 +254,10 @@
 
                                         <th>Visitor</th>
                                         <th>80</th>
-      
+
                                     </tr>
 
-                                    
+
                                 </table>
 
                             </div>
@@ -162,33 +266,33 @@
 
 
                         <form action="#"> <!--form start-->
-                            
-    
+
+
                             <div class="update-user-details">
-    
+
                                 <div class="items">
                                     <label for="">First name</label>
                                     <input type="text" placeholder="First name">
                                 </div>
-    
+
                                 <div class="items">
                                     <label for="">Last name</label>
                                     <input type="text" placeholder="Last name">
                                 </div>
-    
-    
-    
+
+
+
                                 <div class="items">
                                     <label for="">Email</label>
                                     <input type="email" placeholder="Email">
                                 </div>
-    
-    
+
+
                                 <div class="items">
                                     <label for="">Password</label>
                                     <input type="text" placeholder="Password">
                                 </div>
-    
+
                             </div>
 
                             <button type="submit">Update</button>
@@ -197,7 +301,7 @@
 
                     </div><!--user-section end-->
 
-                    
+
 
                 </div>
 
@@ -256,8 +360,7 @@
 
                         <div class="post-card">
 
-                            <div class="photo"><img src="./photo/medium/2.webp" alt=""
-                                    loading="lazy"></div>
+                            <div class="photo"><img src="./photo/medium/2.webp" alt="" loading="lazy"></div>
 
                             <div class="post-title">
                                 <h3>Python & Visual Studio Code Setup</h3>
@@ -297,8 +400,7 @@
 
                         <div class="post-card">
 
-                            <div class="photo"><img
-                                    src="./photo/medium/Digital Innovation Fair 2022.webp" alt=""
+                            <div class="photo"><img src="./photo/medium/Digital Innovation Fair 2022.webp" alt=""
                                     loading="lazy"></div>
 
                             <div class="post-title">
@@ -312,7 +414,9 @@
 
                         <div class="post-card">
 
-                            <div class="photo"><img src="./photo/medium/Visual Studio Code & Python Setup It's Me Shantonu.webp" alt="" loading="lazy"></div>
+                            <div class="photo"><img
+                                    src="./photo/medium/Visual Studio Code & Python Setup It's Me Shantonu.webp" alt=""
+                                    loading="lazy"></div>
 
                             <div class="post-title">
                                 <h3>Digital Smart House Project For Science Fair</h3>
@@ -396,10 +500,10 @@
 
 
 
-    
+
 
     <script>
-        
+
 
 
         /*=========== taggle menu start ===========*/

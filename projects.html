@@ -10,6 +10,87 @@
     <script src="https://kit.fontawesome.com/57947015ac.js" crossorigin="anonymous"></script><!--Font Awesome-->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./media.css">
+
+
+    <style>
+
+        /*-------------------------------------------
+        main-post start
+        --------------------------------------------*/
+
+        .main-post h2{
+            
+            padding: 10px 0;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .main-post-carts{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+            
+            
+        }
+
+        .main-post-cart{
+            background: var(--gray-light);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+
+
+
+
+        .main-post-cart .post-title h3{
+            font-size: 16px;
+            padding: 5px;
+        }
+
+
+        /*-------------------------------------------
+        main-post end
+        --------------------------------------------*/
+
+
+
+
+        /*-------------------------------------------
+        page-number start
+        --------------------------------------------*/
+        .page-number {
+            margin-top: 10px;
+        }
+
+        .page-number ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+
+        .page-number ul li a {
+            display: block;
+            margin: 0 5px;
+
+            height: 30px;
+            line-height: 30px;
+            width: 30px;
+
+            background: var(--gray-light);
+            text-align: center;
+            font-size: 18px;
+            border-radius: 50%;
+
+        }
+
+
+        /*-------------------------------------------
+        page-number end
+        --------------------------------------------*/
+    </style>
 </head>
 
 <body>
@@ -19,7 +100,7 @@
         <header>
 
             <div class="logo">
-                <a href="#"><img src="./photo/logo.svg" alt=""></a>
+                <a href="/"><img src="./photo/logo.svg" alt=""></a>
             </div>
 
             <div class="menu">
@@ -27,7 +108,7 @@
                 <nav>
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="#">Projects</a></li>
+                        <li><a href="/projects.html">Projects</a></li>
                         <li><a href="./blogpost.html">Blog</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
@@ -42,12 +123,66 @@
                 <button type="submit"><i class="fas fa-search" id="search-btn"></i></button>
             </div>
 
+
+
+
+
+
+
+
+
+
+            <div class="taggle-menu"><!--taggle-menu start-->
+
+                <div class="user-profile"><!--user-profile start-->
+
+                    <div class="profile-photo">
+                        <a href="./user.html"><img src="./photo/user.jfif" alt=""></a>
+                    </div>
+
+                </div><!--user-profile end-->
+
+
+
+                <div class="taggle-menu-bar">
+                    <i id="taggle-bar" class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="taggle-menu-items">
+
+                    <ul>
+                        <li><a href="./sitemap.html">SiteMap</a></li>
+                        <li><a href="./PageNotFound.html">PageNotFound</a></li>
+                        <li><a href="#"><span><i id="dripdown1icon" class="fa-solid fa-caret-down"></i></span>
+                                Projects</a>
+
+                            <ul class="dripdown1">
+                                <li><a href="#">Arduino Projects</a></li>
+                                <li><a href="#">Node MCU Projects</a></li>
+                                <li><a href="#">Python Projects</a></li>
+                            </ul>
+
+                        </li>
+
+                        <li><a href="/">Home</a></li>
+                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./signup.html">Signup</a></li>
+                    </ul>
+
+
+                </div>
+
+            </div><!--taggle-menu end-->
+
         </header>
+
+
+
 
     </section><!--header section end-->
 
 
-    
+
 
 
 
@@ -59,20 +194,20 @@
             <div class="main-content"><!--main-content start-->
 
 
-                
 
 
 
 
 
-                
+
+
 
 
                 <div class="main-post"> <!--main-post start-->
 
 
                     <div class="categories"> <!--categories start-->
-    
+
                         <ul>
 
                             <li><a href="#">All</a></li>
@@ -82,8 +217,8 @@
                             <li><a href="#">ML Projects</a></li>
                             <li><a href="#">NodeMCU</a></li>
                             <li><a href="#">PythonProjects</a></li>
-                            
-    
+
+
                         </ul>
 
                     </div><!--categories end-->
@@ -93,7 +228,7 @@
 
                     <div class="main-post-carts"><!--main-post-carts start-->
 
-                        
+
 
                         <div class="main-post-cart">
 
@@ -122,7 +257,8 @@
 
                         <div class="main-post-cart">
 
-                            <div class="photo"><img src="./photo/Activate Windows Its Me Shantonu.webp" alt="" loading="lazy"></div>
+                            <div class="photo"><img src="./photo/Activate Windows Its Me Shantonu.webp" alt=""
+                                    loading="lazy"></div>
 
                             <div class="post-title">
                                 <h3>Digital Smart House Project For Science Fair</h3>
@@ -134,7 +270,8 @@
 
                         <div class="main-post-cart">
 
-                            <div class="photo"><img src="./photo/COVID-19 Realtime Display.webp" alt="" loading="lazy"></div>
+                            <div class="photo"><img src="./photo/COVID-19 Realtime Display.webp" alt="" loading="lazy">
+                            </div>
 
                             <div class="post-title">
                                 <h3>Covid-19 Updater</h3>
@@ -147,7 +284,8 @@
 
                         <div class="main-post-cart">
 
-                            <div class="photo"><img src="./photo/বঙ্গবন্ধুর জন্মদিন উপলক্ষে Robot Meena.webp" alt="" loading="lazy"></div>
+                            <div class="photo"><img src="./photo/বঙ্গবন্ধুর জন্মদিন উপলক্ষে Robot Meena.webp" alt=""
+                                    loading="lazy"></div>
 
                             <div class="post-title">
                                 <h3>Bluetooth Controlled Car Using Arduino (L293D Motor Driver)</h3>
@@ -159,7 +297,8 @@
 
                         <div class="main-post-cart">
 
-                            <div class="photo"><img src="./photo/Digital Innovation Fair 2022.webp" alt="" loading="lazy"></div>
+                            <div class="photo"><img src="./photo/Digital Innovation Fair 2022.webp" alt=""
+                                    loading="lazy"></div>
 
                             <div class="post-title">
                                 <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
@@ -184,7 +323,9 @@
 
                         <div class="main-post-cart">
 
-                            <div class="photo"><img src="./photo/Visual Studio Code & Python Setup It's Me Shantonu.webp" alt="" loading="lazy"></div>
+                            <div class="photo"><img
+                                    src="./photo/Visual Studio Code & Python Setup It's Me Shantonu.webp" alt=""
+                                    loading="lazy"></div>
 
                             <div class="post-title">
                                 <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
@@ -197,7 +338,8 @@
 
                         <div class="main-post-cart">
 
-                            <div class="photo"><img src="./photo/বঙ্গবন্ধুর জন্মদিন উপলক্ষে Robot Meena.webp" alt="" loading="lazy"></div>
+                            <div class="photo"><img src="./photo/বঙ্গবন্ধুর জন্মদিন উপলক্ষে Robot Meena.webp" alt=""
+                                    loading="lazy"></div>
 
                             <div class="post-title">
                                 <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
@@ -312,7 +454,8 @@
 
                         <div class="post-card">
 
-                            <div class="photo"><img src="./photo/Activate Windows Its Me Shantonu.webp" alt="" loading="lazy"></div>
+                            <div class="photo"><img src="./photo/Activate Windows Its Me Shantonu.webp" alt=""
+                                    loading="lazy"></div>
 
                             <div class="post-title">
                                 <h3>Digital Smart House Project For Science Fair</h3>
@@ -323,7 +466,8 @@
 
                         <div class="post-card">
 
-                            <div class="photo"><img src="./photo/COVID-19 Realtime Display.webp" alt="" loading="lazy"></div>
+                            <div class="photo"><img src="./photo/COVID-19 Realtime Display.webp" alt="" loading="lazy">
+                            </div>
 
                             <div class="post-title">
                                 <h3>Digital Smart House Project For Science Fair</h3>
@@ -336,7 +480,8 @@
 
                         <div class="post-card">
 
-                            <div class="photo"><img src="./photo/Digital Innovation Fair 2022.webp" alt="" loading="lazy"></div>
+                            <div class="photo"><img src="./photo/Digital Innovation Fair 2022.webp" alt=""
+                                    loading="lazy"></div>
 
                             <div class="post-title">
                                 <h3>Digital Smart House Project For Science Fair</h3>
@@ -350,8 +495,8 @@
                     </div>
 
                 </div><!--popular-post end-->
-                
-                
+
+
             </div><!--side-content end-->
 
         </main>
@@ -381,7 +526,7 @@
 
             <div class="contactus">
                 <p>Contact Us</p>
-                
+
                 <a href="#"><span><i class="fa-solid fa-phone"></i></span>+8801789333514</a> <br>
                 <a href="#"><span><i class="fa-solid fa-phone"></i></span>ShadhinAi.com@gmail.com</a>
             </div>
@@ -402,7 +547,7 @@
         </footer>
 
 
-        
+
     </section>
 
 

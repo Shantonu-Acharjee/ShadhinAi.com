@@ -10,6 +10,92 @@
     <script src="https://kit.fontawesome.com/57947015ac.js" crossorigin="anonymous"></script><!--Font Awesome-->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./media.css">
+
+
+
+    <style>
+        /*-------------------------------------------
+        login Start
+        --------------------------------------------*/
+
+        .login {
+            background: var(--gray-light);
+            max-width: 430px;
+            width: 100%;
+            margin: 20px auto;
+            padding: 30px;
+        }
+
+        .login h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .login form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login form input {
+            height: 50px;
+            margin: 10px 0;
+            padding: 0 10px;
+            border-radius: 5px;
+        }
+
+        .login form button {
+            height: 50px;
+            padding: 0 10px;
+            border-radius: 5px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            background: var(--green);
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--header-color);
+            text-transform: uppercase;
+        }
+
+        .login form span {
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .login form a {
+            color: var(--red);
+        }
+
+        .login form a:hover {
+            text-decoration: underline;
+        }
+
+        .login hr {
+            margin: 30px 0;
+        }
+
+        .login-with-social {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .login-with-social button {
+            width: 100%;
+            margin: 10px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-with-social button.facebook {
+            background: var(--facebook-color) !important;
+        }
+
+
+        /*-------------------------------------------
+        login end
+        --------------------------------------------*/
+    </style>
 </head>
 
 <body>
@@ -46,7 +132,22 @@
 
 
 
+
+
+
+
+
             <div class="taggle-menu"><!--taggle-menu start-->
+
+                <div class="user-profile"><!--user-profile start-->
+
+                    <div class="profile-photo">
+                        <a href="./user.html"><img src="./photo/user.jfif" alt=""></a>
+                    </div>
+
+                </div><!--user-profile end-->
+
+
 
                 <div class="taggle-menu-bar">
                     <i id="taggle-bar" class="fa-solid fa-bars"></i>
@@ -57,7 +158,8 @@
                     <ul>
                         <li><a href="./sitemap.html">SiteMap</a></li>
                         <li><a href="./PageNotFound.html">PageNotFound</a></li>
-                        <li><a href="#"><span><i id="dripdown1icon" class="fa-solid fa-caret-down"></i></span> Projects</a>
+                        <li><a href="#"><span><i id="dripdown1icon" class="fa-solid fa-caret-down"></i></span>
+                                Projects</a>
 
                             <ul class="dripdown1">
                                 <li><a href="#">Arduino Projects</a></li>
@@ -66,7 +168,10 @@
                             </ul>
 
                         </li>
+
                         <li><a href="/">Home</a></li>
+                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./signup.html">Signup</a></li>
                     </ul>
 
 
@@ -103,7 +208,7 @@
                         <input type="email" placeholder="Email">
                         <input type="text" placeholder="Password">
                         <input type="text" placeholder="Retype Password">
-            
+
                         <button type="submit">Signup</button>
                         <span>Alrady have an account? <a href="#">Login</a></span>
 
@@ -115,7 +220,7 @@
                         <button class="facebook">Faceboook</button>
                         <button>Google</button>
                     </div>
-                    
+
                 </div>
 
 
