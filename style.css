@@ -82,6 +82,13 @@ span {
 }
 
 
+.page-header {
+    font-size: 25px;
+    padding: 10px 5px;
+    text-align: center;
+    background: var(--gray-light);
+}
+
 
 /*-------------------------------------------
 header
