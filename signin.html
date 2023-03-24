@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadhinAi | Bangladeshi AI service provider</title>
+
+    <script src="https://kit.fontawesome.com/57947015ac.js" crossorigin="anonymous"></script><!--Font Awesome-->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
+</head>
+
+<body>
+
+    <section class="header"><!--header section start-->
+
+        <header>
+
+            <div class="logo">
+                <a href="/"><img src="./photo/logo.svg" alt=""></a>
+            </div>
+
+            <div class="menu">
+
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/projects.html">Projects</a></li>
+                        <li><a href="./blogpost.html">Blog</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+
+            <div class="search-bar">
+                <input type="search" placeholder="Search...">
+                <button type="submit"><i class="fas fa-search" id="search-btn"></i></button>
+            </div>
+
+
+
+
+            
+
+
+
+
+
+            <div class="taggle-menu"><!--taggle-menu start-->
+
+                <div class="user-profile"><!--user-profile start-->
+
+                    <div class="profile-photo">
+                        <a href="./user.html"><img src="./photo/user.jfif" alt=""></a>
+                    </div>
+
+                </div><!--user-profile end-->
+
+
+
+                <div class="taggle-menu-bar">
+                    <i id="taggle-bar" class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="taggle-menu-items">
+
+                    <ul>
+                        <li><a href="./sitemap.html">SiteMap</a></li>
+                        <li><a href="./PageNotFound.html">PageNotFound</a></li>
+                        <li><a href="#"><span><i id="dripdown1icon" class="fa-solid fa-caret-down"></i></span> Projects</a>
+
+                            <ul class="dripdown1">
+                                <li><a href="#">Arduino Projects</a></li>
+                                <li><a href="#">Node MCU Projects</a></li>
+                                <li><a href="#">Python Projects</a></li>
+                            </ul>
+
+                        </li>
+                        <li><a href="/">Home</a></li>
+                    </ul>
+
+
+                </div>
+
+            </div><!--taggle-menu end-->
+
+        </header>
+
+
+
+
+    </section><!--header section end-->
+
+
+    
+
+
+
+
+    <section class="main header-padding">
+
+        <div class="container"><!--container start-->
+
+            <div class="form login">
+
+                <div class="form-content">
+
+                    <h1>Login</h1>
+    
+                    <form action="#">
+    
+                        <div class="field input-field"> 
+                            <input type="email" class="input" placeholder="Email">
+                        </div>
+    
+    
+                        <div class="field input-field"> 
+                            <input type="password" class="password" placeholder="password">
+                            <i class="fa-sharp fa-solid fa-eye-slash eye-icon"></i>
+                        </div>
+    
+    
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">Forgot Password?</a>
+                        </div>
+    
+    
+                        <div class="field button-field"> 
+                            <button>Login</button>
+                        </div>
+    
+    
+                        <div class="form-link">
+                            <span>Alrady have an account? <a href="#" class="signup-link">Signup</a></span>
+                        </div>
+    
+                    </form>
+
+                </div>
+
+
+
+
+                <div class="line"></div>
+
+
+                <div class="media-options">
+
+                    <a href="#" class="field facebook">
+                        <i class="fa-brands fa-facebook-f facebook-icon"></i>
+                        <span>Login with Facebook</span>
+                    </a>
+
+                </div>
+
+
+                <div class="media-options">
+
+                    <a href="#" class="field facebook google">
+                        <i class="fa-brands fa-google facebook-icon"></i>
+                        <span>Login with Google</span>
+                    </a>
+
+                </div>
+    
+            </div>
+
+        </div><!--container end-->
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="footer">
+
+        <footer>
+
+            <div class="about">
+                <p>About Us</p>
+                <h4>ShadhinAi is Bangladeshi AI and ML service provider. ShadhinAi ensures freedom of technology.</h4>
+            </div>
+
+
+            <div class="contactus">
+                <p>Contact Us</p>
+
+                <a href="#"><span><i class="fa-solid fa-phone"></i></span>+8801789333514</a> <br>
+                <a href="#"><span><i class="fa-solid fa-phone"></i></span>ShadhinAi.com@gmail.com</a>
+            </div>
+
+            <div class="social">
+                <p>Follow Us</p>
+
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+
+            </div>
+
+        </footer>
+
+
+
+    </section>
+
+
+    <div class="copyright">
+        <p><a href="#">Copyright © 2022 ShadhinAi</a></p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script>
+        
+
+
+        /*=========== taggle menu start ===========*/
+        let TaggleMenuItems = document.querySelector('.taggle-menu-items');
+        let TaggleMenuSubItems = document.querySelector('.dripdown1');
+
+        document.querySelector('#taggle-bar').onclick = () => {
+            TaggleMenuItems.classList.toggle('active');
+        }
+
+
+        document.querySelector('#dripdown1icon').onclick = () => {
+            TaggleMenuSubItems.classList.toggle('active');
+        }
+
+        /*=========== taggle menu end ===========*/
+
+    </script>
+
+
+</body>
+
+</html>
