@@ -1,7 +1,12 @@
 # ShadhinAi.com
 প্রযুক্তির স্বাধীনতা।
 
-- Responsive for 320px Device Also
+# Requirements
+- Logo(200x40)px
+
+
+# Feature
+- Responsive for 260px Device Also
 - Open Graph Protocol Add
 - Canonical Tag Add
 - Schema Add
@@ -12,5 +17,4 @@
 - <a rel="nofollow" href="#">Bot will not follw the link</a>
 - button have to use aria-label="#"
 # Demo
-👉 For demo click here [ShadhinAi](https://shantonu-acharjee.github.io/ShadhinAi.com/) <br>
-👉 For demo click here [ShadhinAi-MLWBD](https://shantonu-acharjee.github.io/ShadhinAi.com/mlwbd-style/index.html)
+👉 For demo click here [ShadhinAi](https://shantonu-acharjee.github.io/ShadhinAi.com/)

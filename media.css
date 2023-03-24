@@ -1,172 +1,179 @@
-/*=========================================== For Tablate ====================*/
-
-
-@media (max-width:1010px) {
-    html {
-        font-size: 55%;
-    }
-
-    header {
-        padding: 1rem 2rem;
-    }
+@media (max-width:1180px) {
 
     section{
-        padding: 2rem 0.5rem;
+        padding: 0 1%;
     }
 
-    header .logo img {
-        width: 200px;
-    }
-
-
-    header .search-form.active {
-        left: 50%;
-        transform: translate(-50%);
-    }
-
-
-    section.home{
-        padding: 0;
-    }
-
-    section.top-post .carts .cart .heading h3{
-        font-size: 16px;
-    }
-
-}
-
-
-
-
-
-
-
-
-/*=========================================== For Moblile Phone ====================*/
-
-
-@media (max-width:790px) { 
-
-    html {
-        font-size: 50%;
-    }
-
-
-    header{
-        box-shadow: none;
-    }
-    
-
-
-    header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        display: flex;
-        background-color: var(--white);
-        box-shadow: var(--box-shadow);
-        justify-content: space-around;
-    }
-
-    
-    header .navbar ul li a span,
-    header .navbar ul li ul{
-        visibility: hidden;
-    }
 
     
 
-    header .logo img {
-        width: 160px;
+    .header-padding{
+        margin-top:105px;
     }
 
-    
-
-    header .search-form.active {
-        width: 40rem;
-    }
-
-
-    .home .home-slider .wrapper .slide{
-        margin-top: 0;
-    }
-
-
-
-    .home .home-slider .slide .image a img.slider-pc{
-        display: none;
-    }
-
-    .home .home-slider .slide .image a img.slider-mobile{
-        display: inline;
-    }
-
-
-
-    .bottom-navbar {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        font-size: 3rem; 
-    }
-
-
-
-    
-    
-
-    section.top-post .carts .cart{
+    section header .search-bar{
         width: 100%;
     }
 
-
-}
-
-
-
-@media (max-width:660px){
-    .home .home-slider .wrapper .slide{
-        margin-top: 6rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-/*=========================================== Small Mobile Phone ====================*/
-
-
-@media (max-width:340px) { 
-
-    html {
-        font-size: 43%;
+    section header .search-bar input{
+        width: 100%;
     }
 
-    header .logo img {
-        width: 120px;
+    section header .menu {
+        margin-right: 50px;
     }
-
-    header .icons i,
-    header .icons a {
     
-    height: 3rem;
-    line-height: 3rem;
-    width: 3rem;
+    .taggle-menu{
     
+        position: absolute;
+        top: 18px;
+        right: 15px;
+    }
+}
+
+
+
+@media (max-width:1150px){
+
+    section.main main{
+
+        grid-template-columns: 100%;
+        
     }
 
 
-    .home .home-slider .wrapper .slide{
-        margin-top: 5rem;
-    }
+    
+
+
 
 }
 
+
+
+
+
+
+
+@media (max-width:780px){
+
+    .header-padding{
+        margin-top:145px;
+    }
+
+    
+
+
+    
+
+    section header .menu{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    section header .logo {
+        
+        
+        display: flex;
+        justify-content: center;
+        margin: auto;
+         
+    }
+
+
+    
+
+
+    section.main main .main-content{
+        padding-right: 0;
+        margin-right: 0;
+        border-right: 0;
+    }
+
+
+
+    .main-post-carts{
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .footer footer {
+        margin: 0 10px;
+    }
+
+
+    section header .menu {
+        margin-right: 0;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:420px){
+
+
+    section header .menu ul li a{
+        font-size: 16px;
+        
+    }
+
+    section header .search-bar{
+        margin: 0 1%;
+    }
+
+
+
+    
+}
+
+
+
+
+
+
+@media (max-width:360px){
+
+    .header-padding{
+        margin-top:130px;
+    }
+
+
+    section header .logo {
+        width: 150px;
+    }
+
+
+    section header .menu ul{
+        gap: 10px;
+    }
+
+    section header .menu ul li a{
+        font-size: 13px;
+        
+    }
+
+
+    .taggle-menu{
+        top: 13px;
+    }
+
+
+
+    .taggle-menu i{
+        font-size: 20px;
+    }
+}
