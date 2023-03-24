@@ -86,6 +86,7 @@ section.header {
     left: 0;
     right: 0;
     z-index: 10;
+    padding-right: 1%;
 }
 
 section header {
@@ -148,15 +149,18 @@ section header .search-bar button {
 section header .search-bar input {
     background-color: #272727;
     height: 40px;
-    width: 270px;
+    width: 250px;
     padding-left: 10px;
     color: var(--white);
     font-size: 16px;
 }
 
-/*----------------------------------*/
+/*-------------taggle-menu---------------------*/
 
-
+.taggle-menu{
+    display: flex;
+    align-items: center;
+}
 
 .taggle-menu i{
     color: var(--white);
@@ -214,6 +218,19 @@ section header .search-bar input {
     display: inline;
 }
 
+
+/*-------------user-profile---------------------*/
+.user-profile{
+    margin-right: 20px;
+}
+
+.user-profile .profile-photo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--green);
+}
 
 /*-------------------------------------------
 scrolling-text

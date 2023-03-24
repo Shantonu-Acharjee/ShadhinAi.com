@@ -20,7 +20,7 @@
     }
 
     section header .menu {
-        margin-right: 50px;
+        margin-right: 100px;
     }
     
     .taggle-menu{
@@ -74,10 +74,8 @@
 
     section header .logo {
         
-        
-        display: flex;
-        justify-content: center;
-        margin: auto;
+        margin-top: 10px;
+        width: 180px;
          
     }
 
@@ -123,7 +121,7 @@
 
 
 
-@media (max-width:420px){
+@media (max-width:450px){
 
 
     section header .menu ul li a{
@@ -153,6 +151,7 @@
 
 
     section header .logo {
+        margin-top: 5px;
         width: 150px;
     }
 
