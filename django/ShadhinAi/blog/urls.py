@@ -6,7 +6,7 @@ from .views import home
 
 
 urlpatterns = [
-    path("", home),
-    path("home/", home),
+   
+    path("", home , name= 'home'),
     
 ]

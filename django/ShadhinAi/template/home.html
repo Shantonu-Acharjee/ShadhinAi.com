@@ -1,139 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShadhinAi | Bangladeshi AI service provider</title>
+{% block title %}home{% endblock title %}
 
 
-    {% load static %}
-    
-    <script src="https://kit.fontawesome.com/57947015ac.js" crossorigin="anonymous"></script><!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /><!--Swiper CDN -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
+{% block custom_css %}<!--custom_css start-->
+<style>
+    /*-------------------------------------------
+    main-post start
+    --------------------------------------------*/
 
+    .main-post h2 {
 
+        padding: 10px 0;
+        font-size: 20px;
+        text-align: center;
+    }
 
-    <style>
+    .main-post-carts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
 
-        /*-------------------------------------------
-        main-post start
-        --------------------------------------------*/
 
-        .main-post h2{
-            
-            padding: 10px 0;
-            font-size: 20px;
-            text-align: center;
-        }
+    }
 
-        .main-post-carts{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 10px;
-            
-            
-        }
+    .main-post-cart {
+        background: var(--gray-light);
+        border-radius: 5px;
+        overflow: hidden;
+    }
 
-        .main-post-cart{
-            background: var(--gray-light);
-            border-radius: 5px;
-            overflow: hidden;
-        }
 
 
 
 
+    .main-post-cart .post-title h3 {
+        font-size: 16px;
+        padding: 5px;
+    }
 
-        .main-post-cart .post-title h3{
-            font-size: 16px;
-            padding: 5px;
-        }
 
+    /*-------------------------------------------
+    main-post end
+    --------------------------------------------*/
 
-        /*-------------------------------------------
-        main-post end
-        --------------------------------------------*/
 
 
 
+    /*-------------------------------------------
+    page-number start
+    --------------------------------------------*/
+    .page-number {
+        margin-top: 10px;
+    }
 
-        /*-------------------------------------------
-        page-number start
-        --------------------------------------------*/
-        .page-number {
-            margin-top: 10px;
-        }
+    .page-number ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        .page-number ul {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    }
 
-        }
 
+    .page-number ul li a {
+        display: block;
+        margin: 0 5px;
 
-        .page-number ul li a {
-            display: block;
-            margin: 0 5px;
+        height: 30px;
+        line-height: 30px;
+        width: 30px;
 
-            height: 30px;
-            line-height: 30px;
-            width: 30px;
+        background: var(--gray-light);
+        text-align: center;
+        font-size: 18px;
+        border-radius: 50%;
 
-            background: var(--gray-light);
-            text-align: center;
-            font-size: 18px;
-            border-radius: 50%;
+    }
 
-        }
 
+    /*-------------------------------------------
+    page-number end
+    --------------------------------------------*/
+</style>
+{% endblock custom_css %}<!--custom_css end-->
 
-        /*-------------------------------------------
-        page-number end
-        --------------------------------------------*/
 
-        
-    </style>
 
-    <link rel="stylesheet" href="{% static 'css/media.css' %}">
-</head>
 
-<body>
+{% block scrolling_text %}
+<div class="header-padding scrolling-text">
 
-    <section class="header"><!--header section start-->
+    <p>
+        <marquee>Hand Over Your Problem To ShadhinAi And Make True Your Imagination.</marquee>
+    </p>
 
-        <header>
+</div>
 
-            <div class="logo">
-                <a href="/"><img src="/media/logo/logo.svg"" alt=""></a>
-            </div>
+<h1 style="display: none;">ShadhinAi | Bangladeshi AI service provider</h1>
+{% endblock scrolling_text %}
 
-            <div class="menu">
 
-                <nav>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/projects.html">Projects</a></li>
-                        <li><a href="./blogpost.html">Blog</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
 
-            </div>
 
+{% block main_content %}
 
-            <div class="search-bar">
-                <input type="search" placeholder="Search...">
-                <button type="submit"><i class="fas fa-search" id="search-btn"></i></button>
-            </div>
 
+{% include 'slider.html' %}
+{% include 'latestPost.html' %}
 
 
+{% endblock main_content %}
 
 
 
@@ -141,575 +117,30 @@
 
 
 
-            <div class="taggle-menu"><!--taggle-menu start-->
 
-                <div class="user-profile"><!--user-profile start-->
 
-                    <div class="profile-photo">
-                        <a href="./user.html"><img src="/media/user/1.png" alt=""></a>
-                    </div>
+{% block custom_script %}
+<script>
 
-                </div><!--user-profile end-->
+    /*========= home-slider Start =========*/
 
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
 
+        loop: true,
+    });
 
-                <div class="taggle-menu-bar">
-                    <i id="taggle-bar" class="fa-solid fa-bars"></i>
-                </div>
+    /*=========== home-slider End ===========*/
 
-                <div class="taggle-menu-items">
 
-                    <ul>
-                        <li><a href="./sitemap.html">SiteMap</a></li>
-                        <li><a href="./PageNotFound.html">PageNotFound</a></li>
-                        <li><a href="#"><span><i id="dripdown1icon" class="fa-solid fa-caret-down"></i></span>
-                                Projects</a>
-
-                            <ul class="dripdown1">
-                                <li><a href="#">Arduino Projects</a></li>
-                                <li><a href="#">Node MCU Projects</a></li>
-                                <li><a href="#">Python Projects</a></li>
-                            </ul>
-
-                        </li>
-
-                        <li><a href="/">Home</a></li>
-                        <li><a href="./login.html">Login</a></li>
-                        <li><a href="./signup.html">Signup</a></li>
-                    </ul>
-
-
-                </div>
-
-            </div><!--taggle-menu end-->
-
-        </header>
-
-
-
-
-    </section><!--header section end-->
-
-
-    <div class="header-padding scrolling-text">
-
-        <p>
-            <marquee>Hand Over Your Problem To ShadhinAi And Make True Your Imagination.</marquee>
-        </p>
-
-    </div>
-
-
-
-
-    <section class="main">
-
-        <main>
-
-            <div class="main-content"><!--main-content start-->
-
-                <div class="swiper mySwiper home-slider"><!--home-slider start-->
-
-                    <div class="swiper-wrapper wrapper"> <!--wrapper start-->
-
-
-
-                        <div class="swiper-slide slide">
-
-                            <div class="image">
-                                <a href="">
-                                    <img src="/media/BlogPost/large/1.webp" alt="">
-                                </a>
-                            </div>
-
-                        </div>
-
-
-
-
-                        <div class="swiper-slide slide">
-
-                            <div class="image">
-                                <a href="">
-                                    <img src="/media/BlogPost/large/2.webp" alt="">
-                                </a>
-                            </div>
-
-                        </div>
-
-
-
-
-                        <div class="swiper-slide slide">
-
-                            <div class="image">
-                                <a href="">
-                                    <img src="/media/BlogPost/large/3.webp" alt="">
-                                </a>
-                            </div>
-
-                        </div>
-
-
-
-
-
-                        <div class="swiper-slide slide">
-
-                            <div class="image">
-                                <a href="">
-                                    <img src="/media/BlogPost/large/4.webp" alt="">
-                                </a>
-                            </div>
-
-                        </div>
-
-
-
-
-                        
-
-
-                    </div><!--wrapper End-->
-
-                    <div class="swiper-pagination"></div>
-
-                </div><!--home-slider End-->
-
-
-
-
-
-
-
-
-                <div class="main-post">
-
-                    <h1 style="display: none;">ShadhinAi | Bangladeshi AI service provider</h1>
-
-                    <h2>Latest Post</h2>
-
-                    <div class="main-post-carts"><!--main-post-carts start-->
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/1.webp" alt=""></div>
-
-                            <div class="post-title">
-                                <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/2.webp" alt="" loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Age And Gender Recognition Useing Python</h3>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/3.webp" alt=""
-                                    loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Digital Smart House Project For Science Fair</h3>
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/4.webp" alt="" 
-                                loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Covid-19 Updater</h3>
-                            </div>
-
-                        </div>
-
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/5.webp"alt=""
-                                    loading="lazy">
-                            </div>
-
-                            <div class="post-title">
-                                <h3>Bluetooth Controlled Car Using Arduino (L293D Motor Driver)</h3>
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/6.webp" alt="" 
-                                loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
-                            </div>
-
-                        </div>
-
-
-
-                    </div><!--main-post-carts end-->
-
-
-
-
-
-
-
-
-                    <!--Latest Blog Start -->
-
-                    <h2>Latest Blog</h2>
-
-                    <div class="main-post-carts"><!--main-post-carts start-->
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/7.webp" alt="" loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
-                            </div>
-                        </div>
-
-
-
-
-
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/8.webp" alt="" loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Digital Smart House Project For Science Fair</h3>
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/9.webp" alt=""
-                                    loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Covid-19 Updater</h3>
-                            </div>
-
-                        </div>
-
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/10.webp" alt=""
-                                    loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Bluetooth Controlled Car Using Arduino (L293D Motor Driver)</h3>
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="main-post-cart">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/1.webp" alt=""
-                                    loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
-                            </div>
-
-                        </div>
-
-
-
-                    </div><!--main-post-carts end-->
-
-
-                    <!--Latest Blog End -->
-
-
-
-
-
-
-
-
-                    <div class="page-number">
-
-                        <ul>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">></a></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-
-            </div><!--main-content end-->
-
-
-
-
-
-
-
-
-
-
-
-            <div class="side-content"><!--side-content start-->
-
-
-
-                <div class="categories">
-
-                    <h2>Categories</h2>
-
-                    <ul>
-
-                        <li><a href="#">ArduinoProjects</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">RobotMeena</a></li>
-                        <li><a href="#">ML</a></li>
-                        <li><a href="#">ML Projects</a></li>
-                        <li><a href="#">ArduinoProjects</a></li>
-                        <li><a href="#">NodeMCU</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">PythonProjects</a></li>
-                        <li><a href="#">Slider</a></li>
-
-                    </ul>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-                <div class="popular-post"><!--popular-post start-->
-
-                    <h2>Popular Post</h2>
-
-                    <div class="post-carts">
-
-                        <div class="post-card">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/2.webp" alt="" loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Python & Visual Studio Code Setup</h3>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div class="post-card">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/3.webp" alt="" loading="lazy">
-                            </div>
-
-                            <div class="post-title">
-                                <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
-                            </div>
-                        </div>
-
-
-
-
-
-
-                        <div class="post-card">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/4.webp" alt=""
-                                    loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Digital Smart House Project For Science Fair</h3>
-                            </div>
-                        </div>
-
-
-
-                        <div class="post-card">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/5.webp" alt=""
-                                    loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Digital Smart House Project For Science Fair</h3>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div class="post-card">
-
-                            <div class="photo"><img src="/media/BlogPost/medium/5.webp" alt=""
-                                    loading="lazy"></div>
-
-                            <div class="post-title">
-                                <h3>Digital Smart House Project For Science Fair</h3>
-                            </div>
-                        </div>
-
-
-
-
-
-                    </div>
-
-                </div><!--popular-post end-->
-
-
-            </div><!--side-content end-->
-
-        </main>
-
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="footer">
-
-        <footer>
-
-            <div class="about">
-                <p>About Us</p>
-                <h4>ShadhinAi is Bangladeshi AI and ML service provider. ShadhinAi ensures freedom of technology.</h4>
-            </div>
-
-
-            <div class="contactus">
-                <p>Contact Us</p>
-
-                <a href="#"><span><i class="fa-solid fa-phone"></i></span>+8801789333514</a> <br>
-                <a href="#"><span><i class="fa-solid fa-phone"></i></span>ShadhinAi.com@gmail.com</a>
-            </div>
-
-            <div class="social">
-                <p>Follow Us</p>
-
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                </ul>
-
-            </div>
-
-        </footer>
-
-
-
-    </section>
-
-
-    <div class="copyright">
-        <p><a href="#">Copyright © 2022 ShadhinAi</a></p>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-</body>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><!-- Swiper CDN -->
-
-    <script>
-
-        /*========= home-slider Start =========*/
-
-        var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-
-            loop: true,
-        });
-
-        /*=========== home-slider End ===========*/
-
-
-
-        
-
-    </script>
-
-    <script src="{% static 'js/script.js' %}"></script>
-
-</html>
+</script>
+{% endblock custom_script %}
