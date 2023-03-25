@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+:root {
+    --green: #00BF63;
+    --greenLight: #9eeebf;
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow: 0px 1px 13px black;
+    --white: #fff;
+    --gray: #eee;
+
+
+    --body-color: #152121;
+    --header-color: #0F0F0F;
+    --gray-light: #272727;
+    --red: #FF3131;
+    --cart-background-color: #0A0B0B;
+    --footer-color: #212529;
+    --facebook-color: #2374E1;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1533px;
+    margin: auto;
+    background: var(--body-color);
+    /* var(--body-color) */
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+
+}
+
+section {
+    padding: 0 7%;
+
+}
+
+main {
+    background: var(--header-color);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+label,
+span {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.page-header {
+    font-size: 25px;
+    padding: 10px 5px;
+    text-align: center;
+    background: var(--gray-light);
+}
+
+
+/*-------------------------------------------
+header
+--------------------------------------------*/
+
+section.header {
+    background: var(--header-color);
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding-right: 1%;
+}
+
+section header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+
+section header .logo {
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+section header .menu {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+section header .menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+
+section header .menu ul li a {
+    font-size: 20px;
+    transition: color .3s;
+}
+
+section header .menu ul li a:hover {
+    color: var(--red);
+}
+
+section header .search-bar {
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+
+
+
+section header .search-bar button {
+
+    background: transparent;
+    padding: 0 10px;
+    font-size: 20px;
+    color: var(--white);
+}
+
+section header .search-bar input {
+    background-color: #272727;
+    height: 40px;
+    width: 250px;
+    padding-left: 10px;
+    color: var(--white);
+    font-size: 16px;
+}
+
+/*-------------taggle-menu---------------------*/
+
+.taggle-menu {
+    display: flex;
+    align-items: center;
+}
+
+.taggle-menu i {
+    color: var(--white);
+    font-size: 30px;
+}
+
+
+.taggle-menu-items {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    padding: 0 7%;
+}
+
+
+
+.taggle-menu-items ul {
+    background-color: var(--green);
+    font-size: 20px;
+    text-align: right;
+    width: 250px;
+}
+
+.taggle-menu-items ul a {
+
+    width: 100%;
+    padding: 5px;
+
+
+
+}
+
+.taggle-menu-items ul li {
+
+    border-bottom: 1px solid var(--gray-light);
+    border-top: 1px solid var(--gray-light);
+
+}
+
+.taggle-menu-items ul li span i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+
+.dripdown1,
+.taggle-menu-items {
+    display: none;
+
+}
+
+
+
+.active {
+    display: inline;
+}
+
+
+/*-------------user-profile---------------------*/
+.user-profile {
+    margin-right: 20px;
+}
+
+.user-profile .profile-photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--green);
+}
+
+/*-------------------------------------------
+scrolling-text
+--------------------------------------------*/
+
+.header-padding {
+    margin-top: 65px;
+}
+
+
+
+
+.scrolling-text p marquee {
+    background: var(--header-color);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    padding: 5px 0;
+}
+
+
+
+/*-------------------------------------------
+main
+--------------------------------------------*/
+
+section.main main {
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+
+}
+
+
+
+
+section.main main .main-content {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid var(--white);
+    margin-bottom: 10px;
+}
+
+
+
+/*-------------------------------------------
+side-content start
+--------------------------------------------*/
+
+.side-content h2 {
+
+    padding: 10px 0;
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--gray-light);
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.post-card {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 5px 0;
+
+}
+
+
+
+
+.post-card .post-title {
+    background: var(--cart-background-color);
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+.post-card .post-title h3 {
+
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+
+
+/*-------------------------------------------
+categories
+--------------------------------------------*/
+.categories ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.side-content .categories ul {
+    margin-bottom: 10px;
+}
+
+.categories ul li {
+    background: var(--gray-light);
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.categories ul li a {
+
+    font-size: 16px;
+    padding: 10px;
+}
+
+
+/*-------------------------------------------
+side-content end
+--------------------------------------------*/
+
+
+
+
+
+
+
+
+/*-------------------------------------------
+footer
+--------------------------------------------*/
+
+section.footer {
+    background: var(--footer-color);
+    margin-top: 10px;
+
+}
+
+section.footer div {
+    margin-bottom: 20px;
+}
+
+
+section.footer footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: var(--white);
+    padding: 20px 0;
+}
+
+
+section.footer footer p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+section.footer footer .about h4 {
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 20px;
+    margin-bottom: 10px;
+    width: 350px;
+}
+
+
+section.footer footer .social ul {
+    display: flex;
+}
+
+
+section.footer footer .social ul li a {
+    color: var(--gray-light);
+
+    display: block;
+    margin-right: 10px;
+
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+
+    background: var(--white);
+    text-align: center;
+    font-size: 16px;
+    border-radius: 50%;
+
+}
+
+
+
+
+
+
+.contactus a span {
+    margin-right: 10px;
+}
+
+.copyright {
+    background: var(--header-color);
+    padding: 10px 0;
+}
+
+
+.copyright p {
+
+    text-align: center;
+
+
+}
+
+
+
+
+
+
