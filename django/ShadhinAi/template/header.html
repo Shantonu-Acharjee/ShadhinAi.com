@@ -11,7 +11,7 @@
             <nav>
                 <ul>
                     <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="/projects.html">Projects</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
                     <li><a href="./blogpost.html">Blog</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
@@ -56,7 +56,7 @@
                 <ul>
                     <li><a href="./sitemap.html">SiteMap</a></li>
                     <li><a href="./PageNotFound.html">PageNotFound</a></li>
-                    <li><a href="#"><span><i id="dripdown1icon" class="fa-solid fa-caret-down"></i></span>
+                    <li><a href="{% url 'projects' %}"><span><i id="dripdown1icon" class="fa-solid fa-caret-down"></i></span>
                             Projects</a>
 
                         <ul class="dripdown1">
