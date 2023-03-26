@@ -14,3 +14,8 @@ def projects(request):
 
 def blogs(request):
     return render(request, 'blogs.html')
+
+
+
+def sitemap(request):
+    return render(request, 'sitemap.html')
