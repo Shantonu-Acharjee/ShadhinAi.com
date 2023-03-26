@@ -14,7 +14,9 @@ def home(request):
         'sliders' : sliders,
         'posts' : posts,
     }
+
     
+
     return render(request, 'home.html', data)
 
 
@@ -58,3 +60,11 @@ def signup(request):
 
 def userProfile(request):
     return render(request, 'userProfile.html')
+
+
+
+
+
+
+
+
