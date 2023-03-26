@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block title %}LogIn{% endblock title %}
+
+
+{% block custom_css %}<!--custom_css start-->
+<style>
+    /*-------------------------------------------
+        login Start
+        --------------------------------------------*/
+
+    .login {
+        background: var(--gray-light);
+        max-width: 430px;
+        width: 100%;
+        margin: 20px auto;
+        padding: 30px;
+    }
+
+    .login h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .login form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login form input {
+        height: 50px;
+        margin: 10px 0;
+        padding: 0 10px;
+        border-radius: 5px;
+    }
+
+    .login form button {
+        height: 50px;
+        padding: 0 10px;
+        border-radius: 5px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        background: var(--green);
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--header-color);
+        text-transform: uppercase;
+    }
+
+    .login form span {
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .login form a {
+        color: var(--red);
+    }
+
+    .login form a:hover {
+        text-decoration: underline;
+    }
+
+    .login hr {
+        margin: 30px 0;
+    }
+
+    .login-with-social {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .login-with-social button {
+        width: 100%;
+        margin: 10px;
+        padding: 15px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .login-with-social button.facebook {
+        background: var(--facebook-color) !important;
+    }
+
+
+    /*-------------------------------------------
+        login end
+        --------------------------------------------*/
+</style>
+{% endblock custom_css %}<!--custom_css end-->
+
+
+
+
+
+{% block main_content %}
+
+<div class="login"><!--login start-->
+
+    <h1>Login</h1>
+
+
+    <form action="#">
+
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Password">
+        <span><a href="#">Forgot Password?</a></span>
+        <button type="submit">Login</button>
+        <span>Do not have an account? <a href="#">Signup</a></span>
+
+    </form>
+
+    <hr>
+
+    <div class="login-with-social">
+        <button class="facebook">Faceboook</button>
+        <button>Google</button>
+    </div>
+
+</div><!--login end-->
+{% endblock main_content %}

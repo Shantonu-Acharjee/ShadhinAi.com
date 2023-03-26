@@ -19,3 +19,8 @@ def blogs(request):
 
 def sitemap(request):
     return render(request, 'sitemap.html')
+
+
+
+def login(request):
+    return render(request, 'login.html')
