@@ -94,20 +94,22 @@
 
 
 {% block main_content %}
-
 <div class="login">
 
     <h1>Signup</h1>
 
 
-    <form action="#">
+    <form action="" method="POST">
+        
+        {% csrf_token %} 
 
-        <input type="email" placeholder="Email">
-        <input type="text" placeholder="Password">
-        <input type="text" placeholder="Retype Password">
+        <input type="text" placeholder="Username" name="user_name">
+        <input type="email" placeholder="Email" name="user_email">
+        <input type="text" placeholder="Password" name="user_password1">
+        <input type="text" placeholder="Retype Password" name="user_password2">
 
         <button type="submit">Signup</button>
-        <span>Alrady have an account? <a href="{% url 'login' %}">Login</a></span>
+        <span>Alrady have an account ? <a href="{% url 'login' %}">Login</a></span>
 
     </form>
 
