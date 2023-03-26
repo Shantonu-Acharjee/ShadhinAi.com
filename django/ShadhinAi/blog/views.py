@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from blog.models import Slider
+from blog.models import Slider, Post
 from django.contrib.auth.models import User
 
 
@@ -8,10 +8,13 @@ from django.contrib.auth.models import User
 def home(request):
     # load all the slider from db
     sliders = Slider.objects.all()
+    posts = Post.objects.all()
 
     data = {
         'sliders' : sliders,
+        'posts' : posts,
     }
+    
     return render(request, 'home.html', data)
 
 

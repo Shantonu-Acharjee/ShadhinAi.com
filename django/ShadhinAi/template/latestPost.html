@@ -6,85 +6,31 @@
 
     <div class="main-post-carts"><!--main-post-carts start-->
 
-
-
-        <div class="main-post-cart">
-
-            <div class="photo"><img src="/media/BlogPost/medium/1.webp" alt=""></div>
-
-            <div class="post-title">
-                <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
-            </div>
-        </div>
-
-
-
-
+        {% for post in posts %}
 
         <div class="main-post-cart">
 
-            <div class="photo"><img src="/media/BlogPost/medium/2.webp" alt="" loading="lazy"></div>
+            <div class="photo"><img src="/media/{{post.post_thumbnail}}" alt="{{post.post_title}}"></div>
+
+
+            <div class="post-date-time">
+
+                <small>
+                    <i class="fa-solid fa-clock"></i>
+                    {{post.post_date}}
+                </small>
+                
+            </div>
+
 
             <div class="post-title">
-                <h3>Age And Gender Recognition Useing Python</h3>
+                <h3>{{post.post_title |truncatewords:10}}</h3>
             </div>
         </div>
+            
+        {% endfor %}
 
-
-
-
-        <div class="main-post-cart">
-
-            <div class="photo"><img src="/media/BlogPost/medium/3.webp" alt=""
-                    loading="lazy"></div>
-
-            <div class="post-title">
-                <h3>Digital Smart House Project For Science Fair</h3>
-            </div>
-
-        </div>
-
-
-
-        <div class="main-post-cart">
-
-            <div class="photo"><img src="/media/BlogPost/medium/4.webp" alt="" 
-                loading="lazy"></div>
-
-            <div class="post-title">
-                <h3>Covid-19 Updater</h3>
-            </div>
-
-        </div>
-
-
-
-
-        <div class="main-post-cart">
-
-            <div class="photo"><img src="/media/BlogPost/medium/5.webp"alt=""
-                    loading="lazy">
-            </div>
-
-            <div class="post-title">
-                <h3>Bluetooth Controlled Car Using Arduino (L293D Motor Driver)</h3>
-            </div>
-
-        </div>
-
-
-
-        <div class="main-post-cart">
-
-            <div class="photo"><img src="/media/BlogPost/medium/6.webp" alt="" 
-                loading="lazy"></div>
-
-            <div class="post-title">
-                <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
-            </div>
-
-        </div>
-
+        
 
 
     </div><!--main-post-carts end-->

@@ -37,7 +37,7 @@ class Post(models.Model):
     post_description = models.TextField()
     post_date = models.DateTimeField(auto_now_add= True)
     post_keyword = models.TextField()
-    post_Schema = models.TextField()
+    post_Schema = models.TextField(default='')
 
 
 
