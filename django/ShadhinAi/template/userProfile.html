@@ -1,0 +1,196 @@
+{% extends 'base.html' %}
+
+{% block title %}Shantonu Acharjee{% endblock title %}
+
+
+{% block custom_css %}<!--custom_css start-->
+<style>
+    /*-------------------------------------------
+        user start
+        --------------------------------------------*/
+
+        .user {
+            padding: 10px;
+        }
+
+        .user .profile-photo {
+            width: 250px;
+            height: 250px;
+            margin: 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+
+        .user .user-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+
+
+
+        .update-user-details {
+            background: var(--gray-light);
+            padding: 10px;
+        }
+
+        .user .user-details h1,
+        .user .user-details p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .update-user-details .items {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+        }
+
+        .update-user-details .items input {
+            padding: 10px;
+        }
+
+        .user form button {
+            padding: 10px;
+            display: flex;
+            margin: 10px auto;
+            background: var(--green);
+            color: var(--white);
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+
+        table {
+
+
+            color: white;
+            border-collapse: collapse;
+            font-family: 'Poppins', sans-serif;
+            text-align: left;
+            width: 100%;
+
+        }
+
+        tr {
+            margin: 20px 0;
+            display: flex;
+            background-color: var(--gray-light);
+            width: 100%;
+        }
+
+        table th {
+            padding: 10px;
+        }
+
+        table tr th:first-child {
+            display: inline-block;
+            width: 50%;
+            background: var(--green);
+        }
+
+        /*-------------------------------------------
+        user end
+        --------------------------------------------*/
+</style>
+{% endblock custom_css %}<!--custom_css end-->
+
+
+
+
+
+{% block main_content %}
+<div class="user"><!--user start-->
+
+    <div class="profile-photo">
+        <img src="/media/user/1.png" alt="Shantonu Acharjee photo">
+    </div>
+
+
+    <div class="user-section"><!--user-section start-->
+
+        <div class="user-details">
+            <h1>Shantonu Acharjee</h1>
+            <p>I have 2 years of experience in Artificial Intelligence and 5 years of experience in
+                microcontrollers, Digital Electronics & home automation systems.</p>
+
+
+            <div class="table">
+
+                <table>
+
+
+                    <tr>
+
+                        <th>Post</th>
+                        <th>18</th>
+
+                    </tr>
+
+
+
+                    <tr>
+
+                        <th>Flower</th>
+                        <th>22</th>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <th>Visitor</th>
+                        <th>80</th>
+
+                    </tr>
+
+
+                </table>
+
+            </div>
+        </div>
+
+
+
+        <form action="#"> <!--form start-->
+
+
+            <div class="update-user-details">
+
+                <div class="items">
+                    <label for="">First name</label>
+                    <input type="text" placeholder="First name">
+                </div>
+
+                <div class="items">
+                    <label for="">Last name</label>
+                    <input type="text" placeholder="Last name">
+                </div>
+
+
+
+                <div class="items">
+                    <label for="">Email</label>
+                    <input type="email" placeholder="Email">
+                </div>
+
+
+                <div class="items">
+                    <label for="">Password</label>
+                    <input type="text" placeholder="Password">
+                </div>
+
+            </div>
+
+            <button type="submit">Update</button>
+
+        </form><!--form end-->
+
+    </div><!--user-section end-->
+
+
+
+</div><!--user end-->
+{% endblock main_content %}
