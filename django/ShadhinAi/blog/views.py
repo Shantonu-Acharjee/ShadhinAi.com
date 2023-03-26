@@ -7,6 +7,10 @@ def home(request):
 
 
 
-
 def projects(request):
     return render(request, 'projects.html')
+
+
+
+def blogs(request):
+    return render(request, 'blogs.html')
