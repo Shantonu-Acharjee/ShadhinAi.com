@@ -15,6 +15,7 @@
     --header-color: #0F0F0F;
     --gray-light: #272727;
     --red: #FF3131;
+    --redLight: #ff31312c;
     --cart-background-color: #0A0B0B;
     --footer-color: #212529;
     --facebook-color: #2374E1;
@@ -76,7 +77,8 @@ h4,
 p,
 a,
 label,
-span {
+span,
+small{
     color: white;
     font-family: 'Poppins', sans-serif;
 }
@@ -454,6 +456,12 @@ section.footer footer .social ul li a {
 
 
 }
+
+
+
+
+
+
 
 
 
