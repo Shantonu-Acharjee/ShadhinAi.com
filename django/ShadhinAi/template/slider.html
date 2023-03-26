@@ -4,58 +4,19 @@
 
 
 
-        <div class="swiper-slide slide">
-
-            <div class="image">
-                <a href="">
-                    <img src="/media/BlogPost/large/1.webp" alt="">
-                </a>
-            </div>
-
-        </div>
-
-
-
+        {% for slide in sliders %}
 
         <div class="swiper-slide slide">
 
             <div class="image">
-                <a href="">
-                    <img src="/media/BlogPost/large/2.webp" alt="">
+                <a href="{{slide.destination_link}}">
+                    <img src="/media/{{slide.image}}" alt="">
                 </a>
             </div>
 
         </div>
-
-
-
-
-        <div class="swiper-slide slide">
-
-            <div class="image">
-                <a href="">
-                    <img src="/media/BlogPost/large/3.webp" alt="">
-                </a>
-            </div>
-
-        </div>
-
-
-
-
-
-        <div class="swiper-slide slide">
-
-            <div class="image">
-                <a href="">
-                    <img src="/media/BlogPost/large/4.webp" alt="">
-                </a>
-            </div>
-
-        </div>
-
-
-
+            
+        {% endfor %}
 
         
 

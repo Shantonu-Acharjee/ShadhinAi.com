@@ -1,9 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from blog.models import Slider
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    # load all the slider from db
+    sliders = Slider.objects.all()
+
+    data = {
+        'sliders' : sliders,
+    }
+    return render(request, 'home.html', data)
 
 
 
