@@ -28,3 +28,7 @@ def login(request):
 
 def signup(request):
     return render(request, 'signup.html')
+
+
+def userProfile(request):
+    return render(request, 'userProfile.html')
