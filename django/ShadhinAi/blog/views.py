@@ -35,26 +35,7 @@ def sitemap(request):
 
 
 
-def login(request):
-    return render(request, 'login.html')
 
-
-def signup(request):
-
-    if request.method == 'POST':
-
-        user_name = request.POST.get('user_name')
-        user_email = request.POST.get('user_email')
-        user_password1 = request.POST.get("user_password1")
-        user_password2 = request.POST.get("user_password2")
-
-
-        #my_user = User.objects.create_user(user_name, user_email, user_password1)
-        #my_user.save()
-
-        print(user_name, user_email, user_password1, user_password2)
-
-    return render(request, 'signup.html')
 
 
 def userProfile(request):

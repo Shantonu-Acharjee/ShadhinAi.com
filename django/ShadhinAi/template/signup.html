@@ -102,11 +102,12 @@
     <form action="" method="POST">
         
         {% csrf_token %} 
-
-        <input type="text" placeholder="Username" name="user_name">
-        <input type="email" placeholder="Email" name="user_email">
-        <input type="text" placeholder="Password" name="user_password1">
-        <input type="text" placeholder="Retype Password" name="user_password2">
+        {% include "alert.html" %}
+        <input required type="text" placeholder="first_name" name="first_name">
+        <input type="text" placeholder="last_name" name="last_name">
+        <input required type="email" placeholder="Email" name="email">
+        <input required type="text" placeholder="Password" name="password1">
+        <input required type="text" placeholder="Retype Password" name="password2">
 
         <button type="submit">Signup</button>
         <span>Alrady have an account ? <a href="{% url 'login' %}">Login</a></span>
