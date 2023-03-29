@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} | ShadhinAi</title>
+
+
+    {% load static %}
+    
+    <script src="https://kit.fontawesome.com/57947015ac.js" crossorigin="anonymous"></script><!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /><!--Swiper CDN -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+
+
+    {% block custom_css %}
+        
+    {% endblock custom_css %}
+
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+</head>
+
+<body>
+
+    
+
+    {% block scrolling_text %}{% endblock scrolling_text %}
+
+    
+
+    {% include 'header.html' %}
+
+
+    <section class="main header-padding">
+
+        <main>
+
+
+
+
+            <div class="main-content"><!--main-content start-->
+
+
+                {% block main_content %}{% endblock main_content %}
+                
+
+            </div><!--main-content end-->    
+
+
+
+
+
+
+
+
+
+
+
+            <div class="side-content"><!--side-content start-->
+
+                {% include 'sideContent.html' %}
+
+            </div><!--side-content end-->
+
+        </main>
+
+    </section>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    {% include 'footer.html' %}
+</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><!-- Swiper CDN -->
+
+
+    {% block custom_script %}{% endblock custom_script %}
+        
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</html>

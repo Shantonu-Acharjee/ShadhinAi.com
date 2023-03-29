@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block title %}SiteMap{% endblock title %}
+
+
+{% block custom_css %}<!--custom_css start-->
+<style>
+    /*-------------------------------------------
+sitemap start
+--------------------------------------------*/
+
+
+
+.site-map .carts .cart h2 {
+    margin: 10px;
+    }
+    
+    
+    
+    .site-map .carts .cart ul {
+    color: var(--white);
+    list-style: disc;
+    margin-left: 30px;
+    }
+    
+    
+    .site-map .carts .cart ul li {
+    margin: 5px 0;
+    }
+    
+    
+    .site-map .carts .cart ul li a {
+    color: var(--red);
+    }
+    
+    
+    .site-map .carts .cart ul li a:hover {
+    text-decoration: underline;
+    }
+    
+    /*-------------------------------------------
+    sitemap end
+    --------------------------------------------*/
+</style>
+{% endblock custom_css %}<!--custom_css end-->
+
+
+
+
+
+{% block main_content %}
+<div class="site-map"><!--site-map start-->
+
+    <h1 class="page-header">Sitemap</h1>
+
+    <div class="carts"><!--carts start-->
+
+
+        <div class="cart">
+
+            <h2>Latest Post</h2>
+
+            <ul>
+                <li><a href="#">ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</a></li>
+                <li><a href="#">Age And Gender Recognition Useing Python</a></li>
+                <li><a href="#">Digital Smart House Project For Science Fair</a></li>
+                <li><a href="#">Covid-19 Updater</a></li>
+                <li><a href="#">Bluetooth Controlled Car Using Arduino (L293D Motor Driver)</a></li>
+                <li><a href="#">Robot Meena Shantonu Acharjee</a></li>
+            </ul>
+
+        </div>
+
+
+
+
+
+
+        <div class="cart">
+
+            <h2>Popular Post</h2>
+
+            <ul>
+                <li><a href="#">ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</a></li>
+                <li><a href="#">Age And Gender Recognition Useing Python</a></li>
+                <li><a href="#">Digital Smart House Project For Science Fair</a></li>
+                <li><a href="#">Covid-19 Updater</a></li>
+                <li><a href="#">Bluetooth Controlled Car Using Arduino (L293D Motor Driver)</a></li>
+                <li><a href="#">Robot Meena Shantonu Acharjee</a></li>
+            </ul>
+
+        </div>
+
+
+
+
+        <div class="cart">
+
+            <h2>Categories</h2>
+
+            <ul>
+                <li><a href="#">ArduinoProjects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">RobotMeena</a></li>
+                <li><a href="#">ML</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Arduino Projects</a></li>
+            </ul>
+
+        </div>
+
+
+
+
+    </div><!--carts end-->
+
+</div><!--site-map end-->
+{% endblock main_content %}

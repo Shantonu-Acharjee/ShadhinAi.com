@@ -1,0 +1,13 @@
+{% if messages %}
+{% for message in messages %}
+<div class="alert">
+
+    <span class="msg">{{message}}</span>
+
+    <span class="close-btn" id="close-btn">
+        <i class="fa-solid fa-circle-xmark"></i>
+    </span>
+
+</div>
+{% endfor %}
+{% endif %}

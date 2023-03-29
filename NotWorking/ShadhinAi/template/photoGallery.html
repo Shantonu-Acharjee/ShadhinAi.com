@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}Photo Gallery{% endblock title %}
+
+
+
+
+{% block custom_css %}<!--custom_css start-->
+<style>
+    .container-image{
+        
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+    
+    
+    
+    
+ 
+    
+    
+    .container-image .box-image{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+        padding: 5px;
+    }
+    
+    
+    .container-image .box-image .dream{
+        display: flex;
+        flex-direction: column;
+        width: 32.5%;
+    }
+    
+    
+    .container-image .box-image .dream img{
+        
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 3px solid var(--green);
+    }
+
+</style>
+{% endblock custom_css %}<!--custom_css end-->
+
+
+
+
+
+{% block main_content %}
+
+<div class="container-image">
+
+    <h1 class="page-header">ShadhinAi Photo Gallery</h1>
+
+    <div class="box-image">
+
+        <div class="dream">
+            <img src="/media/BlogPost/medium/5.webp" alt="">
+            <img src="/media/BlogPost/medium/5.webp" alt="">
+            <img src="/media/BlogPost/medium/5.webp" alt="">
+        </div>
+
+
+        <div class="dream">
+            <img src="/media/BlogPost/medium/5.webp" alt="">
+            <img src="/media/BlogPost/medium/5.webp" alt="">
+            <img src="/media/BlogPost/medium/5.webp" alt="">
+        </div>
+
+
+        <div class="dream">
+            <img src="/media/BlogPost/medium/5.webp" alt="">
+            <img src="/media/BlogPost/medium/5.webp" alt="">
+            <img src="/media/BlogPost/medium/5.webp" alt="">
+        </div>
+
+
+    </div><!-- box End -->
+    
+
+
+</div><!-- container End -->
+
+{% endblock main_content %}
