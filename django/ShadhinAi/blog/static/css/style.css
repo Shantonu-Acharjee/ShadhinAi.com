@@ -277,7 +277,7 @@ main
 section.main main {
     display: grid;
     grid-template-columns: 70% 30%;
-
+    
 
 }
 
@@ -289,6 +289,7 @@ section.main main .main-content {
     margin-right: 10px;
     border-right: 1px solid var(--white);
     margin-bottom: 10px;
+    position: relative;
 }
 
 
