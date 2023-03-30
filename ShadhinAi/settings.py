@@ -10,7 +10,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-(taqlj1gs$5kd_gpbxpck%yt^tczzx1v%rzaa82=k$#q(uf)is"
+SECRET_KEY = "django-insecure-ivfj1qg2-7l+el21=u=$7sw*i=0iwl(eft1x$v5)95(em%fv)p"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "blog",
+    "base"
 ]
 
 MIDDLEWARE = [
@@ -107,16 +107,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
-MEDIA_URL = "/media/"
-
-MEDIA_ROOT = os.path.join(BASE_DIR, "public/media")
-STATIC_ROOT = os.path.join(BASE_DIR,'public/static/staticfiles')
-
-STATICFILES_DIR = [
-    os.path.join(BASE_DIR , "public/static"),
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'public'),
 ]
-
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
