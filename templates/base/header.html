@@ -1,0 +1,85 @@
+{% load static %}
+<section class="header"><!--header section start-->
+   
+    <header>
+
+        <div class="logo">
+            <a href=""><img src="{% static 'media/logo/logo.svg' %}" alt=""></a>
+        </div>
+
+        <div class="menu">
+
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Blogs</a></li>
+                    <li><a href="">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+
+        <div class="search-bar">
+            <input type="search" placeholder="Search...">
+            <button type="submit"><i class="fas fa-search" id="search-btn"></i></button>
+        </div>
+
+
+
+
+
+
+
+        <div class="taggle-menu"><!--taggle-menu start-->
+
+            <div class="user-profile"><!--user-profile start-->
+
+                <div class="profile-photo">
+                    <a href=""><img src="{% static 'media/user/ShadinAi Logo.png' %}" alt=""></a>
+                </div>
+
+            </div><!--user-profile end-->
+
+
+
+            <div class="taggle-menu-bar">
+                <i id="taggle-bar" class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="taggle-menu-items">
+
+                <ul>
+                    
+                    
+                    <li><a href="#"><span><i id="dripdown1icon" class="fa-solid fa-caret-down"></i></span>
+                            Projects</a>
+
+                        <ul class="dripdown1">
+                            <li><a href="#">Arduino Projects</a></li>
+                            <li><a href="#">Node MCU Projects</a></li>
+                            <li><a href="#">Python Projects</a></li>
+                        </ul>
+
+                    </li>
+
+                    
+                    <li><a href="">LogIn</a></li>
+                    <li><a href="">SignUp</a></li>
+                    <li><a href="">SiteMap</a></li>
+                    <li><a href="">PageNotFound</a></li>
+                </ul>
+
+
+            </div>
+
+        </div><!--taggle-menu end-->
+
+    </header>
+
+
+
+
+</section><!--header section end-->
