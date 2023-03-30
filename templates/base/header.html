@@ -4,16 +4,16 @@
     <header>
 
         <div class="logo">
-            <a href=""><img src="{% static 'media/logo/logo.svg' %}" alt=""></a>
+            <a href="{% url 'home' %}"><img src="{% static 'media/logo/logo.svg' %}" alt=""></a>
         </div>
 
         <div class="menu">
 
             <nav>
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="">Projects</a></li>
-                    <li><a href="">Blogs</a></li>
+                    <li><a href="{% url 'blogs' %}">Blogs</a></li>
                     <li><a href="">Gallery</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
