@@ -44,6 +44,9 @@
 
     .post-date-time{
         padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     
     
@@ -138,14 +141,11 @@
 
 
 
-
-
-
-
         {% for blog in blogs %}
+
         <div class="main-post-cart">
 
-            <div class="photo"><img src="{{blog.banner.url}}" alt="{{blog.title}}"></div>
+            <div class="photo"><img src="/media/compressed/{{blog.banner}}" alt="{{blog.title}}"></div>
 
 
             <div class="post-date-time">
@@ -153,6 +153,12 @@
                 <small>
                     <i class="fa-solid fa-clock"></i>
                     {{blog.created_date}}
+                </small>
+
+
+                <small>
+                    <i class="fa-solid fa-tag"></i>
+                    {{blog.category}}
                 </small>
                 
             </div>
@@ -163,21 +169,9 @@
             </div>
             
         </div>
+
         {% endfor %}
 
-
-
-        
-
-        <!--
-        blog.category
-        blog.title
-        blog.user.username
-        blog.created_date
-        blog.blog_comments.all.count
-        blog.description|truncatewords:30
-        -->
-        
 
 
     </div><!--main-post-carts end-->
