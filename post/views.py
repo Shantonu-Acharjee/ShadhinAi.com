@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Blog
 from django.core.paginator import PageNotAnInteger, EmptyPage,Paginator
 
@@ -17,6 +17,7 @@ def blogs(request):
 
     except PageNotAnInteger:
             blogs = paginator.page(1)
+            return redirect('blogs')
 
 
     context = {

@@ -13,3 +13,9 @@ http://127.0.0.1:8000/static/1.webp
         /media/blog_banners/4.webp
         blog_banners/4.webp
         -->
+
+slider - 6
+home page - 12
+bloge page - 18
+
+have to add pagenation page on sitemap.xml
