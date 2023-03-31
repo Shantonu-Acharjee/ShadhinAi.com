@@ -9,7 +9,7 @@
         {% endfor %}
         
         {% for tag in tags %}
-            <li><a href="#">{{tag.title}}</a></li>
+            <li><a href="{% url 'tag_blogs' tag.slug  %}">{{tag.title}}</a></li>
         {% endfor %}
 
     </ul>
