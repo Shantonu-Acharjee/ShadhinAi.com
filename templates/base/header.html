@@ -55,7 +55,7 @@
                     
                     
                     <li><a href="#"><span><i id="dripdown1icon" class="fa-solid fa-caret-down"></i></span>
-                            Projects</a>
+                            Top Projects</a>
 
                         <ul class="dripdown1">
                             <li><a href="#">Arduino Projects</a></li>
@@ -70,6 +70,11 @@
                     <li><a href="">SignUp</a></li>
                     <li><a href="">SiteMap</a></li>
                     <li><a href="">PageNotFound</a></li>
+
+                    {% for category in categories %}
+                    <li><a href="{% url 'category_blogs' category.slug  %}">{{category.title}}</a></li>
+                    {% endfor %}
+
                 </ul>
 
 
