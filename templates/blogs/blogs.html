@@ -101,6 +101,10 @@
 
     }
 
+    .page-number ul li a.active{
+        background: var(--green);
+    }
+
 
     /*-------------------------------------------
     page-number end
@@ -134,6 +138,8 @@
 
     <h2>Latest Blog</h2>
     {% include '../blogs/blogPosts.html' %}
+    {% include '../base/pagination.html' %}<!--pagination.html-->
+
 
 </div><!--main-post end-->
 
