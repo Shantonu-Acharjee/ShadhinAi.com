@@ -6,7 +6,7 @@ from django.core.paginator import PageNotAnInteger, EmptyPage,Paginator
 def home(request):
     queryset = Blog.objects.order_by('-created_date')
     page = request.GET.get('page', 1)
-    paginator = Paginator(queryset, 2) #enter how many post you want to see on single page
+    paginator = Paginator(queryset, 12) #enter how many post you want to see on single page
 
     try:
         blogs = paginator.page(page)
