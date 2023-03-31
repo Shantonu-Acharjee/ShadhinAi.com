@@ -19,3 +19,7 @@ home page - 12
 bloge page - 18
 
 have to add pagenation page on sitemap.xml
+
+
+https://www.youtube.com/watch?v=gHUqtwd8TAM&list=PLoomN1iY7V9neojqrkqPVvE0GdmfOTcht&index=8&ab_channel=NabilMoiun
+6:30
