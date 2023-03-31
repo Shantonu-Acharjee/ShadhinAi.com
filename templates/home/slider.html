@@ -6,45 +6,23 @@
 
 
         
-
+        {% for blog in blogs|slice:"6" %}
         <div class="swiper-slide slide">
 
             <div class="image">
                 <a href="#">
-                    <img src="{% static 'media/slider/1.webp' %}" alt="#">
+                    <img src="{{blog.banner.url}}" alt="{{blog.title}}">
                 </a>
             </div>
 
         </div>
+        {% endfor %}
+        
 
 
 
 
-        <div class="swiper-slide slide">
-
-            <div class="image">
-                <a href="#">
-                    <img src="{% static 'media/slider/4.webp' %}" alt="#">
-                </a>
-            </div>
-
-        </div>
-
-
-
-
-        <div class="swiper-slide slide">
-
-            <div class="image">
-                <a href="#">
-                    <img src="{% static 'media/slider/3.webp' %}" alt="#">
-                </a>
-            </div>
-
-        </div>
-
-
-
+        
 
         
         
