@@ -1,5 +1,6 @@
 http://127.0.0.1:8000/static/1.webp
 <img src="/media/compressed/{{blog.banner}}" alt="{{blog.title}}">
+{{blog.tags.all.title}}
 
 
 <!--

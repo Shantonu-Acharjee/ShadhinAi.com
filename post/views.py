@@ -1,9 +1,11 @@
 from django.shortcuts import render
-from .models import Blog
+from .models import Blog, Tag
 
 def blogs(request):
     blogs = Blog.objects.order_by('-created_date')
     context = {
-        'blogs' : blogs
+        'blogs' : blogs,
+        
     }
     return render(request, 'blogs/blogs.html', context)
+ 
