@@ -34,7 +34,7 @@
         </div>
 
 
-        <a href="">
+        <a href="{% url 'blog_details' blog.slug %}">
             <div class="post-title">
                 <h3>{{blog.title|truncatewords:10}}</h3>
             </div>

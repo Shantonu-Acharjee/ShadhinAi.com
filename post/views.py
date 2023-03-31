@@ -89,9 +89,11 @@ def tag_blogs(request, slug):
 
 def blog_details(request, slug):
     blog = get_object_or_404(Blog, slug=slug)
-    
+    category = Category.objects.get(id = blog.category.id)
+    related_blogs = category.category_blogs.all()
     context = {
         "blog": blog,
+        "related_blogs" : related_blogs
     }
 
     return render(request, 'blogs/blog_details.html', context)

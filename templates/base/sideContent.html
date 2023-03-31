@@ -1,94 +1,101 @@
 {% load static %}
 
 
-{% include '../base/categories.html' %}
+    
+
+
+
+
+{% if related_blogs.count > 0 %}
+<h2>Related Post</h2>
+<div class="post-carts"><!--post-carts start-->
+
+{% for blog in related_blogs %}
+
+<div class="post-card">
+
+    <div class="photo"><a href="{% url 'blog_details' blog.slug %}"><img src="{{blog.banner.url}}" alt="" loading="lazy"></a></div>
+
+    <div class="post-title">
+        <a href="{% url 'blog_details' blog.slug %}">
+            <h3>{{blog.title}}</h3>
+        </a>
+    </div>
+</div>
+
+{% endfor %}
+</div><!--post-carts end-->
+
+
+
+{% else%}
+
+<h2>Popular Post</h2>
+<div class="post-carts"><!--post-carts start-->
+
+<div class="post-card">
+                
+    <div class="photo"><img src="{% static 'media/posts/1.webp' %}" alt="" loading="lazy"></div>
+
+    <div class="post-title">
+        <h3>Python & Visual Studio Code Setup</h3>
+    </div>
+</div>
 
 
 
 
 
+<div class="post-card">
 
-
-
-
-
-<div class="popular-post"><!--popular-post start-->
-
-    <h2>Popular Post</h2>
-
-    <div class="post-carts">
-
-        <div class="post-card">
-
-            <div class="photo"><img src="{% static 'media/posts/1.webp' %}" alt="" loading="lazy"></div>
-
-            <div class="post-title">
-                <h3>Python & Visual Studio Code Setup</h3>
-            </div>
-        </div>
-
-
-
-
-
-        <div class="post-card">
-
-            <div class="photo"><img src="{% static 'media/posts/2.webp' %}" alt="" loading="lazy">
-            </div>
-
-            <div class="post-title">
-                <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
-            </div>
-        </div>
-
-
-
-
-
-
-        <div class="post-card">
-
-            <div class="photo"><img src="{% static 'media/posts/3.webp' %}" alt=""
-                    loading="lazy"></div>
-
-            <div class="post-title">
-                <h3>Digital Smart House Project For Science Fair</h3>
-            </div>
-        </div>
-
-
-
-        <div class="post-card">
-
-            <div class="photo"><img src="{% static 'media/posts/4.webp' %}" alt=""
-                    loading="lazy"></div>
-
-            <div class="post-title">
-                <h3>Digital Smart House Project For Science Fair</h3>
-            </div>
-        </div>
-
-
-
-
-
-        <div class="post-card">
-
-            <div class="photo"><img src="{% static 'media/posts/5.webp' %}" alt=""
-                    loading="lazy"></div>
-
-            <div class="post-title">
-                <h3>Digital Smart House Project For Science Fair</h3>
-            </div>
-        </div>
-
-
-
-
-
+    <div class="photo"><img src="{% static 'media/posts/2.webp' %}" alt="" loading="lazy">
     </div>
 
-</div><!--popular-post end-->
+    <div class="post-title">
+        <h3>ঘরে বসেই তৈরি করুন কথা বলা রোবট মীনা।</h3>
+    </div>
+</div>
 
 
 
+
+
+
+<div class="post-card">
+
+    <div class="photo"><img src="{% static 'media/posts/3.webp' %}" alt=""
+            loading="lazy"></div>
+
+    <div class="post-title">
+        <h3>Digital Smart House Project For Science Fair</h3>
+    </div>
+</div>
+
+
+
+<div class="post-card">
+
+    <div class="photo"><img src="{% static 'media/posts/4.webp' %}" alt=""
+            loading="lazy"></div>
+
+    <div class="post-title">
+        <h3>Digital Smart House Project For Science Fair</h3>
+    </div>
+</div>
+
+
+
+
+
+<div class="post-card">
+
+    <div class="photo"><img src="{% static 'media/posts/5.webp' %}" alt=""
+            loading="lazy"></div>
+
+    <div class="post-title">
+        <h3>Digital Smart House Project For Science Fair</h3>
+    </div>
+</div>
+
+</div><!--post-carts end-->
+{% endif %}

@@ -1,5 +1,5 @@
 {% extends '../base/base.html' %}
-{% block title %}Home{% endblock title %}<!--title-->
+{% block title %}{{blog.title}}{% endblock title %}<!--title-->
 
 
 
@@ -103,35 +103,16 @@
 
 <div class="blog-post"><!--blog-post start-->
 
-    <h1 class="page-header">Digital Smart House Project For Science Fair.</h1>
+    <h1 class="page-header">{{blog.title}}</h1>
 
-    <img src="/photo/2.webp" alt="">
+    <img src="{{blog.banner.url}}" alt="">
 
-    <p>
-        শান্তনু আচার্য্য একজন ইলেকট্রনিক্স বিভাগের ছাত্র যিনি একজন পিসিবি ডিজাইনার এবং পাইথন ডেভেলপার।
-        শান্তনু তার
-        ফ্রিল্যান্সিং ক্যারিয়ার শুরু করেন 2018 সালে। এখন পর্যন্ত শান্তনু পণ্যের প্রোটোটাইপিং, পিসিবি
-        ডিজাইন দক্ষতা ব্যবহার
-        করে 35+ ইলেকট্রনিক্স, রোবোটিক্স এবং পাইথন প্রকল্প তৈরি করেছে। সম্প্রতি শান্তনু আচার্য্য বিজ্ঞান
-        মেলার জন্য রোবট
-        মীনা, ফায়ার ফাইটার রোবো(ম্যাক্স), ফেস মাস্ক ডিটেকশন উইথ আরডুইনো ডোর লক, কৃত্রিম গার্লফ্রেন্ড
-        (বর্ষা) এবং
-        স্মার্ট হাউস তৈরি করেছেন। আর শান্তনু ও তার দল টানা দুই বছর বিজ্ঞান মেলায় প্রথম স্থান অর্জন
-        করেছে।
-    </p>
+    <p>{{blog.description}}</p>
 
 
-    <img src="./photo/3.webp" alt="">
+    
 
-    <p>
-        শান্তনু আচার্য্য Max Electronics BD এবং BongoTronics এর প্রতিষ্ঠাতা। উনার নাম শান্তনু আচার্য্য
-        তবে উনার ডাক নাম শান্ত। শান্তনু বর্তমানে লক্ষ্মীপুর পলিটেকনিক ইনস্টিটিউট এ ইলেকট্রনিক্স নিয়ে
-        পড়াশোনা করতেছেন। এর আগে শান্তনু আচার্য্য উনকিলা উচ্চ বিদ্যালয় এবং জগন্নাথপুর হাজী এরশাদ মিয়া
-        উচ্চবিদ্যালয়ে উনার স্কুল জীবন অতিবাহিত করেন। শান্তনু আচার্য্য জন্মস্থান ফেনী জেলায় উনার মামার
-        বাড়িতে। তবে শান্তনুর গ্রামের বাড়ি চাঁদপুর জেলার শাহরাস্তি উপজেলায়। শান্তনুর নিজ গ্রামেই (খাটোরা)
-        উনার শৈশব কেটেছে। তবে শান্তনুর মা (শ্যামলী আচার্য্য) পেশায় শিক্ষিকা হওয়ার কারণে শান্তনুকে
-        চাঁদপুর জেলায় হাজিগঞ্জে থাকতে হতো। আর সেখানেই শান্তনুর বেড়ে ওঠা।
-    </p>
+    
 
     <h2>টপ প্রজেক্টগুলো নিম্মরুপ :-</h2>
 
@@ -146,7 +127,7 @@
     </ul>
 
 
-    <img src="./photo/Activate Windows Its Me Shantonu.webp" alt="">
+    
 
     <h2>Source Code</h2>
 
@@ -157,18 +138,17 @@
 
 
 
-<div class="main-post"> <!--main-post start-->
-
-    <h2>Latest Post</h2>
-    {% include '../blogs/blogPosts.html' %}
-
-</div><!--main-post end-->
 
 
 
 
 
 
+
+
+<small>{{blog.user.username}}</small> <br>
+<small>{{blog.blog_comments.all.count}} Comments</small> <br>
+<small>{{blog.category.title}}</small>
 {% endblock main_content %}<!--main_content end-->
 
 
@@ -181,30 +161,3 @@
 
 
 
-
-{% block custom_script %}
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><!-- Swiper CDN -->
-<script>
-
-    /*========= home-slider Start =========*/
-
-    var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true
-        },
-
-        loop: true,
-    });
-
-    /*=========== home-slider End ===========*/
-
-
-</script>
-{% endblock custom_script %}
