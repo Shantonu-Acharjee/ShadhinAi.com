@@ -83,5 +83,18 @@ def tag_blogs(request, slug):
     }
      
     return render(request, 'blogs/category_blogs.html', context)
+
+
+
+
+def blog_details(request, slug):
+    blog = get_object_or_404(Blog, slug=slug)
+    
+    context = {
+        "blog": blog,
+    }
+
+    return render(request, 'blogs/blog_details.html', context)
+
  
  

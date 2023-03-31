@@ -1,6 +1,7 @@
 from django.db import models
 from user_profile.models import User
 from django.utils.text import slugify
+from .slugs import generate_unique_slug
 
 
 
@@ -50,6 +51,17 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+    
+
+    def save(self, *args, **kwargs):
+        updating = self.pk is not None
+        
+        if updating:
+            self.slug = generate_unique_slug(self, self.title, update=True)
+            super().save(*args, **kwargs)
+        else:
+            self.slug = generate_unique_slug(self, self.title)
+            super().save(*args, **kwargs)
     
 
 

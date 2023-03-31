@@ -10,7 +10,7 @@
 
     <div class="main-post-cart">
 
-        <div class="photo"><img src="{{blog.banner.url}}" alt="{{blog.title}}" loading="lazy"></div>
+        <a href="{% url 'blog_details' blog.slug %}"><div class="photo"><img src="{{blog.banner.url}}" alt="{{blog.title}}" loading="lazy"></div></a>
 
 
         <div class="post-date-time">
@@ -25,17 +25,20 @@
                 <i class="fa-solid fa-tag"></i>
 
                 {% for tag  in blog.tags.all %}
-                <a href="#">{{tag.title}} | </a>
+                <a href="{% url 'tag_blogs' tag.slug  %}">{{tag.title}} | </a>
                 {% endfor %}
+                
                 
             </small>
 
         </div>
 
 
-        <div class="post-title">
-            <h3>{{blog.title|truncatewords:10}}</h3>
-        </div>
+        <a href="">
+            <div class="post-title">
+                <h3>{{blog.title|truncatewords:10}}</h3>
+            </div>
+        </a>
 
     </div>
 
