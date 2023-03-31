@@ -1,0 +1,47 @@
+
+
+<div class="main-post-carts"><!--main-post-carts start-->
+
+
+
+    
+
+    {% for blog in blogs %}
+
+    <div class="main-post-cart">
+
+        <div class="photo"><img src="{{blog.banner.url}}" alt="{{blog.title}}"></div>
+
+
+        <div class="post-date-time">
+
+            <small>
+                <i class="fa-solid fa-clock"></i>
+                {{blog.created_date}}
+            </small>
+
+
+            <small>
+                <i class="fa-solid fa-tag"></i>
+                {{blog.category}}
+            </small>
+
+        </div>
+
+
+        <div class="post-title">
+            <h3>{{blog.title|truncatewords:10}}</h3>
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div><!--main-post-carts end-->
+
+
+
+
+
+
+
