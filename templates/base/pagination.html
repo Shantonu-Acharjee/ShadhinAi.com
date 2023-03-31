@@ -7,7 +7,16 @@
 
 
         {% for page in blogs.paginator.page_range %}
+
+
+        {% if page == blogs.number %}
+        <li><a class="active" href="?page={{page}}">{{page}}</a></li>
+        
+        {% else %}
         <li><a href="?page={{page}}">{{page}}</a></li>
+
+        
+        {% endif %}
         {% endfor %}
         
         
