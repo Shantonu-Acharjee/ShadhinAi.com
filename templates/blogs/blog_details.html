@@ -73,7 +73,8 @@
     display: flex;
     align-content: center;
     padding: 0 10px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    position: relative;
 }
 
 .comment-section .comment .user{
@@ -124,7 +125,24 @@
     padding: 0 5px;
     border-radius: 5px;
 }
-        
+
+
+.replay{
+    margin-left: 20px;
+}
+
+.replay-comment{
+    position: absolute;
+    left: 50px;
+    bottom: -35px;
+}
+
+.replay-comment input{
+    width: 34% !important;
+    z-index: 5;
+    
+}
+
 /*-------------------------------------------
         comment-section end
         --------------------------------------------*/
@@ -132,6 +150,12 @@
     /*-------------------------------------------
     page-number end
     --------------------------------------------*/
+
+    pre code span{
+        color: var(--green);
+    }
+
+    
 </style>
 {% endblock custom_css %}<!--custom_css end-->
 
@@ -183,73 +207,8 @@
 
 
 
+{% include '../blogs/comment.html' %}
 
-<div class="comment-section"><!--comment-section start-->
-
-
-    <a class="signin" href="">Sign in</a>
-    <hr>
-
-    <div class="comment">
-
-        <div class="user">
-            <a href="">
-                <img src="{% static 'media/user/ShadinAi Logo.png' %}" alt="">
-            </a>
-        </div>
-
-
-
-        <form action="" class="write-comment">
-            <input type="text" placeholder="Share your thoughts...">
-            <button type="submit">Post</button>
-        </form>
-
-
-    </div>
-
-    
-
-
-
-
-    <div class="comment">
-
-        <div class="user">
-            <a href="">
-                <img src="{% static 'media/user/ShadinAi Logo.png' %}" alt="">
-            </a>
-        </div>
-
-
-
-        <p><strong>{{blog.user.username}},</strong> <br> sit amet consectetur.
-            hi how are your Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur.
-        </p>
-
-
-    </div>
-
-
-    <div class="comment">
-
-        <div class="user">
-            <a href="">
-                <img src="{% static 'media/user/ShadinAi Logo.png' %}" alt="">
-            </a>
-        </div>
-
-
-
-        <p>Lorem ipsum dolor sit amet consectetur.
-            hi how are your Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur.
-        </p>
-
-
-    </div>
-
-
-</div><!--comment-section end-->
 
 <small>{{blog.user.username}}</small> <br>
 <small>{{blog.blog_comments.all.count}} Comments</small> <br>

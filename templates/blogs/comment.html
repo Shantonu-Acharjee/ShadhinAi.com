@@ -1,0 +1,124 @@
+{% load static %}
+
+<div class="comment-section"><!--comment-section start-->
+
+
+    
+
+
+    {% if request.user.is_authenticated %}
+
+    <a class="signin" href="">Shantonu</a>
+    <hr>
+
+
+    <div class="comment">
+
+        <div class="user">
+            <a href="">
+                <img src="{{user.get_profile_picture}}" alt="">
+            </a>
+        </div>
+
+
+
+        <form action="{% url 'blog_details' blog.slug %}" class="write-comment" method="POST">
+            {% csrf_token %}
+            <input name="text" type="text" placeholder="Share your thoughts...">
+            <button type="submit">Post</button>
+        </form>
+
+
+    </div>
+
+
+
+    
+
+    {% else %}
+    <a class="signin" href="">Login</a>
+    <hr>
+
+    {% endif %}
+
+    
+
+    
+
+
+    {% for comment in blog.blog_comments.all %}
+
+    <div class="comment">
+
+        <div class="user">
+            <a href="">
+                <img src="{{comment.user.get_profile_picture}}" alt="">
+            </a>
+        </div>
+
+
+
+        <p><strong>{{comment.user.username}},</strong> <br> 
+            {{comment.text}} <br>
+            <small>{{comment.created_date}}</small>
+        </p>
+
+
+        {% if request.user.is_authenticated %}
+        <form action="{% url 'add_reply' blog.id comment.id %}" class="write-comment replay-comment" method="POST">
+            {% csrf_token %}
+            <input name="text" type="text" placeholder="Replay">
+            <button type="submit">Replay</button>
+        </form>
+        {% endif %}
+        
+
+
+    </div>
+
+
+
+
+
+
+
+
+    {% for reply in comment.comment_replies.all %}<!--reply start-->
+
+    <div class="comment replay">
+
+        <div class="user">
+            <a href="">
+                <img src="{{reply.user.get_profile_picture}}" alt="">
+            </a>
+        </div>
+
+
+
+        <p><strong>{{reply.user.username}},</strong> <br> 
+            {{reply.text}} <br>
+            <small>{{reply.created_date}}</small>
+        </p>
+
+
+    </div>
+        
+    {% endfor %}<!--reply End-->
+
+    
+
+
+
+
+
+  
+        
+    {% endfor %}
+
+    
+
+
+    
+
+
+</div><!--comment-section end-->
