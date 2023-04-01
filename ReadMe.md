@@ -23,3 +23,7 @@ have to add pagenation page on sitemap.xml
 
 
 video - 8 done
+
+<small>{{blog.user.username}}</small> <br>
+<small>{{blog.blog_comments.all.count}} Comments</small> <br>
+<small>{{blog.category.title}}</small>
