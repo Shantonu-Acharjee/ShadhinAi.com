@@ -1,6 +1,7 @@
 http://127.0.0.1:8000/static/1.webp
 <img src="/media/compressed/{{blog.banner}}" alt="{{blog.title}}">
 {{blog.tags.all.title}}
+{% for blog in blogs|slice:"6" %}
 
 
 <!--
@@ -21,4 +22,4 @@ bloge page - 18
 have to add pagenation page on sitemap.xml
 
 
-https://www.youtube.com/watch?v=Nip8eGeXz44&list=PLoomN1iY7V9neojqrkqPVvE0GdmfOTcht&index=8&ab_channel=NabilMoiun
+video - 8 done
