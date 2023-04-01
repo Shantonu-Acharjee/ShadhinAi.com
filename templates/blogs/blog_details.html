@@ -1,4 +1,5 @@
 {% extends '../base/base.html' %}
+{% load static %}
 {% block title %}{{blog.title}}{% endblock title %}<!--title-->
 
 
@@ -48,46 +49,85 @@
         blog-post end
         --------------------------------------------*/
 
-
-        /*-------------------------------------------
-        main-post start
+/*-------------------------------------------
+        comment-section start
         --------------------------------------------*/
 
-        .main-post h2 {
 
-            padding: 10px 0;
-            font-size: 20px;
-            text-align: center;
-        }
+        
+.comment-section{
+    margin-top: 10px;
+}
 
-        .main-post-carts {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 10px;
+.comment-section a.signin{
+    margin-left: 10px;
+    font-weight: bold;
+}
 
-
-        }
-
-        .main-post-cart {
-            background: var(--gray-light);
-            border-radius: 5px;
-            overflow: hidden;
-        }
+.comment-section hr{
+    margin: 10px 0;
+}
 
 
+.comment-section .comment{
+    display: flex;
+    align-content: center;
+    padding: 0 10px;
+    margin-bottom: 30px;
+}
+
+.comment-section .comment .user{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.comment-section .comment .user img{
+    width: 100%;
+    height: 100%;
+}
 
 
 
-        .main-post-cart .post-title h3 {
-            font-size: 16px;
-            padding: 5px;
-        }
+.comment-section .comment form{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 10px;
+}
 
 
-        /*-------------------------------------------
-        main-post end
+.comment-section .comment form input{
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 5px;
+    width: 40%;
+}
+
+.comment-section .comment form button{
+    padding: 5px 10px;
+    font-size: 16.6px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: var(--green);
+    color: var(--white);
+}
+
+
+.comment p{
+    width: 44.5%;
+    
+    align-items: center;
+    margin-left: 10px;
+    background: var(--gray-light);
+    padding: 0 5px;
+    border-radius: 5px;
+}
+        
+/*-------------------------------------------
+        comment-section end
         --------------------------------------------*/
-
 
     /*-------------------------------------------
     page-number end
@@ -144,7 +184,72 @@
 
 
 
+<div class="comment-section"><!--comment-section start-->
 
+
+    <a class="signin" href="">Sign in</a>
+    <hr>
+
+    <div class="comment">
+
+        <div class="user">
+            <a href="">
+                <img src="{% static 'media/user/ShadinAi Logo.png' %}" alt="">
+            </a>
+        </div>
+
+
+
+        <form action="" class="write-comment">
+            <input type="text" placeholder="Share your thoughts...">
+            <button type="submit">Post</button>
+        </form>
+
+
+    </div>
+
+    
+
+
+
+
+    <div class="comment">
+
+        <div class="user">
+            <a href="">
+                <img src="{% static 'media/user/ShadinAi Logo.png' %}" alt="">
+            </a>
+        </div>
+
+
+
+        <p><strong>{{blog.user.username}},</strong> <br> sit amet consectetur.
+            hi how are your Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur.
+        </p>
+
+
+    </div>
+
+
+    <div class="comment">
+
+        <div class="user">
+            <a href="">
+                <img src="{% static 'media/user/ShadinAi Logo.png' %}" alt="">
+            </a>
+        </div>
+
+
+
+        <p>Lorem ipsum dolor sit amet consectetur.
+            hi how are your Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur.
+        </p>
+
+
+    </div>
+
+
+</div><!--comment-section end-->
 
 <small>{{blog.user.username}}</small> <br>
 <small>{{blog.blog_comments.all.count}} Comments</small> <br>
