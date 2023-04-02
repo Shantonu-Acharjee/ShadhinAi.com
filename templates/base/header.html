@@ -49,7 +49,7 @@
                     <a href=""><img src="{{user.get_profile_picture}}" alt="{{user.username}}"></a>
 
                     {% else %}
-                    <a href=""><img src="{% static 'media/user/user.png' %}" alt=""></a>
+                    <a href="{% url 'login' %}"><img src="{% static 'media/user/user.png' %}" alt=""></a>
                     {% endif %}
 
                 </div>
@@ -89,9 +89,9 @@
 
 
 
-
+                    {% if request.user.is_authenticated %}
                     <li><a href="#"><span id="dripdown2icon"><i class="fa-solid fa-caret-down"></i></span>
-                            Profile</a>
+                        Profile</a>
 
                         <ul class="dripdown2 display-none">
                             <li><a href="#">My Profile</a></li>
@@ -100,6 +100,14 @@
                         </ul>
 
                     </li>
+
+                    {% else %}
+
+                    <li><a href="{% url 'login' %}">Login</a></li>
+
+                    {% endif %}
+
+                    
 
                 </ul>
 
