@@ -19,9 +19,6 @@ def signup(request):
             return redirect('login')
         
 
-        else:
-            print('---------------------------------------',form.errors, '---------------------------------------')
-
     context = {
         "form": form
     }

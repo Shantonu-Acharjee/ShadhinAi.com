@@ -1,4 +1,5 @@
 {% if messages %}
+
 {% for message in messages %}
 <div class="alert">
 
@@ -10,4 +11,51 @@
 
 </div>
 {% endfor %}
+
+{% elif form.username.errors %}
+<div class="alert">
+
+    <span class="msg">{{form.username.errors}}</span>
+
+    <span class="close-btn" id="close-btn">
+        <i class="fa-solid fa-circle-xmark"></i>
+    </span>
+
+</div>
+
+
+
+{% elif form.email.errors %}
+<div class="alert">
+
+    <span class="msg">{{form.email.errors}}</span>
+
+    <span class="close-btn" id="close-btn">
+        <i class="fa-solid fa-circle-xmark"></i>
+    </span>
+
+</div>
+
+
+
+{% elif form.password.errors %}
+<div class="alert">
+
+    <span class="msg">{{form.password.errors}}</span>
+
+    <span class="close-btn" id="close-btn">
+        <i class="fa-solid fa-circle-xmark"></i>
+    </span>
+
+</div>
 {% endif %}
+
+
+
+
+
+
+
+
+
+

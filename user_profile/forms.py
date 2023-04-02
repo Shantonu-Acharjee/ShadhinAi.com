@@ -8,6 +8,8 @@ class UserRegistrationForm(forms.ModelForm):
         model = User
         fields = ("username", "email", "password", )
 
+
+
     def clean_username(self):
         username = self.cleaned_data.get('username')
         model = self.Meta.model
