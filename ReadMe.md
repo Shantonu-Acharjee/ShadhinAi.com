@@ -22,8 +22,10 @@ bloge page - 18
 have to add pagenation page on sitemap.xml
 
 
-video - 11 done
+video - 13 
+time 14:00
 
 <small>{{blog.user.username}}</small> <br>
 <small>{{blog.blog_comments.all.count}} Comments</small> <br>
 <small>{{blog.category.title}}</small>
+pip freeze > requirements.txt
