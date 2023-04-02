@@ -144,13 +144,14 @@ section header .menu ul li a:hover {
     color: var(--red);
 }
 
-section header .search-bar {
+
+
+section header .search-bar form {
     background: var(--gray-light);
     display: flex;
     align-items: center;
     border-radius: 5px;
     overflow: hidden;
-
 }
 
 
@@ -161,6 +162,7 @@ section header .search-bar button {
     padding: 0 10px;
     font-size: 20px;
     color: var(--white);
+    
 }
 
 section header .search-bar input {
@@ -170,6 +172,7 @@ section header .search-bar input {
     padding-left: 10px;
     color: var(--white);
     font-size: 16px;
+    
 }
 
 /*-------------taggle-menu---------------------*/

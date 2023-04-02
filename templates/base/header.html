@@ -21,11 +21,16 @@
 
         </div>
 
-
+     
         <div class="search-bar">
-            <input type="search" placeholder="Search...">
-            <button type="submit"><i class="fas fa-search" id="search-btn"></i></button>
+
+            <form action="{% url 'search_blogs' %}" method="GET">
+                <input name="search" type="search" placeholder="Search..." required>
+                <button type="submit"><i class="fas fa-search" id="search-btn"></i></button>
+            </form>
+
         </div>
+       
 
 
 
