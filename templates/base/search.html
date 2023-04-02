@@ -1,7 +1,6 @@
 {% extends '../base/base.html' %}
-{% load static %}
 
-{% block title %}Blogs{% endblock title %}
+{% block title %}Search Result{% endblock title %}
 
 
 {% block custom_css %}<!--custom_css start-->
@@ -42,21 +41,21 @@
 
 
 
-    .post-date-time{
+    .post-date-time {
         padding: 5px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
-    
-    
-    .post-date-time small{
+
+
+    .post-date-time small {
         font-size: 12px;
         color: var(--gray);
     }
-    
-    
-    .post-date-time small i{
+
+
+    .post-date-time small i {
         color: var(--green);
         margin-right: 2px;
     }
@@ -66,48 +65,6 @@
 
     /*-------------------------------------------
     main-post end
-    --------------------------------------------*/
-
-
-
-
-    /*-------------------------------------------
-    page-number start
-    --------------------------------------------*/
-    .page-number {
-        margin-top: 10px;
-    }
-
-    .page-number ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-
-
-    .page-number ul li a {
-        display: block;
-        margin: 0 5px;
-
-        height: 30px;
-        line-height: 30px;
-        width: 30px;
-
-        background: var(--gray-light);
-        text-align: center;
-        font-size: 18px;
-        border-radius: 50%;
-
-    }
-
-    .page-number ul li a.active{
-        background: var(--green);
-    }
-
-
-    /*-------------------------------------------
-    page-number end
     --------------------------------------------*/
 </style>
 {% endblock custom_css %}<!--custom_css end-->
@@ -122,7 +79,6 @@
 
     <h2>Your Result</h2>
     {% include '../blogs/blogPosts.html' %}
-    {% include '../base/pagination.html' %}<!--pagination.html-->
 
 
 </div><!--main-post end-->

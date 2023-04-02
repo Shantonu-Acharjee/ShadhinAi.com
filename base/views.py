@@ -32,8 +32,11 @@ def home(request):
 
 
 def search_blogs(request):
-    search_key = request.GET.get('search', None)
+
+    search_key = request.GET.get('q', None)
+
     if search_key:
+
         blogs = Blog.objects.filter(
 
             Q(title__icontains = search_key) |
