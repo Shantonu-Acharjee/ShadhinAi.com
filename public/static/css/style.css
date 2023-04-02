@@ -225,11 +225,8 @@ section header .search-bar input {
     margin-right: 5px;
 }
 
-
-.dripdown1,
-.taggle-menu-items {
+.display-none{
     display: none;
-
 }
 
 
