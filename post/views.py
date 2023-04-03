@@ -119,7 +119,7 @@ def blog_details(request, slug):
 
 
 
-@login_required(login_url='/')
+@login_required(login_url='login')
 def add_reply(request, blog_id, comment_id):
     
     blog = get_object_or_404(Blog, id = blog_id)

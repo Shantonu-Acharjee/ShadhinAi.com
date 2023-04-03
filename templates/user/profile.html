@@ -1,0 +1,207 @@
+{% extends '../base/base.html' %}
+{% load static %}
+{% block title %}Shantonu Acharjee{% endblock title %}<!--title-->
+
+
+
+
+{% block custom_css %}<!--custom_css start-->
+<style>
+    /*---------------------------------------------------
+profile-section start
+---------------------------------------------------*/
+
+    .profile-section .profile {
+        width: 250px;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 5px solid var(--green);
+        margin: 10px auto;
+
+    }
+
+    .profile-details {
+        text-align: center;
+
+
+    }
+
+    .profile-details h1 {
+        line-height: 1;
+        font-size: 30px;
+    }
+
+    .profile-details small {
+        font-size: 20px;
+
+    }
+
+
+    .add-post-edit-profile {
+        display: flex;
+        justify-content: center;
+    }
+
+    .add-post-edit-profile a {
+        width: 120px;
+        background-color: var(--facebook-color);
+        padding: 5px 10px;
+        margin: 5px;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    /*---------------------------------------------------
+profile-section end
+---------------------------------------------------*/
+
+    /*-------------------------------------------
+    main-post start
+    --------------------------------------------*/
+
+    .main-post h2 {
+
+        padding: 10px 0;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .main-post-carts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+
+
+    }
+
+    .main-post-cart {
+        background: var(--gray-light);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+
+
+
+
+    .main-post-cart .post-title h3 {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+
+
+    .post-date-time {
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    .post-date-time small {
+        font-size: 12px;
+        color: var(--gray);
+    }
+
+
+    .post-date-time small i {
+        color: var(--green);
+        margin-right: 2px;
+    }
+
+
+
+
+    /*-------------------------------------------
+    main-post end
+    --------------------------------------------*/
+
+
+
+
+    /*-------------------------------------------
+    page-number start
+    --------------------------------------------*/
+    .page-number {
+        margin-top: 10px;
+    }
+
+    .page-number ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+    .page-number ul li a {
+        display: block;
+        margin: 0 5px;
+
+        height: 30px;
+        line-height: 30px;
+        width: 30px;
+
+        background: var(--gray-light);
+        text-align: center;
+        font-size: 18px;
+        border-radius: 50%;
+
+    }
+
+    .page-number ul li a.active {
+        background: var(--green);
+    }
+
+
+    /*-------------------------------------------
+    page-number end
+    --------------------------------------------*/
+</style>
+{% endblock custom_css %}<!--custom_css end-->
+
+
+
+
+{% block main_content %}<!--main_content start-->
+
+<div class="profile-section">
+
+
+    <div class="profile">
+        <img src="{{user.get_profile_picture}}" alt="">
+    </div>
+
+
+    <div class="profile-details">
+        <h1>Shantonu Acharjee</h1>
+        <small>@ShantonuAchajeee</small> <br>
+        <small>0 Follower</small>
+    </div>
+
+</div>
+
+
+
+
+<div class="add-post-edit-profile">
+    <a href="">Add Post</a>
+    <a href="{% url 'edit_profile' %}">Edit Profile</a>
+</div>
+
+
+
+<div class="main-post"> <!--main-post start-->
+
+
+    <h2>Blogs</h2>
+    {% include '../blogs/blogPosts.html' %}
+    {% include '../base/pagination.html' %}<!--pagination.html-->
+
+
+</div><!--main-post end-->
+
+{% endblock main_content %}<!--main_content end-->

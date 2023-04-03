@@ -47,10 +47,10 @@
                     {% if request.user.is_authenticated %}
 
                         {% if user.get_profile_picture %}
-                        <a href=""><img src="{{user.get_profile_picture}}" alt="{{user.username}}"></a>
+                        <a href="{% url 'profile' %}"><img src="{{user.get_profile_picture}}" alt="{{user.username}}"></a>
 
                         {% else %}
-                        <a href=""><img src="{% static 'media/user/user1.png' %}" alt="{{user.username}}"></a>
+                        <a href="{% url 'profile' %}"><img src="{% static 'media/user/user1.png' %}" alt="{{user.username}}"></a>
                         {% endif %}
                     
 
@@ -96,11 +96,11 @@
 
 
                     {% if request.user.is_authenticated %}
-                    <li><a href="#"><span id="dripdown2icon"><i class="fa-solid fa-caret-down"></i></span>
+                    <li><span id="dripdown2icon"><i class="fa-solid fa-caret-down"></i></span><a href="{% url 'profile' %}">
                         Profile</a>
 
                         <ul class="dripdown2 display-none">
-                            <li><a href="#">My Profile</a></li>
+                            <li><a href="{% url 'profile' %}">My Profile</a></li>
                             <li><a href="#">Notification</a></li>
                             <li><a href="{% url 'logout' %}">Logout</a></li>
                         </ul>

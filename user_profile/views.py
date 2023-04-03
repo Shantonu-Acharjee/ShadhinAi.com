@@ -3,7 +3,8 @@ from .forms import UserRegistrationForm, LoginForm
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 from .decorators import not_logged_in_required
-
+from post.models import Blog
+from django.core.paginator import PageNotAnInteger, EmptyPage, Paginator
 
 
 @not_logged_in_required
@@ -61,3 +62,36 @@ def signup(request):
     }
 
     return render(request, 'user/signup.html', context)
+
+
+
+
+
+
+
+
+def profile(request):
+    queryset = Blog.objects.order_by('-created_date')
+    page = request.GET.get('page', 1)
+    # enter how many post you want to see on single page
+    paginator = Paginator(queryset, 18)
+
+    try:
+        blogs = paginator.page(page)
+
+    except EmptyPage:
+        blogs = paginator.page(1)
+
+    except PageNotAnInteger:
+            blogs = paginator.page(1)
+            return redirect('blogs')
+
+    context = {
+        'blogs': blogs,
+        'paginator': paginator,
+    }
+    return render(request, 'user/profile.html', context)
+
+
+def edit_profile(request):
+    return render(request, 'user/editProfile.html')

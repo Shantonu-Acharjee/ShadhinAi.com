@@ -22,7 +22,8 @@ bloge page - 18
 have to add pagenation page on sitemap.xml
 
 
-video - 14 done
+video - 16
+time: 16:45;
 
 
 <small>{{blog.user.username}}</small> <br>
