@@ -2,10 +2,11 @@ from django.shortcuts import render, redirect
 from .forms import UserRegistrationForm, LoginForm
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
+from .decorators import not_logged_in_required
 
 
 
-
+@not_logged_in_required
 def login_user(request):
     form = LoginForm()
 
@@ -40,7 +41,7 @@ def logout_user(request):
 
 
 
-
+@not_logged_in_required
 def signup(request):
     form = UserRegistrationForm()
 
