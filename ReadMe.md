@@ -22,8 +22,8 @@ bloge page - 18
 have to add pagenation page on sitemap.xml
 
 
-video - 13 
-time 14:00
+video - 14 done
+
 
 <small>{{blog.user.username}}</small> <br>
 <small>{{blog.blog_comments.all.count}} Comments</small> <br>
