@@ -165,10 +165,10 @@
     <form action="" method="POST">
 
         {% csrf_token %}
-        <input required type="text" placeholder="Firstname" name="username">
-        <input required type="email" placeholder="Email" name="email">
-        <input required type="text" placeholder="Password" name="password">
-        <input required type="text" placeholder="Retype Password" name="confirm_password">
+        <input required {% if form.is_bound %} value = "{{form.username.value}}" {% endif %} type="text" placeholder="Username" name="username">
+        <input required {% if form.is_bound %} value = "{{form.email.value}}" {% endif %} type="email" placeholder="Email" name="email">
+        <input required {% if form.is_bound %} value = "{{form.password.value}}" {% endif %} type="text" placeholder="Password" name="password">
+        <input required {% if form.is_bound %} value = "{{form.password.value}}" {% endif %} type="text" placeholder="Retype Password" name="confirm_password">
 
         <button type="submit">Signup</button>
         <span>Alrady have an account ? <a href="{% url 'login' %}">Login</a></span>
