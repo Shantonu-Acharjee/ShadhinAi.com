@@ -1,11 +1,12 @@
-from django.shortcuts import render, redirect
-from .forms import UserRegistrationForm, LoginForm
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import UserRegistrationForm, LoginForm, UserProfileUpdateForm
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 from .decorators import not_logged_in_required
 from post.models import Blog
 from django.core.paginator import PageNotAnInteger, EmptyPage, Paginator
-
+from django.contrib.auth.decorators import login_required
+from .models import User
 
 @not_logged_in_required
 def login_user(request):
@@ -93,5 +94,28 @@ def profile(request):
     return render(request, 'user/profile.html', context)
 
 
+
+
+
+@login_required(login_url='login')
 def edit_profile(request):
-    return render(request, 'user/editProfile.html')
+    account = get_object_or_404(User, pk=request.user.pk)
+    form = UserProfileUpdateForm(instance=account)
+    
+    if request.method == "POST":
+        if request.user.pk != account.pk:
+            return redirect('home')
+        
+        form = UserProfileUpdateForm(request.POST, instance = account)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Profile has been updated sucessfully")
+            return redirect('profile')
+        else:
+            print(form.errors)
+
+    context = {
+        "account": account,
+        "form": form
+    }
+    return render(request, 'user/editProfile.html', context)

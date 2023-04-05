@@ -1,7 +1,24 @@
-<form action="">
-    <input type="text" placeholder="Firstname"> <br>
-    <input type="text" placeholder="Lastname"> <br>
-    <input type="text" placeholder="Username"> <br>
-    <input type="text" placeholder="Email"> <br>
+<form action="{% url 'edit_profile' %}" method="POST">
+    {% csrf_token %}
+    <input value="{{account.first_name}}" type="text" placeholder="Firstname" name="first_name"> <br>
+    <input value="{{account.last_name}}" type="text" placeholder="Lastname" name="last_name"> <br>
+    <input value="{{account.username}}" type="text" placeholder="Username" name="username"> <br>
+    <input value="{{account.email}}" type="text" placeholder="Email" name="email"> <br>
+    <input type="text" placeholder="Enter old password" name="password"> <br>
+    <input type="text" placeholder="Enter new password" name="new_password"> <br>
     <button type="submit">Update</button>
+</form>
+
+<br>
+<br>
+<br>
+
+
+
+
+<form action="">
+    {% csrf_token %}
+    <input type="file" name="profile_images" accept="image/*"> <br>
+    <button type="submit">Update Profile</button>
+
 </form>
