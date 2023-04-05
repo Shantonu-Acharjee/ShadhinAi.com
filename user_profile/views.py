@@ -72,6 +72,9 @@ def signup(request):
 
 
 def profile(request):
+    account = get_object_or_404(User, pk=request.user.pk)
+
+
     queryset = Blog.objects.order_by('-created_date')
     page = request.GET.get('page', 1)
     # enter how many post you want to see on single page
@@ -90,6 +93,7 @@ def profile(request):
     context = {
         'blogs': blogs,
         'paginator': paginator,
+        "account": account,
     }
     return render(request, 'user/profile.html', context)
 

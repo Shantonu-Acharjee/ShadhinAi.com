@@ -172,7 +172,7 @@ profile-section end
 
 
     <div class="profile">
-        <img src="{{user.get_profile_picture}}" alt="">
+        <img src="{{account.get_profile_picture}}" alt="">
     </div>
 
 
@@ -197,7 +197,7 @@ profile-section end
 <div class="main-post"> <!--main-post start-->
 
 
-    <h2>Blogs</h2>
+    <h2>{{account.user_blogs.count}} Blogs</h2>
     {% include '../blogs/blogPosts.html' %}
     {% include '../base/pagination.html' %}<!--pagination.html-->
 
