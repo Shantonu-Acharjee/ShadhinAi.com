@@ -37,7 +37,6 @@
 </div>
 
 
-
 {% elif form.password.errors %}
 <div class="alert">
 
@@ -48,6 +47,28 @@
     </span>
 
 </div>
+{% endif %}
+
+
+
+
+
+
+
+
+
+{% if form.non_field_errors %}
+{% for error in form.non_field_errors %}
+<div class="alert">
+
+    <span class="msg">{{error}}</span>
+
+    <span class="close-btn" id="close-btn">
+        <i class="fa-solid fa-circle-xmark"></i>
+    </span>
+
+</div>
+{% endfor %}    
 {% endif %}
 
 

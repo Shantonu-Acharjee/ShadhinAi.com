@@ -76,6 +76,24 @@ class UserProfileUpdateForm(forms.ModelForm):
             raise forms.ValidationError("A user with that email already exists")
         
         return self.cleaned_data.get('email')
+    
 
+    def change_password(self):
+        if 'new_password' in self.data and 'confirm_password' in self.data:
+            
+            new_password = self.data['new_password']
+            confirm_password = self.data['confirm_password']
 
+            if new_password != '' and confirm_password != '':
+
+                if new_password != confirm_password:
+                    raise forms.ValidationError('Password do not mach')
+                
+                else:
+                    self.instance.set_password(new_password)
+                    self.instance.save()
+
+    
+    def clean(self):
+        self.change_password()
     
