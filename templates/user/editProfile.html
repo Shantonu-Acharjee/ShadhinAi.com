@@ -34,9 +34,9 @@
 
 
 
-<form action="">
+<form action="{% url 'change_profile_picture' %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    <input type="file" name="profile_images" accept="image/*"> <br>
+    <input required name="profile_image" type="file" name="profile_images" accept="image/*"> <br>
     <button type="submit">Update Profile</button>
 
 </form>

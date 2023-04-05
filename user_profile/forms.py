@@ -97,3 +97,8 @@ class UserProfileUpdateForm(forms.ModelForm):
     def clean(self):
         self.change_password()
     
+
+
+
+class ProfilePictureUpdateForm(forms.Form):
+    profile_image = forms.ImageField(required= True)

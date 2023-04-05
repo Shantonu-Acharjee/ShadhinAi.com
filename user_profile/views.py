@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import UserRegistrationForm, LoginForm, UserProfileUpdateForm
+from .forms import UserRegistrationForm, LoginForm, UserProfileUpdateForm, ProfilePictureUpdateForm
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 from .decorators import not_logged_in_required
@@ -119,3 +119,26 @@ def edit_profile(request):
         "form": form
     }
     return render(request, 'user/editProfile.html', context)
+
+
+
+@login_required(login_url='login')
+def change_profile_picture(request):
+    if request.method == 'POST':
+        form = ProfilePictureUpdateForm(request.POST, request.FILES)
+        if form.is_valid():
+            image = request.FILES['profile_image']
+            user = get_object_or_404(User, pk = request.user.pk)
+
+            if request.user.pk != user.pk:
+                return redirect('home')
+            
+
+            user.profile_image = image
+            user.save()
+            messages.success(request, 'Profile picture updated Successfully')
+            return redirect('profile')
+        
+        
+        
+    return redirect('edit_profile')
