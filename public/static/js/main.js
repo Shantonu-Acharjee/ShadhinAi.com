@@ -18,3 +18,13 @@ document.querySelector('#dripdown2icon').onclick = () => {
 }
 
 /*=========== taggle menu end ===========*/
+
+
+
+/*==========Alert Start=========*/
+let AlertItem = document.querySelector('.alert');
+document.querySelector('#close-btn').onclick = () => {
+    AlertItem.classList.toggle('deactive');
+}
+/*==========Alert End=========*/  
+

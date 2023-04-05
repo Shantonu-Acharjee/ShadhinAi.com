@@ -1,3 +1,21 @@
+{% extends '../base/base.html' %}
+{% load static %}
+{% block title %}{{blog.title}}{% endblock title %}<!--title-->
+
+
+
+
+{% block custom_css %}<!--custom_css start-->
+<style>
+    
+</style>
+{% endblock custom_css %}<!--custom_css end-->
+
+
+
+
+{% block main_content %}<!--main_content start-->
+
 <form action="{% url 'edit_profile' %}" method="POST">
     {% csrf_token %}
     <input value="{{account.first_name}}" type="text" placeholder="Firstname" name="first_name"> <br>
@@ -22,3 +40,9 @@
     <button type="submit">Update Profile</button>
 
 </form>
+
+{% endblock main_content %}<!--main_content end-->
+
+
+
+

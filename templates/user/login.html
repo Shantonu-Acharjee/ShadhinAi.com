@@ -90,60 +90,7 @@
         --------------------------------------------*/
 
 
-    /*-------------------------------------------
-        alert Start
-    --------------------------------------------*/
-
-   
-    .alert {
-        padding: 10px 20px;
-        max-width: 430px;
-        width: 100%;
-        border-radius: 5px;
-        overflow: hidden;
-        display: flex;
-        margin: auto;
-        margin-top: 10px;
-        position: relative;
-        background-color: var(--green);
-    }
-
-
     
-
-
-
-
-    .alert .close-btn {
-        background-color: #ffd080;
-        padding: 15px 18px;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-
-    }
-
-    .alert .close-btn:hover {
-        background-color: #ffc766;
-    }
-
-    .alert .close-btn i {
-        color: #ce8500;
-        font-size: 22px;
-        line-height: 40px;
-    }
-
-
-    .deactive {
-        display: none;
-    }
-
-
-    /*-------------------------------------------
-        alert end
-    --------------------------------------------*/
 </style>
 {% endblock custom_css %}<!--custom_css end-->
 
@@ -151,7 +98,7 @@
 
 
 {% block main_content %}<!--main_content start-->
-{% include "../base/alert.html" %}
+
 
 <div class="login"><!--login start-->
 
@@ -181,13 +128,3 @@
 
 
 
-{% block custom_script %}
-<script>
-    /*==========Alert Start=========*/
-    let AlertItem = document.querySelector('.alert');
-    document.querySelector('#close-btn').onclick = () => {
-        AlertItem.classList.toggle('deactive');
-    }
-    /*==========Alert End=========*/
-</script>
-{% endblock custom_script %}
