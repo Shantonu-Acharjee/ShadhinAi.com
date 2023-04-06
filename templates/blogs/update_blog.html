@@ -1,0 +1,50 @@
+{% extends '../base/base.html' %}
+{% load static %}
+{% block title %}Update Post{% endblock title %}<!--title-->
+
+
+
+
+{% block custom_css %}<!--custom_css start-->
+<style>     
+</style>
+{% endblock custom_css %}<!--custom_css end-->
+
+
+
+
+
+
+
+{% block main_content %}<!--main_content start-->
+<form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+
+<Label for="title">Blog Title</Label>
+<input  name="title" type="text" value="{{form.instance.title}}"> <br> <br>
+
+
+<label for="catagorys">Catagoris</label>
+<select  name="category" id="">
+    {% for category in categories %}
+    <option value="{{category.id}}"  {% if form.instance.category.pk == category.pk  %} selected {% endif %}    >{{category.title}}</option>
+    {% endfor %}
+</select> <br> <br>
+
+
+<Label for="banner">Blog Banner</Label>
+<input  name="banner" type="file" value="{{form.instance.banner.url}}"> <br> <br>
+
+
+<Label for="description">Description</Label>
+<textarea  name="description" cols="30" rows="10">{{form.instance.description}}</textarea> <br> <br>
+
+
+<Label for="tags">Tags</Label>
+<textarea  name="tags" cols="30" rows="10" placeholder="Enter comma seprrated value">{{form.instance.tags}}</textarea> <br> <br>
+
+
+<button type="submit">Update</button>
+
+</form>
+{% endblock main_content %}<!--main_content end-->

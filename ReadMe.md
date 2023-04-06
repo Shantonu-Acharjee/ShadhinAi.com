@@ -37,3 +37,4 @@ pip freeze > requirements.txt
 - Add bangla sligify
 - cheek custom slag
 - if title slag is not avable avable it show to provide custom slug
+- update post page tage not workong

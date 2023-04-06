@@ -82,6 +82,18 @@ def profile(request):
     # enter how many post you want to see on single page
     paginator = Paginator(queryset, 6)
 
+    delete = request.GET.get('delete', None)
+
+
+    if delete:
+        blog = get_object_or_404(Blog, pk = delete)
+        if request.user.pk != blog.user.pk:
+            return redirect('home')
+        blog.delete()
+        messages.success(request, 'Your blog han been delete')
+        return redirect('profile')
+
+
     try:
         blogs = paginator.page(page)
 
@@ -199,3 +211,62 @@ def add_blog(request):
         "form": form
     }
     return render(request, 'blogs/add_post.html', ontext)
+
+
+
+
+
+
+
+
+
+
+@login_required(login_url='login')
+def update_blog(request, slug):
+    blog = get_object_or_404(Blog, slug=slug)
+    form = AddBlogForm(instance=blog)
+
+    if request.method == "POST":
+        form = AddBlogForm(request.POST, request.FILES, instance=blog)
+        
+        if form.is_valid():
+            
+            if request.user.pk != blog.user.pk:
+                return redirect('home')
+
+            tags = request.POST['tags'].split(',')
+            user = get_object_or_404(User, pk=request.user.pk)
+            category = get_object_or_404(Category, pk=request.POST['category'])
+            blog = form.save(commit=False)
+            blog.user = user
+            blog.category = category
+            blog.save()
+
+            for tag in tags:
+                tag_input = Tag.objects.filter(
+                    title__iexact=tag.strip(),
+                    slug=slugify(tag.strip())
+                )
+                if tag_input.exists():
+                    t = tag_input.first()
+                    blog.tags.add(t)
+
+                else:
+                    if tag != '':
+                        new_tag = Tag.objects.create(
+                            title=tag.strip(),
+                            slug=slugify(tag.strip())
+                        )
+                        blog.tags.add(new_tag)
+
+            messages.success(request, "Blog updated successfully")
+            return redirect('blog_details', slug=blog.slug)
+        else:
+            print(form.errors)
+
+
+    context = {
+        "form": form,
+        "blog": blog
+    }
+    return render(request, 'blogs/update_blog.html', context)
