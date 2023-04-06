@@ -1,10 +1,10 @@
-{% if blogs.has_next %}
+{% if blogs.has_next or blogs.has_previous %}
 
 <div class="page-number">
 
     <ul>
         {% if blogs.has_previous %}
-        <li><a href="?page={{blogs.number|add:'-1'}}"><</a></li>
+        <li><a href="?page={{blogs.previous_page_number}}"><</a></li>
         {% endif %}
 
 
@@ -24,7 +24,7 @@
         
 
         {% if blogs.has_next %}
-        <li><a href="?page={{blogs.number|add:'1'}}">></a></li>
+        <li><a href="?page={{blogs.next_page_number}}">></a></li>
         {% endif %}
         
     </ul>
