@@ -1,0 +1,50 @@
+{% extends '../base/base.html' %}
+{% load static %}
+{% block title %}Add Post{% endblock title %}<!--title-->
+
+
+
+
+{% block custom_css %}<!--custom_css start-->
+<style>     
+</style>
+{% endblock custom_css %}<!--custom_css end-->
+
+
+
+
+
+
+
+{% block main_content %}<!--main_content start-->
+<form action="" method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+
+<Label for="title">Blog Title</Label>
+<input required name="title" type="text"> <br> <br>
+
+
+<label for="catagorys">Catagoris</label>
+<select required name="category" id="" multiple>
+    {% for category in categories %}
+    <option value="{{category.id}}">{{category.title}}</option>
+    {% endfor %}
+</select> <br> <br>
+
+
+<Label for="banner">Blog Banner</Label>
+<input required name="banner" type="file"> <br> <br>
+
+
+<Label for="description">Description</Label>
+<textarea required name="description" cols="30" rows="10"></textarea> <br> <br>
+
+
+<Label for="tags">Tags</Label>
+<textarea required name="tags" cols="30" rows="10" placeholder="Enter comma seprrated value"></textarea> <br> <br>
+
+
+<button type="submit">Post</button>
+
+</form>
+{% endblock main_content %}<!--main_content end-->

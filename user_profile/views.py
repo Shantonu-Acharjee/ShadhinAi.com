@@ -3,10 +3,12 @@ from .forms import UserRegistrationForm, LoginForm, UserProfileUpdateForm, Profi
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 from .decorators import not_logged_in_required
-from post.models import Blog
+from post.models import Blog, Category, Tag
 from django.core.paginator import PageNotAnInteger, EmptyPage, Paginator
 from django.contrib.auth.decorators import login_required
 from .models import User
+from post.forms import AddBlogForm
+from django.utils.text import slugify
 
 @not_logged_in_required
 def login_user(request):
@@ -75,10 +77,10 @@ def profile(request):
     account = get_object_or_404(User, pk=request.user.pk)
 
 
-    queryset = Blog.objects.order_by('-created_date')
+    queryset = request.user.user_blogs.all()
     page = request.GET.get('page', 1)
     # enter how many post you want to see on single page
-    paginator = Paginator(queryset, 18)
+    paginator = Paginator(queryset, 6)
 
     try:
         blogs = paginator.page(page)
@@ -146,3 +148,54 @@ def change_profile_picture(request):
         
         
     return redirect('edit_profile')
+
+
+
+
+
+
+@login_required(login_url='login')
+def add_blog(request):
+    form = AddBlogForm()
+
+    if request.method == 'POST':
+        form = AddBlogForm(request.POST, request.FILES)
+        if form.is_valid():
+            tags = request.POST['tags'].split(',')
+            user = get_object_or_404(User, pk = request.user.pk)
+            category = get_object_or_404(Category, pk = request.POST['category'])
+            blog = form.save(commit= False)
+            blog.user = user
+            blog.category = category
+            blog.save()
+
+            for tag in tags:
+                tag_input = Tag.objects.filter(
+                    title__iexact = tag.strip(),
+                    slug = slugify(tag.strip())
+                    )
+                
+                if tag_input.exists():
+                    t = tag_input.first()
+                    blog.tags.add(t)
+
+                else:
+                    new_tag = Tag.objects.create(
+                        title = tag.strip(),
+                        slug = slugify(tag.strip())
+                    )
+                    blog.tags.add(new_tag)
+
+
+            messages.success(request, 'Blog Added Successfully')
+            return redirect('blog_details', slug = blog.slug)
+        
+        else:
+            print('-----------------------', form.errors,'-------------------')
+
+
+
+    ontext = {
+        "form": form
+    }
+    return render(request, 'blogs/add_post.html', ontext)

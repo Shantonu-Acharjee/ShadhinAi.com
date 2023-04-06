@@ -1,6 +1,6 @@
 <div class="main-post-carts"><!--main-post-carts start-->
 
-
+    
 
     {% for blog in blogs %}
 
@@ -35,6 +35,32 @@
                 <h3>{{blog.title|truncatewords:10}}</h3>
             </div>
         </a>
+
+
+
+
+        <div class="post-date-time">
+
+            <small>
+                <a href="">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    Edit
+                </a>
+                
+            </small>
+
+
+            <small>
+                <a href="">
+                    <i class="fa-sharp fa-solid fa-trash"></i>
+                    Delete
+                </a>
+            </small>
+
+
+        </div>
+
+
 
     </div>
 

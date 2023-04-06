@@ -188,7 +188,7 @@ profile-section end
 
 
 <div class="add-post-edit-profile">
-    <a href="">Add Post</a>
+    <a href="{% url 'add_blog' %}">Add Post</a>
     <a href="{% url 'edit_profile' %}">Edit Profile</a>
 </div>
 
@@ -198,7 +198,7 @@ profile-section end
 
 
     <h2>{{account.user_blogs.count}} Blogs</h2>
-    {% include '../blogs/blogPosts.html' %}
+    {% include '../blogs/my_blogs.html' %}
     {% include '../base/pagination.html' %}<!--pagination.html-->
 
 

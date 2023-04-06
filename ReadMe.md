@@ -22,7 +22,7 @@ bloge page - 18
 have to add pagenation page on sitemap.xml
 
 
-video - 16
+video - 17 done
 
 
 
@@ -30,3 +30,10 @@ video - 16
 <small>{{blog.blog_comments.all.count}} Comments</small> <br>
 <small>{{blog.category.title}}</small>
 pip freeze > requirements.txt
+
+
+
+# I have t do 
+- Add bangla sligify
+- cheek custom slag
+- if title slag is not avable avable it show to provide custom slug
