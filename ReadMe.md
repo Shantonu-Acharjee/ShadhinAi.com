@@ -38,6 +38,11 @@ pip freeze > requirements.txt
 - cheek custom slag
 - if title slag is not avable avable it show to provide custom slug
 - update post page tage not workong
+- only admin can post user can comment user post should be aproveable
+- comment section link will not follow/working
+- I can't follow myself
+- have to add most view post / most propular post
+
 
 
 
@@ -45,3 +50,4 @@ pip freeze > requirements.txt
 # Comands
 - python manage.py makemigrations
 - python manage.py migrate
+- python manage.py startapp notification
