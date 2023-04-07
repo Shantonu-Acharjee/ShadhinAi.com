@@ -318,13 +318,23 @@ def view_user_information(request, username):
     
 
     following = False
+    muted = None
     if request.user.is_authenticated:
         if request.user.id == account.id:
             return redirect('profile')
         followers = account.followers.filter(followed_by__id = request.user.id)
+
         if followers.exists():
             following = True
 
+    if following:
+        querysettt = followers.first()
+
+        if querysettt.muted:
+            muted = True
+        
+        else:
+            muted = False
 
 
     context = {
@@ -332,6 +342,7 @@ def view_user_information(request, username):
         'paginator': paginator,
         'account' : account,
         'following' : following,
+        'muted' : muted,
         
     }
 
@@ -379,3 +390,29 @@ def user_notifications(request):
         notification.save()
         
     return render(request, 'user/notifications.html')
+
+
+
+
+
+
+
+@login_required(login_url='login')
+def mute_or_unmute_user(request, user_id):
+    user = get_object_or_404(User, pk=user_id)
+    follower = get_object_or_404(User, pk=request.user.pk)
+    instance = get_object_or_404(
+        Follow,
+        followed=user,
+        followed_by=follower
+    )
+
+    if instance.muted:
+        instance.muted = False
+        instance.save()
+
+    else:
+        instance.muted = True
+        instance.save()
+
+    return redirect('view_user_information', username=user.username)

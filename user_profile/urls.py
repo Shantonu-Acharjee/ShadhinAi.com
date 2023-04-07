@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import signup, login_user, logout_user, profile, edit_profile, change_profile_picture, add_blog, update_blog, view_user_information, follow_or_unfollow_user, user_notifications
+from .views import signup, login_user, logout_user, profile, edit_profile, change_profile_picture, add_blog, update_blog, view_user_information, follow_or_unfollow_user, user_notifications, mute_or_unmute_user
 
 
 urlpatterns = [
@@ -14,4 +14,5 @@ urlpatterns = [
     path('view_user_information/<str:username>/', view_user_information, name='view_user_information'),
     path('follow_or_unfollow/<int:user_id>/', follow_or_unfollow_user, name= 'follow_or_unfollow_user'),
     path('user_notifications/', user_notifications, name= 'user_notifications'),
+    path('mute_or_unmute_user/<int:user_id>/', mute_or_unmute_user, name= 'mute_or_unmute_user'), 
 ]

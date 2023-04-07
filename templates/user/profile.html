@@ -203,7 +203,11 @@ profile-section end
 {% if following %}
 <div class="add-post-edit-profile">
     <a href="{% url 'follow_or_unfollow_user' account.id %}">Unfollow</a>
-    <a href="">Mute</a>
+    {% if muted %}
+    <a href="{% url 'mute_or_unmute_user' account.id %}">Unmute</a>
+    {% else %}
+    <a href="{% url 'mute_or_unmute_user' account.id %}">Mute</a>
+    {% endif %}
 </div>
 
 {% else %}

@@ -43,6 +43,9 @@ pip freeze > requirements.txt
 - I can't follow myself
 - have to add most view post / most propular post
 - have to create notificashon for comments
+- i have to use page not found 
+- i have to use custom sitemap.xml
+- tag is not editable problem solve
 
 
 
