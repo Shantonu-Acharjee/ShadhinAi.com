@@ -22,7 +22,7 @@ bloge page - 18
 have to add pagenation page on sitemap.xml
 
 
-video - 17 done
+video - 22done
 
 
 
@@ -38,3 +38,10 @@ pip freeze > requirements.txt
 - cheek custom slag
 - if title slag is not avable avable it show to provide custom slug
 - update post page tage not workong
+
+
+
+
+# Comands
+- python manage.py makemigrations
+- python manage.py migrate

@@ -2,7 +2,7 @@ from django.db import models
 from user_profile.models import User
 from django.utils.text import slugify
 from .slugs import generate_unique_slug
-
+from ckeditor.fields import RichTextField
 
 
 class Category(models.Model):
@@ -46,7 +46,7 @@ class Blog(models.Model):
     title = models.CharField(max_length= 250)
     slug = models.SlugField(null= True, blank= True)
     banner = models.ImageField(upload_to= 'blog_banners')
-    description = models.TextField()
+    description = RichTextField()
     created_date = models.DateField(auto_now_add= True)
 
     def __str__(self):
