@@ -42,6 +42,7 @@ pip freeze > requirements.txt
 - comment section link will not follow/working
 - I can't follow myself
 - have to add most view post / most propular post
+- have to create notificashon for comments
 
 
 

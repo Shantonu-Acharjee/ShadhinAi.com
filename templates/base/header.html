@@ -101,7 +101,11 @@
 
                         <ul class="dripdown2 display-none">
                             <li><a href="{% url 'profile' %}">My Profile</a></li>
-                            <li><a href="#">Notification</a></li>
+                            <li><a href="{% url 'user_notifications' %}">
+                                {% if unseen > 0 %}
+                                    {{unseen}}
+                                {% endif %}
+                                Notification</a></li>
                             <li><a href="{% url 'logout' %}">Logout</a></li>
                         </ul>
 

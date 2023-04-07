@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from .models import User, Follow
 from post.forms import AddBlogForm
 from django.utils.text import slugify
+from notification.models import Notification
 
 @not_logged_in_required
 def login_user(request):
@@ -359,3 +360,23 @@ def follow_or_unfollow_user(request, user_id):
         follow.delete()
 
     return redirect('view_user_information', username = followed.username)
+
+
+
+
+
+
+
+
+@login_required(login_url='login')
+def user_notifications(request):
+    notifications = Notification.objects.filter(
+        user = request.user,
+        is_seen = False
+    )
+
+    for notification in notifications:
+        notification.is_seen = True
+        notification.save()
+        
+    return render(request, 'user/notifications.html')
