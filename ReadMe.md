@@ -22,7 +22,7 @@ bloge page - 18
 have to add pagenation page on sitemap.xml
 
 
-video - 22done
+video - 24done
 
 
 

@@ -84,7 +84,6 @@ def profile(request):
 
     delete = request.GET.get('delete', None)
 
-
     if delete:
         blog = get_object_or_404(Blog, pk = delete)
         if request.user.pk != blog.user.pk:
@@ -270,3 +269,48 @@ def update_blog(request, slug):
         "blog": blog
     }
     return render(request, 'blogs/update_blog.html', context)
+
+
+
+
+def view_user_information(request, username):
+    account = get_object_or_404(User, username = username)
+    blogs = account.user_blogs.all()
+
+
+    queryset = Blog.objects.order_by('-created_date')
+    page = request.GET.get('page', 1)
+    # enter how many post you want to see on single page
+    paginator = Paginator(queryset, 3)
+
+
+
+    delete = request.GET.get('delete', None)
+    if delete:
+        blog = get_object_or_404(Blog, pk = delete)
+        if request.user.pk != blog.user.pk:
+            return redirect('home')
+        blog.delete()
+        messages.success(request, 'Your blog han been delete')
+        return redirect('profile')
+    
+    
+
+    try:
+        blogs = paginator.page(page)
+
+    except EmptyPage:
+        blogs = paginator.page(1)
+
+    except PageNotAnInteger:
+            blogs = paginator.page(1)
+            return redirect('blogs')
+
+    context = {
+        'blogs': blogs,
+        'paginator': paginator,
+        'account' : account,
+        
+    }
+
+    return render(request, 'user/profile.html', context)

@@ -7,7 +7,7 @@
     <div class="comment-header"><!--comment-header start-->
 
         <div class="user-name">
-            <a href="#">{{user.username}}</a>
+            <a href="{% url 'view_user_information' blog.user.username %}">{{blog.user.username}}</a>
         </div>
 
 
