@@ -63,3 +63,6 @@ pip freeze > requirements.txt
 - pip install django-ckeditor
 - pip freeze > requirements.txt
 - pip3.8 install --user pythonanywhere
+- python manage.py createsuperuser
+- Shantonu560634
+- https://www.pythonanywhere.com/user/ShantonuAcharjee/consoles/28165668/
