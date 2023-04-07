@@ -46,6 +46,7 @@ pip freeze > requirements.txt
 - i have to use page not found 
 - i have to use custom sitemap.xml
 - tag is not editable problem solve
+- forgot password
 
 
 
@@ -56,3 +57,8 @@ pip freeze > requirements.txt
 - python manage.py makemigrations
 - python manage.py migrate
 - python manage.py startapp notification
+- virtualenv env
+- pip install django
+- pip install pillow
+- pip install django-ckeditor
+- pip freeze > requirements.txt
