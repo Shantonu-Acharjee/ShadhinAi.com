@@ -48,6 +48,7 @@ pip freeze > requirements.txt
 
 
 
+
 # Comands
 - python manage.py makemigrations
 - python manage.py migrate

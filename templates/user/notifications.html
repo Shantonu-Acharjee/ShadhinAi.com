@@ -20,20 +20,25 @@
 {% if notifications %}
     {% for notification in notifications %}
 
-        {% if notification.notification_types == 'Blog' %}
-            <a href="{% url 'blog_details' notification.content_object.slug %}">
-                <p>{{notification.text}}</p>
-                <p>{{notification.created_date|timesince}} ago</p>
-            </a> <br>
+        {% if notification.content_object %}
+        
+    
+            {% if notification.notification_types == 'Blog' %}
+                <a href="{% url 'blog_details' notification.content_object.slug %}">
+                    <p>{{notification.text}}</p>
+                    <p>{{notification.created_date|timesince}} ago</p>
+                </a> <br>
 
 
-        {% elif notification.notification_types == 'Follow' %}
-            <a href="{% url 'view_user_information' notification.content_object.followed_by.username %}">
-                <p>{{notification.text}}</p>
-                <p>{{notification.created_date|timesince}} ago</p>
-            </a> <br>
+            {% elif notification.notification_types == 'Follow' %}
+                <a href="{% url 'view_user_information' notification.content_object.followed_by.username %}">
+                    <p>{{notification.text}}</p>
+                    <p>{{notification.created_date|timesince}} ago</p>
+                </a> <br>
 
 
+            {% endif %}
+    
         {% endif %}
         
     {% endfor %}
