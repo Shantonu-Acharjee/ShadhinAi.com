@@ -62,3 +62,4 @@ pip freeze > requirements.txt
 - pip install pillow
 - pip install django-ckeditor
 - pip freeze > requirements.txt
+- pip3.8 install --user pythonanywhere
