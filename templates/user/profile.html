@@ -179,7 +179,7 @@ profile-section end
     <div class="profile-details">
         <h1>{{account.first_name}} {{account.last_name}}</h1>
         <small>@{{account.username}}</small> <br>
-        <small>0 Follower</small>
+        <small>{{account.user_followers.count}} Follower</small>
     </div>
 
 </div>
@@ -188,11 +188,33 @@ profile-section end
 
 
     
-
+{% if request.user.id == account.id %}
 <div class="add-post-edit-profile">
     <a href="{% url 'add_blog' %}">Add Post</a>
     <a href="{% url 'edit_profile' %}">Edit Profile</a>
 </div>
+{% endif %}
+
+
+
+
+
+{% if request.user.id != account.id %}
+{% if following %}
+<div class="add-post-edit-profile">
+    <a href="{% url 'follow_or_unfollow_user' account.id %}">Unfollow</a>
+</div>
+
+{% else %}
+<div class="add-post-edit-profile">
+    <a href="{% url 'follow_or_unfollow_user' account.id %}">Follow</a>
+</div>
+{% endif %}
+
+{% endif %}
+
+
+
 
 
 
